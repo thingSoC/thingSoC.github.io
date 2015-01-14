@@ -1,0 +1,37 @@
+---
+layout: post
+category: news
+title: "RSVP-SIS Github Launch"
+date: 2013-12-03 06:49
+quote: Never believe that a few caring people can't change the world. For, indeed, that's all who ever have.
+quote_author: Margaret Mead
+product_slug: Github_Launch
+licensing: true
+cc_by_sa: true
+comments: true
+---
+<p>RSVP-SIS has created a new Github Site for the community development of RSVP-SIS.
+</p>
+<!-- more -->
+<p>
+	Modern configurable System-on-Chip and Field Programmable Gate Array devices, 
+        are a blank slate for designers to draw on. However, most systems require 
+        several common resources and peripherals in order to present the user with a 
+        usable "System Platform" upon which to base an application.
+
+        The initial Reference System Virtual Platforms are designed to provide useful 
+        baseline systems with commonly required resources and peripherals, as well as a vendor neutral, 
+        portable API to access and control those resources and peripherals.
+
+        While most semiconductor vendors will provide a baseline "driver" library for their parts, 
+        or a configuation tool within their IDE (Integrated Development Environment) to select and configure IP blocks, 
+        these tend to be unique, vendor specific, and/or proprietary in nature. It can often take a significant 
+        amount of work to port an embedded application from one SOC/Microprocessor family to another.
+
+        RSVP-SIS is intended to provide a vendor neutral, and device/architecture agnostic set of resources,
+        peripherals, and Application Programming Interfaces (API's) with which to access them.
+
+        By providing a common set of resources and API's, embedded applications can be ported more rapidly, 
+        and with less code modification or if/def configuration. We are also looking at several complimentary efforts 
+        underway in this subject area, including MRAPI and MCAPI, for a common API structure.
+</p>

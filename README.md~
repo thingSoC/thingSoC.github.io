@@ -16,11 +16,8 @@ The website is built using the Jekyll blogging tools (native to Github pages)
 and the Zurb Foundation framework for a responsive layout system.
 
 See the github pages documentation for installation directions:
-[using-jekyll-with-github-pages] (https://help.github.com/articles/using-jekyll-with-pages/)
-Note: these are "Github Organization" sites, 
-and are slightly different from Github project pages (i.e. gh_pages),
-so they live in the "source" and "master" branches.
- 
+[https://help.github.com/articles/using-jekyll-with-pages/] (using-jekyll-with-pages)
+
 To use Ruby/Jekyll to build the website:
 > rake generate
 

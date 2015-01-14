@@ -1,0 +1,51 @@
+---
+layout: basic
+class: contact
+title: "RSVP-SIS - Press"
+permalink: /contact/press.html
+meta:
+  robots: "noodp, noydir, noarchive"
+  description: "RSVP-SIS - Press"
+  abstract: "RSVP-SIS - Press"
+  keywords: "RSVP-SIS, faq, press, press release, news, investors, investment"
+comments: false
+---
+{% capture standard_content %}
+  <h1>Press &amp; Media Information</h1>
+  <p class="before_list">
+    <img class="illo" src="{{site.url.images}}/staff/press_contact.png">
+  </p>
+  <ul>
+    <li><a href="{{site.url.contact.home}}">Contact Us</a></li> 
+    <li><a href="{{site.url.about.home}}">About Us</a></li>
+    <li><a href="{{site.url.contact.faq}}">Press - Frequently Asked Questions</a></li>
+  </ul>
+
+  <h3>RSVP-SIS Explained <br>(In a Nutshell)</h3>
+	<P>
+	Modern configurable System-on-Chip and Field Programmable Gate Array devices, 
+        are a blank slate for designers to draw on. However, most systems require 
+        several common resources and peripherals in order to present the user with a 
+        usable "System Platform" upon which to base an application.
+
+        The initial Reference System Virtual Platforms are designed to provide useful 
+        baseline systems with commonly required resources and peripherals, as well as a vendor neutral, 
+        portable API to access and control those resources and peripherals.
+
+        While most semiconductor vendors will provide a baseline "driver" library for their parts, 
+        or a configuation tool within their IDE (Integrated Development Environment) to select and configure IP blocks, 
+        these tend to be unique, vendor specific, and/or proprietary in nature. It can often take a significant 
+        amount of work to port an embedded application from one SOC/Microprocessor family to another.
+
+        RSVP-SIS is intended to provide a vendor neutral, and device/architecture agnostic set of resources,
+        peripherals, and Application Programming Interfaces (API's) with which to access them.
+
+        By providing a common set of resources and API's, embedded applications can be ported more rapidly, 
+        and with less code modification or if/def configuration. We are also looking at several complimentary efforts 
+        underway in this subject area, including MRAPI and MCAPI, for a common API structure.
+	</P>
+        Please call, email, or tweet (@twmoxon) if you have a media inquiry, and we will be glad to assist you.
+        </p>
+{% endcapture %}
+
+{% include layouts/standard.html %}

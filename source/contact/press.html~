@@ -1,13 +1,13 @@
 ---
 layout: basic
 class: contact
-title: "RSVP-SIS - Press"
+title: "thingSoC - Press"
 permalink: /contact/press.html
 meta:
   robots: "noodp, noydir, noarchive"
-  description: "RSVP-SIS - Press"
-  abstract: "RSVP-SIS - Press"
-  keywords: "RSVP-SIS, faq, press, press release, news, investors, investment"
+  description: "thingSoC - Press"
+  abstract: "thingSoC - Press"
+  keywords: "thingSoC, faq, press, press release, news, investors, investment"
 comments: false
 ---
 {% capture standard_content %}
@@ -21,7 +21,7 @@ comments: false
     <li><a href="{{site.url.contact.faq}}">Press - Frequently Asked Questions</a></li>
   </ul>
 
-  <h3>RSVP-SIS Explained <br>(In a Nutshell)</h3>
+  <h3>thingSoC Explained <br>(In a Nutshell)</h3>
 	<P>
 	Modern configurable System-on-Chip and Field Programmable Gate Array devices, 
         are a blank slate for designers to draw on. However, most systems require 
@@ -37,7 +37,7 @@ comments: false
         these tend to be unique, vendor specific, and/or proprietary in nature. It can often take a significant 
         amount of work to port an embedded application from one SOC/Microprocessor family to another.
 
-        RSVP-SIS is intended to provide a vendor neutral, and device/architecture agnostic set of resources,
+        thingSoC is intended to provide a vendor neutral, and device/architecture agnostic set of resources,
         peripherals, and Application Programming Interfaces (API's) with which to access them.
 
         By providing a common set of resources and API's, embedded applications can be ported more rapidly, 

@@ -1,43 +1,41 @@
 ---
 layout: basic
 class: home
-title: "RSVP-SIS"
+title: "thingSoC"
 permalink: /index.html
 meta:
   robots: "noodp, noydir, noarchive"
-  description: "RSVP-SIS: Reference System Virtual Platform"
-  abstract: "RSVP-SIS: Reference System Virtual Platform"
+  description: "thingSoC: System on Chip Platform for the Internet of Things"
+  abstract: "thingSoC: System on Chip Platform for the Internet of Things"
   classification: "open source software, open source hardware, foss, oshw"
-  keywords: "RSVP-SIS, microprocessor, fpga, asic, arduino, oshw"
+  keywords: "thingSoC, rsvp, rsvpsis, rsvp-sis, microprocessor, fpga, asic, arduino, oshw"
 comments: false
 ---
 
 {% capture home_content %}
-  <h1>RSVP-SIS:</h1>
-	<P>
-	Modern configurable System-on-Chip and Field Programmable Gate Array devices, 
-        are a blank slate for designers to draw on. However, most systems require 
-        several common resources and peripherals in order to present the user with a 
-        usable "System Platform" upon which to base an application.
+<h1>What can you do with thingSoC?</h1>
+<p>
+What could you build with an IoT platform that is both simple to use, and ultra reliable?
+<ul>
+<li>Data Logging and Remote Monitoring</li>
+<li>Asset Monitoring Solutions</li>
+<li>Smart Home Applications</li>
+<li>Measurement and Verification Applications</li>
+</ul>
+</p>
 
-        The initial Reference System Virtual Platforms are designed to provide useful 
-        baseline systems with commonly required resources and peripherals, as well as a vendor neutral, 
-        portable API to access and control those resources and peripherals.
+<p><b>thingSoC</b> is a new IoT platform paradigm that is different from the "rest of the pack",
+in that it offers seemless hardware monitoring, and verification of correct operation.
+No other solution out there includes the capability to remotely monitor the operation
+of your IoT device on a cycle by cycle basis. <b>thingSoC</b> will change the way you
+think about performance monitoring and product development and lifecycle costs.
+</p>
 
-        While most semiconductor vendors will provide a baseline "driver" library for their parts, 
-        or a configuation tool within their IDE (Integrated Development Environment) to select and configure IP blocks, 
-        these tend to be unique, vendor specific, and/or proprietary in nature. It can often take a significant 
-        amount of work to port an embedded application from one SOC/Microprocessor family to another.
+<p><b>thingSoC</b> is completely open-source hardware and software, so you are not locked
+in to any proprietary solutions. Sign-up for our mailing list to here more about 
+the <b>thingSoC</b> development and release.
 
-        RSVP-SIS is intended to provide a vendor neutral, and device/architecture agnostic set of resources,
-        peripherals, and Application Programming Interfaces (API's) with which to access them.
-
-        By providing a common set of resources and API's, embedded applications can be ported more rapidly, 
-        and with less code modification or if/def configuration. We are also looking at several complimentary efforts 
-        underway in this subject area, including MRAPI and MCAPI, for a common API structure.
-	</P>
-        </P>
-
+</p>
 <!-- Begin MailChimp Signup Form -->
 <div id="mc_embed_signup">
 <form action="http://patternagents.us5.list-manage.com/subscribe/post?u=d606135278a28bf2e4504c9ef&amp;id=34ecdcaa40" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>

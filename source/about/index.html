@@ -12,29 +12,13 @@ comments: false
 ---
 {% capture standard_content %}
  
-
 <h2>About thingSoC</h2>
-<p>
-<b>thingSoC</b> is an open source project that defines a
-vendor independent system socket standard for the creation of new devices
-for the Internet of Things. 
-<b>thingSoC</b> addresses many of the limitations of current product offerings;
-such as automatic device discovery, automatic device configuration,
-self-monitoring and self-testing capabilities. 
-<p>
-<b>thingSoC</b> can support many existing hardware small form factors,
-such as Arduino, rfDuino, Raspberry Pi, Beaglbone, X-Bee, and others;
-but adds  new features and capabilites to make building
-your IoT devices easier, with a more reliable and portable final product. 
-<p>
-<b>thingSoC</b> provides a vendor neutral and device agnostic socket standard,
-using a virtual hardware definition. This means that the IoT applications you
-develop can be easily migrated without having to re-write your software.
-</p>
+{% include frag/about.html %}
 
 {% include frag/blurb.html %}
+
 <p>
-<img src="{{site.url.images}}/projects/thingSoC/thingSoC.png" alt="thingSoC" title="thingSoC">
+<img src="{{site.url.images}}/projects/thingSoC/thingSoC_thumb.png" alt="thingSoC" title="thingSoC">
 </p>
 
 {% endcapture %}

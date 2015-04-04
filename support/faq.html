@@ -130,7 +130,7 @@ automatic device configuration, self-monitoring, and self-testing.</li>
 
   <li>Q: How big are the <b>thingSoC</b> modules?
   </li>
-  <li><b>thingSoC</b> modules come in standardized sizes with specificed mounting hole pattern.<br>
+  <li><b>thingSoC</b> modules come in standardized sizes with specificed mounting hole patterns.<br>
       A <b>single thingSoC</b> module is  38.1mm long by 38.1mm wide (1.5 inches x 1.5 inches).<br>
       A <b>double thingSoC</b> module is  79.2mm long by 38.1mm wide (3.12 inches x 1.5 inches). <br>
       A <b>triple thingSoC</b> module is 114.8mm long by 38.1mm wide (4.52 inches x 1.5 inches). <br>
@@ -141,15 +141,23 @@ automatic device configuration, self-monitoring, and self-testing.</li>
 
   <li>Q: How many pins do <b>thingSoC</b> modules have?
   </li>
-  <li><b>thingSoC</b> modules can be from a minumum of six(6) pins to a maximum of eighty(80) pins per 
+  <li>
+      <b>thingSoC</b> modules can have different I/O connector type "bindings", in order
+      to facilitate specific user requirements. The "default <b>thingSoC</b> I/O connector binding" is
+      the "BreadBoard" type, which employs common 2.54mm (0.1 inch) female header and male pin connections. 
+      <b>thingSoC</b> modules can be from a minumum of six(6) pins to a maximum of eighty(80) pins per 
       <b>thingSoC</b> socket. The <b>thingSoC</b> module pin configurations are <br>
       <ul>
-        <li>6 Pins - The minimum IOClass includes Vin, Vbat, 5V, Ground, I2C1_SDA, and I2C1_SCL, to form
-            a bare minimum connection. The I2C bus is used for both configuration information and data exchange.</li>
-        <li>20 Pins - adds UART and SPI bus pins for higher speed data exchange, 
+        <li>6 Pins - The Minimum PinClass (0)<br>
+            includes Vin, Vbat, 5V, Ground, I2C1_SDA, and I2C1_SCL, to form a bare minimum connection. 
+            The I2C bus is used for both configuration information and data exchange.</li>
+        <li>20 Pins - The Basic PinClass (1)<br>
+            adds UART and SPI bus pins for higher speed data exchange, 
             as well as additional clocks, interrupt and power saving shutdown modes.</li>
-        <li>40 Pins - adds USB2.0, JTAG, Analog, and I2S audio.</li>
-        <li>80 Pins - add Superspeed USB3.0, PCI-E, or 10/100 Ethernet, second UART, Second SPI ports.</li>
+        <li>40 Pins - The Standard Pinclass (2)<br>
+            adds USB2.0, JTAG, Analog, and I2S audio.</li>
+        <li>80 Pins - The Maximum PinClass (3)<br>
+            adds Superspeed USB3.0, PCI-E, or 10/100 Ethernet, second UART, Second SPI ports.</li>
       </ul>
       
   </li>

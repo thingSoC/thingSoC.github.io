@@ -38,7 +38,7 @@ automatic device configuration, self-monitoring, and self-testing.</li>
 
   <li>Q: How big are the thingSoC modules?
   </li>
-  <li>thingSoC modules come in standardized sizes with specificed mounting hole patterns.<br>
+  <li>thingSoC modules come in standardized sizes with specified mounting hole patterns.<br>
       A <b>single thingSoC</b> module is  38.1mm long by 38.1mm wide (1.5 inches x 1.5 inches).<br>
       A <b>double thingSoC</b> module is  79.2mm long by 38.1mm wide (3.12 inches x 1.5 inches). <br>
       A <b>triple thingSoC</b> module is 114.8mm long by 38.1mm wide (4.52 inches x 1.5 inches). <br>
@@ -77,19 +77,28 @@ automatic device configuration, self-monitoring, and self-testing.</li>
      
   </li>
 
-  <li>Q: What does thingSoC mean by the terms "Compliant" and "Compatible" devices?
+  <li>Q: What do the terms "thingSoC Compliant" and "thingSoC Compatible" mean?
   </li>
   <li> <b>thingSoC Compliant</b> devices implement at least the the Minimum PinClass (0) of six (6) pins, 
        and the thingSoC EEPROM based autodiscovery mechanism in a thingSoC single, double, or triple sized PCB,
-       with specified mounting holes, and display the thingSoC logo on the silkscreen.<br>
+       with specified mounting holes, and display the thingSoC logo on the silkscreen. 
+       <br><br>
        <b>thingSoC Compatible</b> devices may fit and interoperate with thingSoC based systems,
        but do not support the thingSoC EEPROM based autodiscovery mechanism or match the physical PCB size and specified mounting holes.
        This implies that <b>thingSoC Compatible</b> devices don't have access to thingSoC extended functions or display the thingSoC logo. 
   </li>
 
-  <li>Q: thingSoC modules?
+  <li>Q: Is the thingSoC EEPROM based autodiscovery mechanism compatible with the Beaglebone Cape Manager?
   </li>
-  <li> 
+  <li> Yes. <b>thingSoC Compliant</b> devices implement the thingSoC EEPROM based autodiscovery mechanism,
+       which is compatible with the <A href="http://elinux.org/BeagleBone_and_the_3.8_Kernel#Cape_Manager_requirements">Linux 3.8 Kernal 
+       and Device  Tree  Overlays</a>. The thingSoC EEPROM based autodiscovery mechanism also implements additional features,
+       however it is backward compatible with the Linux Beaglebone Cape Manager.
+  </li>
+
+  <li>Q: ?
+  </li>
+  <li>
   </li>
 
 </ul>

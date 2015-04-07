@@ -190,8 +190,9 @@ automatic device configuration, self-monitoring, and self-testing.</li>
          "EXPS" level modules use either "stack-thru" female header connectors, or surface mount (SMD)
          female headers on the top side of the board and surface mount (SMD) male pins on the 
          bottom side of the board.
-         The majority of thingSoC modules are Expansion level modules.
-         A maximum of four (4) Expansion levels can function in any thingSoC "BASE" socket.
+         The majority of thingSoC modules are "EXPS" level modules.
+         A maximum of four (4) Expansion levels can function in any thingSoC "BASE" socket 
+         (i.e. maximum stack height of four (4) "EXPS" level modules in any single thingSoC Socket).
          </li>
         <li><b>BASE</b> - Base Level<br>
          There will be only one "BASE" level per thingSoC socket stack, 
@@ -203,7 +204,7 @@ automatic device configuration, self-monitoring, and self-testing.</li>
          (Uno, Leonardo, Due, etc.) as the bottom of the stack.
          Most thingSoC "BASE" level module implementations will utilize surface mount (SMD)
          female headers on the top side of the board, and leave the bottom connectors pads bare,
-         (i.e. no male pins on bottom) in order to utilize Pogo-Pin style test connectors on the 
+         (i.e. no male pins on bottom) in order to utilize Pogo-Pin ("PP") style test connectors on the 
          "TEST" level.  
          </li>
          <li><b>TEST</b> - Test Levels<br>

@@ -84,6 +84,8 @@ automatic device configuration, self-monitoring, and self-testing.</li>
       to facilitate specific user requirements. The default thingSoC I/O connector binding is
       the "BreadBoard" type, which employs common 2.54mm pitch (0.1 inch) female header and male pin connections,
       and as the name suggests, is capable of being used with commonly available 2.54mm pitch breadboards and prototyping boards.
+      <br><br>A Pogo-Pin ("PP" type) I/O connector type "binding" is also included in the thingSoC specification,
+              in order to facilitate the creation of thingSoC "TEST" modules for production testing.
       <br><br>Other I/O connector type "bindings" are possible, and may be added to the thingSoC specification
       at some future date.
   </li>
@@ -130,11 +132,11 @@ automatic device configuration, self-monitoring, and self-testing.</li>
       </ul> 
       <p>
          Most thingSoC "BASE" level module implementations will utilize surface mount (SMD)
-         female headers on the top side of the board, and leave the bottom connectors pads bare,
+         female headers on the top side of the board, and leave the bottom connector pads unpopulated,
          (i.e. no male pins on bottom) in order to utilize Pogo-Pin style test connectors on the 
          "TEST" level.  "TEST" level modules are either "BB" type (Bread-Board) or "PP" type (Pogo-Pin).
          In order to reduce the cost of most "BASE" level modules, they will most commonly omit the
-         bottom stacking pins, and expect the "PP" type (Pogo-Pin) "TEST" modules will be used.
+         bottom stacking pins, and expect that "PP" type (Pogo-Pin) "TEST" modules will be used.
       </p>
   </li>
 

@@ -55,17 +55,6 @@ automatic device configuration, self-monitoring, and self-testing.</li>
    </p>
   </li>
 
-  <li>Q: What kind of connectors do thingSoC modules use?
-  </li>
-  <li>
-      thingSoC modules can have different I/O connector type "bindings", in order
-      to facilitate specific user requirements. The default thingSoC I/O connector binding is
-      the "BreadBoard" type, which employs common 2.54mm pitch (0.1 inch) female header and male pin connections,
-      and as the name suggests, is capable of being used with commonly available 2.54mm pitch breadboards and prototyping boards.
-      <br><br>Other I/O connector type "bindings" are possible, and may be added to the thingSoC specification
-      at some future date.
-  </li>
-
   <li>Q: How many pins do thingSoC modules have?
   </li>
   <li>
@@ -85,9 +74,45 @@ automatic device configuration, self-monitoring, and self-testing.</li>
       </ul>
     <p>
    <img src="{{site.url.images}}/projects/thingSoC/tsoc-singles.png"alt="thingSoC single with PINClasses" title="thingSoC single with PINClasses">
-   </p>
+   </p>     
+  </li>
+
+  <li>Q: What kind of connectors do thingSoC modules use?
+  </li>
+  <li>
+      thingSoC modules can have different I/O connector type "bindings", in order
+      to facilitate specific user requirements. The default thingSoC I/O connector binding is
+      the "BreadBoard" type, which employs common 2.54mm pitch (0.1 inch) female header and male pin connections,
+      and as the name suggests, is capable of being used with commonly available 2.54mm pitch breadboards and prototyping boards.
+      <br><br>Other I/O connector type "bindings" are possible, and may be added to the thingSoC specification
+      at some future date.
+  </li>
+
+  <li>Q: What are thingSoC module "Stack levels"?
+  </li>
+  <li>
+      thingSoC module "Stack levels" refer to the type of board function, and it's vertical position in the physical stack of modules. 
+      <ul>
+        <li><b>EXPS</b> - Expansion levels<br>
+         Any layer above the base level is refered to as an "EXPS" level module.
+         The majority of thingSoC modules are Expansion level modules.
+         A maximum of four (4) Expansion levels can function in any thingSoC "BASE" socket.
+         </li>
+        <li><b>BASE</b> - Base Level<br>
+         There will be only one "BASE" level per thingSoC socket stack, 
+         and it generally contains the application processor and it's support subsystems.
+         </li>
+         <li><b>TEST</b> - Test Level<br>
+         Any layer below the "BASE" layer is refered to as an "TEST" level module.
+         "TEST" modules implement test, measurement, and monitoring functions for the thingSoC "BASE" socket.
+         </li>
+      </ul> 
+   <p>
+     <img src="{{site.url.images}}/projects/thingSoC/thingsoc-levels.png"alt="thingSoC levels" title="thingSoC levels">
+   </p>     
      
   </li>
+
 
   <li>Q: What do the terms "thingSoC Compliant" and "thingSoC Compatible" mean?
   </li>

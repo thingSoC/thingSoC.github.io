@@ -187,22 +187,42 @@ automatic device configuration, self-monitoring, and self-testing.</li>
       <ul>
         <li><b>EXPS</b> - Expansion levels<br>
          Any layer above the base level is refered to as an "EXPS" level module.
-         The majority of thingSoC modules are Expansion level modules.
-         A maximum of four (4) Expansion levels can function in any thingSoC "BASE" socket.
+         "EXPS" level modules use either "stack-thru" female header connectors, or surface mount (SMD)
+         female headers on the top side of the board and surface mount (SMD) male pins on the 
+         bottom side of the board.
+         The majority of thingSoC modules are "EXPS" level modules.
+         A maximum of four (4) Expansion levels can function in any thingSoC "BASE" socket 
+         (i.e. maximum stack height of four (4) "EXPS" level modules in any single thingSoC Socket).
          </li>
         <li><b>BASE</b> - Base Level<br>
          There will be only one "BASE" level per thingSoC socket stack, 
          and it generally contains the application processor and it's support subsystems.
+         "BASE" level modules use either "stack-thru" female header connectors, or surface mount (SMD)
+         female headers on the top side of the board and surface mount (SMD) male pins on the 
+         bottom side of the board.. Please note, this is very different than 
+         other small form factors systems, such as the Arduino, that treat the processor board 
+         (Uno, Leonardo, Due, etc.) as the bottom of the stack.
+         Most thingSoC "BASE" level module implementations will utilize surface mount (SMD)
+         female headers on the top side of the board, and leave the bottom connectors pads bare,
+         (i.e. no male pins on bottom) in order to utilize Pogo-Pin ("PP") style test connectors on the 
+         "TEST" level.  
          </li>
          <li><b>TEST</b> - Test Levels<br>
          Any layer below the "BASE" layer is refered to as an "TEST" level module.
          "TEST" modules implement test, measurement, and monitoring functions for the thingSoC "BASE" socket.
+         The "TEST" level modules will typically include JTAG programming and trace functionality as well.
          </li>
       </ul> 
    <p>
      <img src="/img/projects/thingSoC/thingSoC-levels.png"alt="thingSoC levels" title="thingSoC levels">
    </p>     
-     
+         Most thingSoC "BASE" level module implementations will utilize surface mount (SMD)
+         female headers on the top side of the board, and leave the bottom connectors pads bare,
+         (i.e. no male pins on bottom) in order to utilize Pogo-Pin style test connectors on the 
+         "TEST" level.  "TEST" level modules are either "BB" type (Bread-Board) or "PP" type (Pogo-Pin).
+         In order to reduce the cost of most "BASE" level modules, they will most commonly omit the
+         bottom stacking pins, and expect the "PP" type (Pogo-Pin)"TEST" modules will be used.
+
   </li>
 
 

@@ -197,6 +197,9 @@ such as cell modems, packet radios, Wi-Fi, Bluetooth, and more.
   <li>
       thingSoC module "stacking levels" refer to the type of board function, and it's vertical position in the physical stack of modules. 
    <p>
+     <img src="/img/projects/thingSoC/thingSoC-levels-diagram.png"alt="thingSoC levels" title="thingSoC levels">
+   </p>     
+   <p>
      <img src="/img/projects/thingSoC/thingSoC-levels.png"alt="thingSoC levels" title="thingSoC levels">
    </p>     
       <ul>
@@ -233,21 +236,17 @@ such as cell modems, packet radios, Wi-Fi, Bluetooth, and more.
          for adding instrumentation to a thingSoC socket, for testing and monitoring.
          </li>
       </ul> 
-   <p>
-     <img src="/img/projects/thingSoC/thingSoC-levels-diagram.png"alt="thingSoC levels" title="thingSoC levels">
-   </p>     
-      <p>
+     <p>
+       <img src="/img/projects/thingSoC/thingSoC-test-level.png"alt="thingSoC levels" title="thingSoC levels">
+     </p>     
+     <p>
          Most thingSoC "BASE" level module implementations will utilize surface mount (SMD)
          female headers on the top side of the board, and leave the bottom connector pads unpopulated,
          (i.e. no male pins on bottom) in order to utilize Pogo-Pin style test connectors on the 
          "TEST" level.  "TEST" level modules are either "BB" type (Bread-Board) or "PP" type (Pogo-Pin).
          In order to reduce the cost of most "BASE" level modules, they will most commonly omit the
          bottom stacking pins, and expect that "PP" type (Pogo-Pin) "TEST" modules will be used.
-      </p>
-   <p>
-     <img src="/img/projects/thingSoC/thingSoC-test-level.png"alt="thingSoC levels" title="thingSoC levels">
-   </p>     
-
+     </p>
   </li>
 
   <li>Q: What do the terms "thingSoC Compliant" and "thingSoC Compatible" mean?

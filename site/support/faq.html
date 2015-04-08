@@ -132,14 +132,33 @@ such as cell modems, packet radios, Wi-Fi, Bluetooth, and more.
   </li>
 
   <li>Q: Why create a new standard? Why not just use Arduino, or Beaglebone, or another existing standard?</li>
-  <li>thingSoC includes several new capabilities that other small form factors do not support. 
-      thingSoC is a completely open source standard, not tied to any proprietary vendor implementation, 
+  <li>thingSoC includes several capabilities that the other small form factors do not support :
+	  <ul>
+	  <li>Standardized Mounting System, designed for high vibration platforms (robots, ebikes, drones)</li>
+	  <li>Built in support for battery, solar, and low power applications</li>
+	  <li>Standardized Auto-Discovery Firmware System, compatible with the Beaglebone Cape Manager</li>
+	  <li>Variable Connector Sizing for very low pin count, cost sensitive applications</li>
+	  <li>Variable Physical size, based on X-Y tiles (single, double, triple sizes)</li>
+	  <li>Modular system of Radios and Network/Device Interfaces</li>
+	  <li>Standardized cross-platform Application Programming Interfaces (APIs)</li>
+	  </ul>
+	  <p>thingSoC is a completely open source standard, not tied to any proprietary vendor implementation, 
       CPU architecture, or IDE. thingSoC is designed to be backward compatible with Arduino, rfDuino, Raspberry Pi, Beaglebone, X-Bee, and others.
+  </li>
+
+  <li>Q: What are thingSoC Reference Designs?
+  </li>
+  <li> <b>thingSoC Reference Designs</b> are example <b>thingSoC Compliant</b> PCB designs that demonstrate
+       a particular function or interface. Example reference designs include functions such as
+       USB CDC/HID thingSoC BASE interfaces to thingSoC EXPAnsion boards. 
+       Please see the <A href="https://github.com/thingSoC">thingSoC Github repo</a> 
+       for currently available thingSoC Reference Designs.
   </li>
 
   <li>Q: Are there any licensing fees for using thingSoC in my own products?</li>
   <li>No. thingSoc is a completely open standard, and there are NO licensing costs for adopting the thingSoC standard.
-      If you want to design your own thingSoC based product, you are free to do so.
+      If you want to design your own thingSoC based product, you are free to do so. If you want to make and sell
+	  your own copies of the <b>thingSoC Reference Designs</b> you are free to do so.
   </li>
 
   <li>Q: How big are the thingSoC modules?
@@ -234,8 +253,11 @@ such as cell modems, packet radios, Wi-Fi, Bluetooth, and more.
          The "TEST" level modules can include JTAG programming, debugging, and trace functionality.
          Oscilloscopes, Logic Analyzers, Protocol Analyzers, Emulators, and similar functions are implemented
          as "TEST" level modules in the thingSoC standard. 
-         The "TEST" levels are an optional feature of the thingSoC standard, but present a consistant mechanism
-         for adding instrumentation to a thingSoC socket, for testing and monitoring.
+		 <p>"TEST" level modules eliminate common test lead/test jumper wiring and configuration problems
+		 by instrumenting standardized busses on known pins that can be easily probed and monitored.
+		 The thingSoC "TEST" level yields modular test and measurement platforms that are easily integrated
+		 for onsite or remote monitoring of devices and nodes.
+		 </p>
          </li>
       </ul> 
      <p>
@@ -248,6 +270,8 @@ such as cell modems, packet radios, Wi-Fi, Bluetooth, and more.
          "TEST" level.  "TEST" level modules are either "BB" type (Bread-Board) or "PP" type (Pogo-Pin).
          In order to reduce the cost of most "BASE" level modules, they will most commonly omit the
          bottom stacking pins, and expect that "PP" type (Pogo-Pin) "TEST" modules will be used.
+         The "TEST" levels are an optional feature of the thingSoC standard, but present a consistant mechanism
+         for adding instrumentation to a thingSoC socket, for testing and monitoring.
      </p>
   </li>
 
@@ -268,15 +292,6 @@ such as cell modems, packet radios, Wi-Fi, Bluetooth, and more.
        which is compatible with the <A href="http://elinux.org/BeagleBone_and_the_3.8_Kernel#Cape_Manager_requirements">Linux 3.8 Kernal 
        and Device  Tree  Overlays</a>. The thingSoC EEPROM based autodiscovery mechanism also implements additional features,
        however it is backward compatible with the Linux Beaglebone Cape Manager.
-  </li>
-
-  <li>Q: What are thingSoC Reference Designs?
-  </li>
-  <li> <b>thingSoC Reference Designs</b> are example <b>thingSoC Compliant</b> PCB designs that demonstrate
-       a particular function or interface. Some of the example reference designs will include functions like
-       USB CDC/HID thingSoC base interfaces to thingSoC expansion boards. 
-       Please see the <A href="https://github.com/thingSoC">thingSoC Github repo</a> 
-       for currently available thingSoC Reference Designs.
   </li>
 
   <li>Q: Are schematic and PCB layout library packages available for the different size thingSoC modules?

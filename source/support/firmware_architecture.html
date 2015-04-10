@@ -1,0 +1,41 @@
+---
+layout: basic
+class: support
+title: "thingSoC Firmware Architecture"
+permalink: /support/firmware_architecture.html
+meta:
+  robots: "noodp, noydir, noarchive"
+  description: "thingSoC Firmware Architecture"
+  abstract: "thingSoC Firmware Architecture"
+  keywords: "thingSoC, patternagents, arduino, sensors, iot, internet"
+comments: false
+---
+{% capture standard_content %}
+<h1>thingSoC Firmware Architecture</h1>
+<p>
+</p>
+
+<p>
+<ul class="fw">
+  <li>Q: What is thingSoC firmware?</li>
+  <li>All <b>thingSoC Compliant</b> boards contain an I2C EEPROM Memory device (minimum 32Kbits)
+      which contains data that identifies the board type, it's serial number, pin multiplexing
+      and setup information. THis allows a <b>thingSoC Compliant</b> system to automatically discover
+      what boards have been installed into a system, and to configure itself properly to communicate with them.
+  </li>
+
+  <li>Q: Is the thingSoC firmware autodiscovery mechanism compatible with the Beaglebone Cape Manager?
+  </li>
+  <li> Yes. <b>thingSoC Compliant</b> devices implement the thingSoC EEPROM based autodiscovery mechanism,
+       which is compatible with the <A href="http://elinux.org/BeagleBone_and_the_3.8_Kernel#Cape_Manager_requirements">Linux 3.8 Kernal 
+       and Device  Tree  Overlays</a>. The thingSoC EEPROM based autodiscovery mechanism also implements additional features,
+       however it is backward compatible with the Linux Beaglebone Cape Manager.
+  </li>
+</ul>
+</p>
+
+<p>
+</p>
+{% endcapture %}
+
+{% include layouts/standard.html %}

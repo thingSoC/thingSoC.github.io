@@ -50,6 +50,9 @@ url:
   support:
     home: /support/index.html
     faq: /support/faq.html
+    hw: /support/hardware_architecture.html
+    fw: /support/firmware_architecture.html
+    sw: /support/software_architecture.html
   news:
     home: /news/index.html
     page: /news/page

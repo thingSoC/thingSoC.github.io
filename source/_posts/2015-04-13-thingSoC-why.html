@@ -22,7 +22,6 @@ each has a particular set of limitations, which thingSoC is designed to address.
 
 <h3>New Needs for the "Internet of Things"</h3>
 <p>
-     Designing new products for the "Internet of Things" requires new tools and new techniques.<br>
      thingSoC is very well suited for developing new "Internet Things", because :
       <p>
        <ul class="faq">
@@ -40,38 +39,46 @@ each has a particular set of limitations, which thingSoC is designed to address.
               <b>thingSoC Compliant</b> devices implement the thingSoC EEPROM based autodiscovery mechanism,
               which is compatible with the <A href="http://elinux.org/BeagleBone_and_the_3.8_Kernel#Cape_Manager_requirements">Linux 3.8 Kernal 
               and Device  Tree  Overlays</a>. The thingSoC EEPROM based autodiscovery mechanism also implements additional features,
-              however it is backward compatible with the Linux Beaglebone Cape Manager.
+              however it is backward compatible with the Linux Device Tree Overlay Manager.
               </p>
           </li>
 
+	  <li>thingSoC is designed to support RF wireless interfaces from the "ground up"</li>
+          <li>
+           <p>
+            There are designated "RF zones" in the thingSoC specification for supporting on-board antenna and RF interfaces.
+            This is very important for creating a modular IoT platform that yields the maximum radio range with minimum RF interference.
+           </p>
+           <p>
+            We run into this all the time with the Arduino, the Beaglebone and most others - 
+            the basic design of those platforms include ground and power planes that limit 
+            the RF performance of expansion cards plugged into them. thingSoC has designated "RF" zones
+            for the placement of on-board antenna and RF interfaces. thingSoC is designed to help you get great RF range, 
+            as well as limiting radiated RF interference, by using proven design techniques right from the beginning.
+           </p>
+           </li>
+
           <li>thingSoC is designed for low power and battery operation</li>
-          <li>thingSoC includes dedicated pins for battery power, 
-              as well as "shutdown/sleep" and "wakeup" pins for integrated battery management and control functions.</li>
+          <li>
+            <p>thingSoC includes dedicated pins for battery power, 
+               as well as "shutdown/sleep" and "wakeup" pins 
+               for integrated battery management and control functions.
+               thingSoC takes a "whole system" approach to reducing power and maximizing battery life.
+            </p>
+          </li>
 
 	  <li>thingSoC is designed for solar, wind, thermal, and other alternative charging schemes</li>
           <li>thingSoC includes dedicated pins for external power inputs, with prescribed input protections.<br>
               It also includes support for the new USB Type-C charging and wall power specification. 
           </li>
 
-	  <li>thingSoC is designed to support variable RF wireless interfaces</li>
-          <li>
-           <p>
-            thingSoC has designated "RF" zones withing the thingSoC specification for supporting on-board antenna and RF interfaces.
-            This is very important for creating a modular IoT platform that yields the maximum radio range with minimum RF interference.
-           </p>
-           <p>
-            We run into this all the time with Arduino, Beaglebone and others - the basic design of the platform includes ground
-            and power planes that limit the RF performance of expansion cards plugged into the system. thingSoC has designated "RF" zones
-            for the placement of on-board antenna and RF interfaces.
-           </p>
-           </li>
-
 	  <li>thingSoC is designed to support higher speed interfaces like USB 3.0 and 10/100/1000 Ethernet</li>
           <li>
             <p>
               While it may seem counter-intuitive at first, using higher speed interfaces can actually reduce overall system power use.
-              Older, slower interfaces need to stay "Awake" longer to transfer the same amont of data as a faster interface, like USB 3.0.
-              So while USB 3.0 may use more power during the actual transfer, overall the power used is less.
+              Older, slower interfaces need to stay "Awake" longer to transfer the same amont of data as a faster interface, like SuperSpeed USB.
+              While USB 3.0 (SuperSpeed) may use more power during the actual transfer, 
+              since the transfer time is so much shorter, the overall power used for the same data transfer is less than USB 2.0 (High-Speed).
             </p>
           </li>
 
@@ -87,10 +94,11 @@ each has a particular set of limitations, which thingSoC is designed to address.
             </p>
             <p>
                  Building a new IoT widget and launching it on Kickstarter, Indiegogo, Tindie, or elsewhere?<br>
-                 That's great - now, how are you going to do initial testing and quality assurance?<br>
-                 Wouldn't it be great to be able to just plug in a preconfigured "TEST" board that can
-                 test and montitor your production builds? Even better if it supported Zero-Insertion-Force (ZIF)
-                 and Pogo Type Pins for making the test jigs you'll need for production?<br>
+                 That's great - now, how are you going to do your initial product testing and quality assurance?<br>
+                 Wouldn't it be great to be able to just plug in a modular "TEST" board that can do production
+                 programming, and testing of your first production builds inexpensively? <br>
+                 thingSoC supports Zero-Insertion-Force (ZIF) and Spring type pins(Pogo-Pins)
+                 for making all of those test jigs that you'll be needing for production testing.<br>
             </p>
           </li>
 
@@ -115,7 +123,7 @@ each has a particular set of limitations, which thingSoC is designed to address.
 	  <li>Built in support for battery, solar, and very low power applications</li>
 	  <li>Standardized auto-discovery firmware system that identifies what boards are installed</li>
 	  <li>Selectable connector sizing for very low pin count, cost sensitive applications</li>
-	  <li>Selectable physical sizing for cost trade-off based on PCB size (single, double, triple sizes)</li>
+	  <li>Selectable physical sizing for cost trade-off based on PCB size (half-size, single, double, triple sizes)</li>
           <li>Standardized testing, instrumentation, monitoring, and data recording interfaces</li>
 	  <li>Interchangeable platform for break-out-boards, sensors, radios, and other devices</li>
         </ol>

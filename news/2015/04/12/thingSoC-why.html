@@ -3,16 +3,16 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang="en" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
-  <title>thingSoC: thingSoC Hardware Architecture</title>
+  <title>thingSoC: Why thingSoC ?</title>
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width" />
 
-  <meta name="robots"                  content="noodp, noydir, noarchive"         />
-  <meta name="description"        content="thingSoC Hardware Architecture"    />
-  <meta name="abstract"              content="thingSoC Hardware Architecture"       />
+  <meta name="robots"          content="index, follow, noodp, noydir" />
+  <meta name="description"     content="thingSoC : System on Chip Platform for the Internet of Things" />
+  <meta name="abstract"        content="System on Chip Platform for the Internet of Things" />
   <meta name="classification"  content="electronics, electronics design, design engineering" />
-  <meta name="keywords"              content="thingSoC, patternagents, arduino, sensors, iot, internet"       />
+  <meta name="keywords"        content="electronics, electronics design, design engineering, open source software, open source hardware, OSHW" />
 
   <link rel="apple-touch-icon" type="image/png" href="/img/logos/apple-touch-icon-144x144.png" />
   <!--  <link rel="icon" type="image/png" href="http://www.moxon.com/img/logos/apple-touch-icon.png"/>  -->
@@ -50,8 +50,9 @@
 
 </head>
 
-<body class="support">
+<body class="">
  
+
 
 
 
@@ -103,54 +104,168 @@
   <div class="col major">
     
   
-<h1>thingSoC Hardware Architecture</h1>
+  <article role="article">
+    <header>
+      
+        <h1 class="entry-title">Why thingSoC ?</h1>
+      
+      
+        <p class="meta">
+          
+        </p>
+      
+    </header>
+    <div class="entry-content">
+  
+  
+  
+
+<blockquote>
+	<p>If I have seen further than others, it is by standing on the shoulders of giants.</p>
+	<p>&mdash;Issac Newton</p>
+</blockquote>
+
+<p>Why <b>thingSoC</b>? What problems does it solve? <br>What value does <b>thingSoC</b> provide? 
+</p>
+<!-- more -->
 <p>
+There are already a number of popular and well-supported development platforms,
+like Arduino, Beaglebone, Raspberry Pi, and others, so why is thingSoC needed?
+While we work with and support all those platforms,
+each has a particular set of limitations, which thingSoC is designed to address.
+</p>
+
+<h3>New Needs for the "Internet of Things"</h3>
+<p>
+     Designing new products for the "Internet of Things" requires new tools and new techniques.<br>
+     thingSoC is very well suited for developing new "Internet Things", because :
+      <p>
+       <ul class="faq">
+	  <li>thingSoC is designed to automatically identify and configure installed options and peripherals</li>
+          <li><p>
+              thingSoC devices are very user friendly. They can detect what options and peripherals are installed
+              in a system and how to communicate with them. Similar to how "USB" works, and how USB knows the difference
+              between a USB Memory Stick and a USB Camera, for example.
+              </p>
+              <p>This capability alone yields a great user experience, as users will no longer have to deal with configuration and setup,
+                 or wondering if two devices are compatible. The thingSoC autodiscovery mechanism allows the system to discover that information.
+                 That will tranform the customer support experience for new devices, break-out-boards, etc.
+              </p>
+              <p>
+              <b>thingSoC Compliant</b> devices implement the thingSoC EEPROM based autodiscovery mechanism,
+              which is compatible with the <A href="http://elinux.org/BeagleBone_and_the_3.8_Kernel#Cape_Manager_requirements">Linux 3.8 Kernal 
+              and Device  Tree  Overlays</a>. The thingSoC EEPROM based autodiscovery mechanism also implements additional features,
+              however it is backward compatible with the Linux Beaglebone Cape Manager.
+              </p>
+          </li>
+
+          <li>thingSoC is designed for low power and battery operation</li>
+          <li>thingSoC includes dedicated pins for battery power, 
+              as well as "shutdown/sleep" and "wakeup" pins for integrated battery management and control functions.</li>
+
+	  <li>thingSoC is designed for solar, wind, thermal, and other alternative charging schemes</li>
+          <li>thingSoC includes dedicated pins for external power inputs, with prescribed input protections.<br>
+              It also includes support for the new USB Type-C charging and wall power specification. 
+          </li>
+
+	  <li>thingSoC is designed to support variable RF wireless interfaces</li>
+          <li>
+           <p>
+            thingSoC has designated "RF" zones withing the thingSoC specification for supporting on-board antenna and RF interfaces.
+            This is very important for creating a modular IoT platform that yields the maximum radio range with minimum RF interference.
+           </p>
+           <p>
+            We run into this all the time with Arduino, Beaglebone and others - the basic design of the platform includes ground
+            and power planes that limit the RF performance of expansion cards plugged into the system. thingSoC has designated "RF" zones
+            for the placement of on-board antenna and RF interfaces.
+           </p>
+           </li>
+
+	  <li>thingSoC is designed to support higher speed interfaces like USB 3.0 and 10/100/1000 Ethernet</li>
+          <li>
+            <p>
+              While it may seem counter-intuitive at first, using higher speed interfaces can actually reduce overall system power use.
+              Older, slower interfaces need to stay "Awake" longer to transfer the same amont of data as a faster interface, like USB 3.0.
+              So while USB 3.0 may use more power during the actual transfer, overall the power used is less.
+            </p>
+          </li>
+
+          <li>thingSoC is designed to support internal testing, monitoring, and data logging operations</li>
+          <li>
+            <p>Let's face it, for many systems and products out there - proving correct operation and self-testing is an after-thought,
+               if it has been addressed at all. We've seen many interesting projects fail due to the lack of a well thought out testing strategy.
+            </p>
+            <p>thingSoC TEST level modules eliminate common test lead/test jumper wiring and configuration problems
+		 by instrumenting standardized busses on known pins that can be easily probed and monitored.
+		 The thingSoC "TEST" level yields modular test and measurement platforms that are easily integrated within a design
+		 for remote monitoring and data logging operations.
+            </p>
+            <p>
+                 Building a new IoT widget and launching it on Kickstarter, Indiegogo, Tindie, or elsewhere?<br>
+                 That's great - now, how are you going to do initial testing and quality assurance?<br>
+                 Wouldn't it be great to be able to just plug in a preconfigured "TEST" board that can
+                 test and montitor your production builds? Even better if it supported Zero-Insertion-Force (ZIF)
+                 and Pogo Type Pins for making the test jigs you'll need for production?<br>
+            </p>
+          </li>
+
+	  <li>thingSoC is designed to be interoperable with competitors products</li>
+          <li>thingSoC is a completely open source standard, not tied to any proprietary vendor implementation, 
+         CPU architecture, or IDE. thingSoC is designed to be backward compatible with Arduino, rfDuino, Raspberry Pi, Beaglebone, X-Bee, and others.</li>
+       </ul>
+      </p>
 </p>
 
 <p>
-<ul class="faq">
-  <li>Q: What is thingSoC hardware?</li>
-  <li><br>
-<b>thingSoC</b> is an open source standard that defines a
-vendor independent socket system for the creation of new Internet Things;
-it addresses many of the limitations of current product offerings
-and standards, by adding capabilities such as automatic device discovery, 
-device configuration, monitoring, instrumentation, and testing.
-<br><br>
-<b>thingSoC</b> works with many existing standards and Integrated Development Environments (IDEs),
-such as Arduino, rfDuino, Raspberry Pi, Beaglebone, X-Bee, and others;
-but adds features and capabilites that make building new IoT devices much easier.
-<br><br>
-The <b>thingSoC</b> virtual platform definition supports a number of different System-on-Chip platforms and peripherals,
-such as cell modems, packet radios, Wi-Fi, Bluetooth, and more. 
+  <img src="/img/projects/thingSoC/tsoc-singles-smd.png"alt="thingSoC single size" title="thingSoC single size">
+</p>     
 
-</li>
-
-  <li>Q: What is unique about thingSoC hardware?</li>
-  <li>     thingSoC includes several capabilities that the other small form factors do not support :
+<h3><b>thingSoC</b> Capabilities</h3>
+<p>
+     thingSoC includes several capabilities that many small form factors do not support :
       <p>
 	<ol>
-          <li>Production Ready, embeddable hardware platforms that are easy to use </li>
 	  <li>High Speed Interface support, including SuperSpeed USB 3.0, PCI-E, and 10/100 Ethernet </li>
 	  <li>Standardized Mounting System, designed for high vibration platforms (robots, ebikes, drones)</li>
 	  <li>Built in support for battery, solar, and very low power applications</li>
-	  <li>Standardized auto-discovery firmware system, compatible with the Beaglebone Cape Manager</li>
+	  <li>Standardized auto-discovery firmware system that identifies what boards are installed</li>
 	  <li>Selectable connector sizing for very low pin count, cost sensitive applications</li>
 	  <li>Selectable physical sizing for cost trade-off based on PCB size (single, double, triple sizes)</li>
           <li>Standardized testing, instrumentation, monitoring, and data recording interfaces</li>
 	  <li>Interchangeable platform for break-out-boards, sensors, radios, and other devices</li>
-	  <li>Standardized cross-platform Application Programming Interfaces (APIs)</li>
         </ol>
       </p>
-
-
-</li>
-
-</ul>
 </p>
 
+
+<h3>IoT and Maker Space Fragmentation</h3>
 <p>
+Companies like NXP, Cypress, Sparkfun, SeedStudios, and many others, 
+as well as independent makers selling on Tindie, eBay, and Amazon - 
+have embraced the <a href="http://developer.mbed.org/media/uploads/franzachatz/screen_shot_2011-01-02_at_15.16.46.png">"GumStick"</a> 
+form factor as a low cost delivery vehicle for their microprocessor boards and/or microprocessor based IP.
 </p>
+<p> 
+While that has served well in lowering the cost of entry for many, the incompatible sizes, incompatible pin assignments,
+incompatible signal levels and many other incompatibilities have made most of these products unable
+to connect to each other, or utilize peripherals and radios designed for the each other.
+In our opinion, this fragmentation has been limiting the market as a whole, 
+while slowing community development efforts developing common application and driver software.
+</p>
+
+</div>
+    <footer>
+      <p class="meta">
+        April 12, 2015
+      </p>
+      <p class="meta">
+        
+          <a class="previous" href="/news/2015/04/12/thingSoC-background.html" title="Previous Post: thingSoC Background">&laquo; thingSoC Background</a>
+        
+        
+      </p>
+    </footer>
+  </article>
 
 
   </div>
@@ -214,6 +329,8 @@ such as cell modems, packet radios, Wi-Fi, Bluetooth, and more.
 
 <!-- discus panel -->
 <!-- place "comments: true" in the YAML front matter to enable comments in that page -->
+
+<div class="panel" id="disqus_thread"></div>
 
    
 

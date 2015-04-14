@@ -52,7 +52,7 @@ each has a particular set of limitations, which thingSoC is designed to address.
            <p>
             We run into this all the time with the Arduino, the Beaglebone and most others - 
             the basic design of those platforms include ground and power planes that limit 
-            the RF performance of expansion cards plugged into them. thingSoC has designated "RF" zones
+            the RF performance of expansion cards plugged into them. thingSoC has designated "RF zones"
             for the placement of on-board antenna and RF interfaces. thingSoC is designed to help you get great RF range, 
             as well as limiting radiated RF interference, by using proven design techniques right from the beginning.
            </p>
@@ -79,6 +79,21 @@ each has a particular set of limitations, which thingSoC is designed to address.
               Older, slower interfaces need to stay "Awake" longer to transfer the same amount of data as a faster interface, like SuperSpeed USB.
               While USB 3.0 (SuperSpeed) may use more power during the actual transfer, 
               since the transfer time is so much shorter, the overall power used for the same data transfer is less than USB 2.0 (High-Speed).
+            </p>
+          </li>
+
+	  <li>thingSoC is designed with a secure mounting system for high vibration applications</li>
+          <li>
+            <p>
+             Many current platforms lack a standardized physical mounting standard, which means they are not
+             suitable for high vibration applications like robots, drones, ebikes, and other moving devices.
+            </p>
+            <p>
+             Even our smallest board size, the "half-board" includes two (2) mounting holes for secure attachment,
+             and the most used, "single-board" size includes four (4) mounting holes for secure attachment.
+             This means that thingSoC devices can survive tough treatment, and be securely mounted to moving platforms.
+             It also means that packaging for similar sized thingSoC devices are interchangeable.
+             A library of modular 3D package models is in development for standardized 3D printed cases and enclosures. 
             </p>
           </li>
 

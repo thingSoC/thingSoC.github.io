@@ -17,20 +17,115 @@ comments: false
 
 <p>
 <ul class="faq">
-  <li>Q: What is thingSoC firmware?</li>
-  <li>All <b>thingSoC Compliant</b> boards contain an I2C EEPROM Memory device (minimum 32Kbits)
-      which contains data that identifies the board type, it's serial number, pin multiplexing
-      and setup information. THis allows a <b>thingSoC Compliant</b> system to automatically discover
+  <li>Q: What is the thingSoC Firmware Meta Data Store (TFDMS) ? </li>
+  <li>All <b>thingSoC Compliant</b> boards contain a memory/storage device
+      containing data that identifies the board type, serial number, pin multiplexing,
+      and other setup information. This allows a <b>thingSoC Compliant</b> system to automatically discover
       what boards have been installed into a system, and to configure itself properly to communicate with them.
+      <p>
+      thingSoC firmware is referred to as a "data driven architecture", because the memory/storage device
+      contains only pure data, without any executable code that would be specific to a particular processor.
+      The thingSoC Firmware Meta Data Store (TFMDS) contains information that can be used across different hardware platforms, 
+      to support a wide variety of different processor types. 
+      <br>(i.e. low-power, high-speed, different architectures/vendors, etc.)
+      </p>
   </li>
 
-  <li>Q: Is the thingSoC firmware autodiscovery mechanism compatible with the Beaglebone Cape Manager?
+  <li>Q: Is the thingSoC Firmware Meta Data Store (TFDMS) compatible with the Beaglebone Cape Manager?
   </li>
-  <li> Yes. <b>thingSoC Compliant</b> devices implement the thingSoC EEPROM based autodiscovery mechanism,
+  <li> Yes. <b>thingSoC Compliant</b> devices implement the thingSoC thingSoC Firmware Meta Data Store (TFDMS) mechanism,
        which is compatible with the <A href="http://elinux.org/BeagleBone_and_the_3.8_Kernel#Cape_Manager_requirements">Linux 3.8 Kernal 
-       and Device  Tree  Overlays</a>. The thingSoC EEPROM based autodiscovery mechanism also implements additional features,
-       however it is backward compatible with the Linux Beaglebone Cape Manager.
+       and Device  Tree  Overlays</a>. The thingSoC Firmware Meta Data Store (TFDMS) mechanism implements additional features,
+       however it is backward compatible with the Linux/Beaglebone Cape Manager.
   </li>
+
+  <li>Q: What additional features does the  thingSoC Firmware Meta Data Store (TFDMS) support?
+  </li>
+  <li> The thingSoC Firmware Meta Data Store (TFDMS) mechanism can implement additional features by allowing additional 
+       <A href="http://www.patternagents.com/news/2015/01/25/the-blob.html">"BLOBs" (Binary Level Objects)</a> to be included in
+       the memory/storage device after the Beaglebone Cape Manager "BLOB". For example, an 
+       <a href="http://www.intel.com/content/www/us/en/servers/ipmi/information-storage-definition-rev-1-2.html">IPMI FRU</a> 
+       (Intelligent Peripheral Management Interface - Field Replaceable Unit) "BLOB" could be located immediately after the
+       Beaglebone Cape Manager "BLOB", giving access IPMI format data as well.
+       <p>
+        Each <A href="http://www.patternagents.com/news/2015/01/25/the-blob.html">"BLOB"</a> type can be identified by a
+        unique "Magic Word" sequence at the beginning of the <A href="http://www.patternagents.com/news/2015/01/25/the-blob.html">"BLOB"</a>
+        data section. This mechanism allows for complete backward compatibility, while allowing for the support of many new
+        <A href="http://www.patternagents.com/news/2015/01/25/the-blob.html">"BLOB"</a> types within thingSoC. 
+       </p>
+  </li>
+
+  <li>Q: What type of memory device is used for the thingSoC Firmware Meta Data Store (TFDMS)?
+  </li>
+  <li> That choice is up to the implementor, and may include I2C EEPROM, FLASH, NVSRAM, FRAM, or others.
+       For low cost applications with relatively fixed data storage needs, typically EEPROMs of the CAT24C256 types are used.
+       For applications that require a high data update/write to data storage, typically an NVSRAM or battery backed SRAM
+       would be used to avoid write wear leveling issues.
+      <p>
+       In many cases a FLASH based microprocessor may be used as a "smart" memory device, in place of a dumb storage device, like an EEPROM.
+       This allows for "live updates" of meta data, such as the number of hours of operation, or other changing metrics.
+      </p>
+      <p>
+       There are really only three (3) requirements for the memory device used for the thingSoC Firmware Meta Data Store (TFDMS)
+       <ol>
+        <li>It be I2C bus compatible with 3.3V level signaling</li>
+        <li>It be I2C bus addressable from addresses 0x50 to 0x57</li>
+        <li>It appear as an I2C EEPROM (i.e. CAT24C256 compatible) register address model</li>
+       </ol>
+      </p> 
+  </li>
+
+  <li>Q: What is the discovery algorithm for the thingSoC Firmware Meta Data Store (TFDMS)?
+  </li>
+  <li> 
+      <p>(A simplified discovery algorithm in english)
+         <br>
+         (TFDMS structure Magic Word is : 0xAA, 0x55, 0x33, 0xEE)
+      </p>
+      <p>
+         The primary processor on the BASE level will use it's I2C1 Master port to : 
+       <ol>
+        <li>Read four (4) bytes from I2C Address 0x50, Offset 0x0000 and compare to the Magic Word<br>
+            If True, then a valid TFDMS structure exists on the BASE Level</li>
+        <li>Read four (4) bytes from I2C Address 0x51, Offset 0x0000 and compare to the Magic Word<br>
+            If True, then a valid TFDMS structure exists on the TEST Level 1</li>
+        <li>Read four (4) bytes from I2C Address 0x52, Offset 0x0000 and compare to the Magic Word<br>
+            If True, then a valid TFDMS structure exists on the TEST Level 2</li>
+        <li>Read four (4) bytes from I2C Address 0x53, Offset 0x0000 and compare to the Magic Word<br>
+            If True, then a valid TFDMS structure exists on the TEST Level 3</li>
+        <li>Read four (4) bytes from I2C Address 0x54, Offset 0x0000 and compare to the Magic Word<br>
+            If True, then a valid TFDMS structure exists on the EXPA Level 1</li>
+        <li>Read four (4) bytes from I2C Address 0x55, Offset 0x0000 and compare to the Magic Word<br>
+            If True, then a valid TFDMS structure exists on the EXPA Level 2</li>
+        <li>Read four (4) bytes from I2C Address 0x56, Offset 0x0000 and compare to the Magic Word<br>
+            If True, then a valid TFDMS structure exists on the EXPA Level 3</li>
+        <li>Read four (4) bytes from I2C Address 0x57, Offset 0x0000 and compare to the Magic Word<br>
+            If True, then a valid TFDMS structure exists on the EXPA Level 4</li>
+        <li>Read and Parse all valid TFDMS structures for data, as needed</li>
+       </ol>
+      </p>
+      <p>
+       There are many other details covered in the thingSoC firmware specification, such as data integrity
+       and checksum validation, as well as security (authentication keys are encrypted) and authentication.
+      </p>
+  </li>
+
+  <li>Q: Is the thingSoC Firmware Meta Data Store (TFDMS) accessible from the Host as well as the Target?
+  </li>
+  <li> Yes. <b>thingSoC Compliant</b> devices implement both a USB-to-UART Host Bridge as well as a USB-to-I2C Host Bridge.
+   <p>
+   <img src="{{site.url.images}}/projects/thingSoC/thingSoC_host_bd.png" alt="thingSoC Host Bridges" title="thingSoC Host Bridges">
+   </p>
+    <p>
+    This is important because it allows the Integrated Development Enviroment (IDE) running on the Host computer to read
+    the thingSoC Firmware Meta Data Store (TFDMS) as well as the Target processor. For example, this would allow something
+    like the Arduino IDE to automatically determine the type of Target processor board installed, and be able to configure it automatically.
+    </p>
+    <p>
+     
+    </p> 
+  </li>
+
 </ul>
 </p>
 

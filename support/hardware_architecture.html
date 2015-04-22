@@ -144,6 +144,31 @@ such as cell modems, packet radios, Wi-Fi, Bluetooth, and more.
 
 </li>
 
+  <li>Q: What interface standard does thingSoC support?</li>
+  <li>thingSoC sockets support both the basic low speed interface standards like I2C, SPI, and UART, 
+      but also supports higher speed interfaces like USB 2.0/3.0, 10/100/1000, and PCI-E for higher performance IoT devices.
+      The following diagram shows the basic interfaces by group, and color-coded : 
+   <p>
+   <img src="/img/projects/thingSoC/thingSoC_cat.png" alt="thingSoC Socket Connections" title="thingSoC Socket Connections">
+   </p>
+  </li>
+
+  <li>Q: What does a thingSoC BASE device interface look like to a Host Computer, like a PC or Mac?
+  </li>
+  <li> <b>thingSoC Compliant</b> BASE devices implement both a USB-to-UART Host Bridge as well as a USB-to-I2C Host Bridge.
+   <p>
+   <img src="/img/projects/thingSoC/thingSoC_host_bd.png" alt="thingSoC Host Bridges" title="thingSoC Host Bridges">
+   </p>
+    <p>
+    This is important because it allows the Integrated Development Enviroment (IDE) running on the Host computer to read
+    the thingSoC Firmware Meta Data Store (TFDMS) as well as the Target processor. For example, this would allow
+    the software IDE to automatically determine the type of Target processor board installed, and be able to configure it automatically.
+    </p>
+    <p>
+     
+    </p> 
+  </li>
+
 </ul>
 </p>
 

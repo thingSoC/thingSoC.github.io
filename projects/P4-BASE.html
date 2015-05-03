@@ -3,16 +3,16 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang="en" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
-  <title>thingSoC: thingSoC : Open Source Sockets</title>
+  <title>thingSoC: P4-BASE</title>
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width" />
 
   <meta name="robots"                  content="noodp, noydir, noarchive"         />
-  <meta name="description"        content="thingSoC : System on Chip Platform for the Internet of Things"    />
-  <meta name="abstract"              content="thingSoC : System on Chip Platform for the Internet of Things"       />
+  <meta name="description"        content="P4-BASE"    />
+  <meta name="abstract"              content="P4-BASE"       />
   <meta name="classification"  content="electronics, electronics design, design engineering" />
-  <meta name="keywords"              content="thingSoC, arduino, lcd, lcd controller, uno, mega, due, psoc, psoc1, psoc3, psoc4, psoc5, cypress, cpm, cpld, fpga"       />
+  <meta name="keywords"              content="P4-BASE, usb, arduino, uno, mega, due, psoc, psoc1, psoc3, psoc4, psoc5, cypress, cpm, cpld, fpga"       />
 
   <link rel="apple-touch-icon" type="image/png" href="/img/logos/apple-touch-icon-144x144.png" />
   <!--  <link rel="icon" type="image/png" href="http://www.moxon.com/img/logos/apple-touch-icon.png"/>  -->
@@ -123,48 +123,41 @@
     <div class="col maj_major">
       
   
-  <h1>thingSoC : Open Source Sockets</h1>
+  <h1>P4-BASE</h1>
 
   <!-- Add the content from the post/project -->
-  <br>
-<b>thingSoC</b> is an open source standard that defines a
-vendor independent socket system for the creation of new Internet Things;
-it addresses many of the limitations of current product offerings
-and standards, by adding capabilities such as automatic device discovery, 
-device configuration, monitoring, instrumentation, and testing.
-<br><br>
-<b>thingSoC</b> works with many existing standards and Integrated Development Environments (IDEs),
-such as Arduino, rfDuino, Raspberry Pi, Beaglebone, X-Bee, and others;
-but adds features and capabilites that make building new IoT devices much easier.
-<br><br>
-The <b>thingSoC</b> virtual platform definition supports a number of different System-on-Chip platforms and peripherals,
-such as cell modems, packet radios, Wi-Fi, Bluetooth, and more. 
+    <p>
+    <b>thingSoC Reference Design</b><br> 
+    P4-BASE is a an example PSoC 4200 Series, System on Chip, thingSoC BASE Module.
 
-
+  </p>
 <!-- more -->
-<br><br>
-<b>thingSoC</b> provides a vendor neutral and device agnostic socket standard, 
-using a virtual hardware socket definition; so you are not locked in to any proprietary solutions.
-This means that the IoT applications you develop can be easily migrated 
-without having to re-write your software.
 <p>
-<h3>thingSoC Features:</h3>
-<ul>
-  <li>Auto-Discovery of attached peripherals and radios </li>
-  <li>Configuration of attached peripherals </li>
-  <li>Monitoring and Instrumentation of attached peripherals </li>
-  <li>Standard metadata store for configuration and parameter information</li>
-  <li>An Open-Source Hardware Standard (OSHW)</li>
-</ul>
+P4-BASE includes a dual channel USB to Serial interface, along with an I2C EEPROM (internal) for storing the board configuration information,
+and status LED's. The P4-BASE also includes VIN, USB, and Battery powered capabilities, with a single cell Li-Po battery charger.
+The battery can be charged from either VIN (i.e. 12 volt wall wart) or the USB input.
+<p> 
+  <h3>P4-BASE Features :</h3>
+  <ul>
+    <li>Dual Channel USB to Serial interface - CY7C65215</li>
+    <li>PSoC-4200 Series : Programmable System-on-Chip - CY8C42453</li>
+    <li>Single Cell Lithium battery charger (4.2V) - MCP73831</li>
+    <li>Status LED's : Four (4)</li>
+    <li>thingSoC BB-40-Double Form Factor</li>
+  </ul>
+</p>
+<p> 
+</p>
 
 <p>
  <img src="/img/projects/thingSoC/open_source_hardware_logo.png"alt="Open Source Hardware" title="Open Source Hardware">
 </p>     
+  <p>
+   <b>thingSoC Reference Designs</b> are example thingSoC implementations that implement
+   various reference and testing circuits for demonstrating the use of the thingSoC libraries.
+   These reference designs can serve as starting templates for user designs.
+  </p>
 
-<p>
-If you are interested in participating in the <b>thingSoC</b> community development,
-please join our mailing list (it is low frequency - about once per month).
-</p>
 
 
 
@@ -172,49 +165,49 @@ please join our mailing list (it is low frequency - about once per month).
     </div>
     <div class="col maj_minor">
       
-  <h2>thingSoC</h2>
-  <img src="/img/projects/thingSoC/thingSoC_model.png" alt="thingSoC Model" title="thingSoC Model"/>
+  <h2>P4-BASE</h2>
+  <img src="/img/projects/P4-BASE/P4-BASE_model.png" alt="P4-BASE Model" title="P4-BASE Model"/>
   <br>
   
 
 
-  <h2>Tweet about thingSoC</h2>
+  <h2>Tweet about P4-BASE</h2>
     <center>
-    <a href="https://twitter.com/intent/tweet?button_hashtag=thingSoC" class="twitter-hashtag-button" data-lang="en" data-related="PatternAgents">Tweet #thingSoC</a>
+    <a href="https://twitter.com/intent/tweet?button_hashtag=P4-BASE" class="twitter-hashtag-button" data-lang="en" data-related="PatternAgents">Tweet #P4-BASE</a>
 	</center>
-  <h2>thingSoC Repository</h2>
+  <h2>P4-BASE Repository</h2>
   <center>
   <table border="0">
   <tr>
-	<td><a href="https://github.com/thingSoC/thingSoC"><img class="img" src="/img/logos/github_repo.png" width="168" height="38" alt="thingSoC Github" title="thingSoC Github"/></a></td>
+	<td><a href="https://github.com/thingSoC/P4-BASE"><img class="img" src="/img/logos/github_repo.png" width="168" height="38" alt="P4-BASE Github" title="P4-BASE Github"/></a></td>
   </tr>
   <tr>
-	<td><a href="https://github.com/thingSoC/thingSoC/wiki"><img class="img" src="/img/logos/project_wiki.png"  width="168" height="38" alt="thingSoC Wiki" title="thingSoC Wiki"/></a></td>
+	<td><a href="https://github.com/thingSoC/P4-BASE/wiki"><img class="img" src="/img/logos/project_wiki.png"  width="168" height="38" alt="P4-BASE Wiki" title="P4-BASE Wiki"/></a></td>
   </tr>
   <tr>
-	<td><a href="https://github.com/thingSoC/thingSoC/issues"><img class="img" src="/img/logos/bug_tracker.png"  width="168" height="38" alt="thingSoC Issues" title="thingSoC Issues"/></a></td>
+	<td><a href="https://github.com/thingSoC/P4-BASE/issues"><img class="img" src="/img/logos/bug_tracker.png"  width="168" height="38" alt="P4-BASE Issues" title="P4-BASE Issues"/></a></td>
   </tr>
   </table>
   </center>
-  <h2>thingSoC Downloads</h2>
+  <h2>P4-BASE Downloads</h2>
     <center>
 	<table border="0">
 	<tr>
-		<td><a href="https://github.com/thingSoC/thingSoC/zipball/master"><img class="img" src="/img/logos/zip_archive.png" width="168" height="38" alt="thingSoC ZIPball" title="thingSoC ZIPball"/></a></td>
+		<td><a href="https://github.com/thingSoC/P4-BASE/zipball/master"><img class="img" src="/img/logos/zip_archive.png" width="168" height="38" alt="P4-BASE ZIPball" title="P4-BASE ZIPball"/></a></td>
 	</tr>
 	<tr>
-		<td><a href="https://github.com/thingSoC/thingSoC/tarball/master"><img class="img" src="/img/logos/tar_archive.png" width="168" height="38" alt="thingSoC TARball" title="thingSoC TARball"/></a></td>
+		<td><a href="https://github.com/thingSoC/P4-BASE/tarball/master"><img class="img" src="/img/logos/tar_archive.png" width="168" height="38" alt="P4-BASE TARball" title="P4-BASE TARball"/></a></td>
 	</tr>
 	</table>
 	</center>
-  <h2>thingSoC Images</h2>
+  <h2>P4-BASE Images</h2>
     <center>
 	<table border="0">
 	<tr>
-		<td><a href="/img/projects/thingSoC/thingSoC_top.png"><img class="illo" src="/img/projects/thingSoC/thingSoC_top.png" alt="thingSoC Top View" title="thingSoC Top View"/></a></td>
+		<td><a href="/img/projects/P4-BASE/P4-BASE_top.png"><img class="illo" src="/img/projects/P4-BASE/P4-BASE_top.png" alt="P4-BASE Top View" title="P4-BASE Top View"/></a></td>
 	</tr>
 	<tr>
-		<td><a href="/img/projects/thingSoC/thingSoC_bot.png"><img class="illo" src="/img/projects/thingSoC/thingSoC_bot.png" alt="thingSoC Bottom View" title="thingSoC Bottom View"/></a></td>
+		<td><a href="/img/projects/P4-BASE/P4-BASE_bot.png"><img class="illo" src="/img/projects/P4-BASE/P4-BASE_bot.png" alt="P4-BASE Bottom View" title="P4-BASE Bottom View"/></a></td>
 	</tr>
 	</table>
 	</center>
@@ -223,21 +216,21 @@ please join our mailing list (it is low frequency - about once per month).
 
 <!-- place "licensing: true" in the YAML front matter to enable Licensing in that page -->
 
-	<h2>thingSoC Licensing</h2>
+	<h2>P4-BASE Licensing</h2>
 
 <!-- place "cc_by_sa: true" in the YAML front matter to enable cc_by_sa licensing for that page -->
 	
-
-<!-- place "cc_by_nc_sa: true" in the YAML front matter to enable cc_by_nc_sa licensing for that page -->
-	
 		<table border="0">
 		<tr>
-			<td align="center"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img width="88" height="31" alt="Creative Commons License" src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"></a></td>
+			<td align="center"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img width="88" height="31" alt="Creative Commons License" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a></td>
         </tr>
 		<tr>
-		<td>The thingSoC Project by PatternAgents is available and licensed under a Creative Commons CC BY-NC-SA 4.0 International License. </td>
+			<td>The P4-BASE Project by PatternAgents is available and licensed under a Creative Commons Attribution-ShareAlike 4.0 International License</td>
 		</tr>
 		</table>
+	
+
+<!-- place "cc_by_nc_sa: true" in the YAML front matter to enable cc_by_nc_sa licensing for that page -->
 	
 
 

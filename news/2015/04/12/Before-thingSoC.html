@@ -3,16 +3,16 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang="en" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
-  <title>thingSoC: PROTO-EXPA</title>
+  <title>thingSoC: Before thingSoC...</title>
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width" />
 
-  <meta name="robots"                  content="noodp, noydir, noarchive"         />
-  <meta name="description"        content="PROTO-EXPA"    />
-  <meta name="abstract"              content="PROTO-EXPA"       />
+  <meta name="robots"          content="index, follow, noodp, noydir" />
+  <meta name="description"     content="thingSoC : System on Chip Platform for the Internet of Things" />
+  <meta name="abstract"        content="System on Chip Platform for the Internet of Things" />
   <meta name="classification"  content="electronics, electronics design, design engineering" />
-  <meta name="keywords"              content="PROTO-EXPA, usb, arduino, uno, mega, due, psoc, psoc1, psoc3, psoc4, psoc5, cypress, cpm, cpld, fpga"       />
+  <meta name="keywords"        content="electronics, electronics design, design engineering, open source software, open source hardware, OSHW" />
 
   <link rel="apple-touch-icon" type="image/png" href="/img/logos/apple-touch-icon-144x144.png" />
   <!--  <link rel="icon" type="image/png" href="http://www.moxon.com/img/logos/apple-touch-icon.png"/>  -->
@@ -52,20 +52,6 @@
 
 <body class="">
  
-
-<!-- Add the standard layout -->
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -112,135 +98,156 @@
 
 
   
-  
-
 
 <main class="row">
   
   <div class="col major">
     
-  <div class="row">
-    <div class="col maj_major">
-      
   
-  <h1>PROTO-EXPA</h1>
+  <article role="article">
+    <header>
+      
+        <h1 class="entry-title">Before thingSoC...</h1>
+      
+      
+        <p class="meta">
+          
+        </p>
+      
+    </header>
+    <div class="entry-content">
+  
+  
+  
 
-  <!-- Add the content from the post/project -->
-    <p>
-    <b>thingSoC Reference Design</b><br>
-    PROTO-EXPA is an example Prototyping Board<br>
-  </p>
+<blockquote>
+	<p>The only way to deal with an unfree world is to become so absolutely free that your very existance is an act of rebellion.</p>
+	<p>&mdash;Albert Camus</p>
+</blockquote>
+
+<p>In order to really understand why the <b>thingSoC</b> platform is needed, 
+you first need a little background on the current state of embedded product development tools.  
+</p>
 <!-- more -->
+<h3>What is a Small Form Factor? </h3>
 <p>
-PROTO-EXPA includes a simple I2C EEPROM for storing the board configuration information,
-and a gridded protyping area with break-outs for all of the thingSoC Socket Signals.
-<p> 
-  <h3>PROTO-EXPA Features :</h3>
-  <ul>
-    <li>I2C Configuration EEPROM</li>
-    <li>Gridded Prototyping Area</li>
-    <li>thingSoC BB-40-Double Form Factor</li>
-  </ul>
+  Small Form Factor lacks a normative definition and is consequently open to (mis)interpretation and/or misuse.
+  It historically referred to any (PC) computer format that was smaller than a traditional tower computer,
+  and was applied to any smaller computer, such as shoebox size (Shuttle), small cubes, net-tops and book sized computers.
 </p>
-<p> 
-  <h3>Reference Design Status :</h3>
-  <ul>
-    <li>Untested PCB Layout, <a href="https://github.com/thingSoC/PROTO-TSOC-BB-S-40/blob/master/PROTO-TSOC-BB-S-40/hardware/PROTO-TSOC-BB-S-40_SCH.pdf?raw=true">example schematic</a> reference only.</li>
-  </ul>
+<p>
+ For the purposes of discussion today, we will define a Small Form Factor as,
+ any computing device, or circuit board, that is smaller than the Standard ATX motherboard,
+ meaning smaller than 12.00 by 9.65 inches (305mm by 244mm).
 </p>
+<h3>Trends in Small Form Factors for Embedded Devices</h3>
+<p>
+  There are two primary trends in Small Form Factor adoption today, and those break down
+  along the lines of quasi-Proprietary standards versus Open Source Hardware standards.
+  Companies like Texas Instruments have adopted quasi-Proprietary standards, such as the 
+  <a href="http://www.ti.com/launchpad/">TI LaunchPad</a> and the 
+  <a href="http://beagleboard.org/">BeagleBoard</a>, 
+  which are used primarily to market and support their proprietary microprocessor/microcontroller products. 
+  While other companies like Atmel, Freescale, and Cypress Semiconductor have embraced
+  Open Source Hardware platforms such as the
+  <a href="http://arduino.cc/">Arduino</a> family of small form factor boards. 
+  The <a href="http://www.raspberrypi.org/">Raspberry Pi</a> was developed in the UK by the Raspberry Pi Foundation
+  with the intention of providing a low cost platform for teaching basic computer science in schools.
+  Other vendors like NXP, have embraced a more breadboard friendly Dual-Inline-Package (DIP) format,
+  and have been having great success with their "mbed" format for small embedded processors.
+</p>
+<ul class="illo-list">
+  <li>
+    <span>
+       <a href="http://www.ti.com/launchpad/"><img class="illo" src="http://www.patternagents.com/img/news/sff/launchpad.png" alt="TI LaunchPad" title="TI LaunchPad"/></a>
+    </span>
+  </li>
+  <li>
+    <span>
+       <a href="http://beagleboard.org/"><img class="illo" src="http://www.patternagents.com/img/news/sff/beaglebone.png" alt="TI BeagleBoard" title="TI BeagleBoard"/></a>
+    </span>
+  </li>
+</ul>
+
+<ul class="illo-list">
+  <li>
+    <span>
+      <a href="http://www.raspberrypi.org/"><img class="illo" src="http://www.patternagents.com/img/news/sff/rasppi.png" alt="RaspberryPI" title="RaspberryPI"/></a>
+    </span>
+  </li>
+  <li>
+    <span>
+      <a href="http://www.arduino.cc/"><img class="illo" src="http://www.patternagents.com/img/news/sff/uno.png" alt="Arduino Uno" title="Arduino Uno"/></a>
+    </span>
+  </li>
+</ul>
+
+<ul class="illo-list">
+  <li>
+    <span>
+      <a href="http://www.freescale.com/frdm-kl25z/"><img class="illo" src="http://www.patternagents.com/img/news/sff/freedom.png" alt="Freescale Freedom" title="Freescale Freedom"/></a>
+    </span>
+  </li>
+  <li>
+    <span>
+      <a href="http://www.cypress.com/?rID=77780"><img class="illo" src="http://www.patternagents.com/img/news/sff/p4pioneer.png" alt="Cypress Pioneer" title="Cypress Pioneer"/></a>
+    </span>
+  </li>
+</ul>
+
+<ul class="illo-list">
+  <li>
+    <span>
+       <a href="http://mbed.org/handbook/mbed-Hardware"><img class="illo" src="http://www.patternagents.com/img/news/sff/mbed.png" alt="NXP mBed" title="NXP mBed"/></a>
+    </span>
+  </li>
+  <li>
+    <span>
+       <a href="http://www.st.com/stm32-discovery/"><img class="illo" src="http://www.patternagents.com/img/news/sff/stm32discovery.png" alt="ST Discovery" title="ST Discovery"/></a>
+    </span>
+  </li>
+</ul>
+
+<h3>Popular Small Form Factors for Embedded Computing</h3> 
+<ul>
+  <li>BeagleBoard</li>
+  <li>LaunchPad</li>
+  <li>Arduino</li>
+  <li>Raspberry Pi</li>
+  <li>Freescale Freedon</li>
+  <li>Cypress Pioneer</li>
+  <li>NXP mbed</li>
+  <li>STM32 Discovery</li>
+</ul>
 
 <p>
- <img src="/img/projects/thingSoC/open_source_hardware_logo.png"alt="Open Source Hardware" title="Open Source Hardware">
-</p>     
-   <b>thingSoC Reference Designs</b> are example thingSoC implementations that implement
-   various reference and testing circuits for demonstrating the use of the thingSoC libraries.
-   These reference designs can serve as starting templates for user designs.
-  </p>
+Each of these <b>Small Form Factors</b> are popular for use with their companion microcontroller/microprocessor family brands,
+and each have different stenghths and weaknesses. Between the design work done by <a href="http://www.moxondesign.com/">Moxon Design</a>
+and <a href="http://www.patternagents.com/">PatternAgents</a> over the past twenty (20) years, we've used all of these platforms.
+In the next article, we'll talk more about those strengths and weaknesses, and why <a href="https://github.com/thingSoC/">thingSoC</a>
+needed to be built.
+</p>
 
 
+</div>
+    <footer>
+      <p class="meta">
+        April 12, 2015
+      </p>
+      <p class="meta">
+        
+          <a class="previous" href="/projects/PROTO-EXPA.html" title="Previous Post: PROTO-EXPA">&laquo; PROTO-EXPA</a>
+        
+        
+          <a class="next" href="/news/2015/04/12/thingSoC-why.html" title="Next Post: Why thingSoC ?">Why thingSoC ? &raquo;</a>
+        
+      </p>
+    </footer>
+  </article>
 
-
-
-    </div>
-    <div class="col maj_minor">
-      
-  <h2>PROTO-EXPA</h2>
-  <img src="/img/projects/PROTO-EXPA/PROTO-EXPA_model.png" alt="PROTO-EXPA Model" title="PROTO-EXPA Model"/>
-  <br>
-  
-
-
-  <h2>Tweet about PROTO-EXPA</h2>
-    <center>
-    <a href="https://twitter.com/intent/tweet?button_hashtag=PROTO-EXPA" class="twitter-hashtag-button" data-lang="en" data-related="PatternAgents">Tweet #PROTO-EXPA</a>
-	</center>
-  <h2>PROTO-EXPA Repository</h2>
-  <center>
-  <table border="0">
-  <tr>
-	<td><a href="https://github.com/thingSoC/PROTO-EXPA"><img class="img" src="/img/logos/github_repo.png" width="168" height="38" alt="PROTO-EXPA Github" title="PROTO-EXPA Github"/></a></td>
-  </tr>
-  <tr>
-	<td><a href="https://github.com/thingSoC/PROTO-EXPA/wiki"><img class="img" src="/img/logos/project_wiki.png"  width="168" height="38" alt="PROTO-EXPA Wiki" title="PROTO-EXPA Wiki"/></a></td>
-  </tr>
-  <tr>
-	<td><a href="https://github.com/thingSoC/PROTO-EXPA/issues"><img class="img" src="/img/logos/bug_tracker.png"  width="168" height="38" alt="PROTO-EXPA Issues" title="PROTO-EXPA Issues"/></a></td>
-  </tr>
-  </table>
-  </center>
-  <h2>PROTO-EXPA Downloads</h2>
-    <center>
-	<table border="0">
-	<tr>
-		<td><a href="https://github.com/thingSoC/PROTO-EXPA/zipball/master"><img class="img" src="/img/logos/zip_archive.png" width="168" height="38" alt="PROTO-EXPA ZIPball" title="PROTO-EXPA ZIPball"/></a></td>
-	</tr>
-	<tr>
-		<td><a href="https://github.com/thingSoC/PROTO-EXPA/tarball/master"><img class="img" src="/img/logos/tar_archive.png" width="168" height="38" alt="PROTO-EXPA TARball" title="PROTO-EXPA TARball"/></a></td>
-	</tr>
-	</table>
-	</center>
-  <h2>PROTO-EXPA Images</h2>
-    <center>
-	<table border="0">
-	<tr>
-		<td><a href="/img/projects/PROTO-EXPA/PROTO-EXPA_top.png"><img class="illo" src="/img/projects/PROTO-EXPA/PROTO-EXPA_top.png" alt="PROTO-EXPA Top View" title="PROTO-EXPA Top View"/></a></td>
-	</tr>
-	<tr>
-		<td><a href="/img/projects/PROTO-EXPA/PROTO-EXPA_bot.png"><img class="illo" src="/img/projects/PROTO-EXPA/PROTO-EXPA_bot.png" alt="PROTO-EXPA Bottom View" title="PROTO-EXPA Bottom View"/></a></td>
-	</tr>
-	</table>
-	</center>
-   <!-- License terms -->
-  
-
-<!-- place "licensing: true" in the YAML front matter to enable Licensing in that page -->
-
-	<h2>PROTO-EXPA Licensing</h2>
-
-<!-- place "cc_by_sa: true" in the YAML front matter to enable cc_by_sa licensing for that page -->
-	
-		<table border="0">
-		<tr>
-			<td align="center"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img width="88" height="31" alt="Creative Commons License" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a></td>
-        </tr>
-		<tr>
-			<td>The PROTO-EXPA Project by PatternAgents is available and licensed under a Creative Commons Attribution-ShareAlike 4.0 International License</td>
-		</tr>
-		</table>
-	
-
-<!-- place "cc_by_nc_sa: true" in the YAML front matter to enable cc_by_nc_sa licensing for that page -->
-	
-
-
-
-
-    </div>
-  </div>
 
   </div>
   <div class="col minor">
-    
     
   <h2>Featured Projects</h2>
   <ul class="post-list">
@@ -274,7 +281,6 @@ and a gridded protyping area with break-outs for all of the thingSoC Socket Sign
     </li>
   
 </ul>
-
 
 
   </div>
@@ -399,40 +405,6 @@ and a gridded protyping area with break-outs for all of the thingSoC Socket Sign
 
 
   
-  
-  
-
-<!-- twitter widget script -->
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
-  
-
-<!-- pinterest widget script -->
-<script type="text/javascript">
-(function(d){
-  var f = d.getElementsByTagName('SCRIPT')[0], p = d.createElement('SCRIPT');
-  p.type = 'text/javascript';
-  p.async = true;
-  p.setAttribute('data-pin-color', 'red');
-  p.setAttribute('data-pin-hover', 'true');
-  p.src = '//assets.pinterest.com/js/pinit.js';
-  f.parentNode.insertBefore(p, f);
-}(document));
-</script>
-  
-
-<!-- disqus widget script -->
-<script type="text/javascript">
-  var disqus_shortname = 'patternagents';
-  (function() {
-   var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-   dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-  })();
-</script>
-
-
-
 
 
 

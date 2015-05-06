@@ -1,0 +1,481 @@
+
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <title>thingSoC: Why thingSoC ?</title>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+
+  <meta name="robots"          content="index, follow, noodp, noydir" />
+  <meta name="description"     content="thingSoC : System on Chip Platform for the Internet of Things" />
+  <meta name="abstract"        content="System on Chip Platform for the Internet of Things" />
+  <meta name="classification"  content="electronics, electronics design, design engineering" />
+  <meta name="keywords"        content="electronics, electronics design, design engineering, open source software, open source hardware, OSHW" />
+
+  <link rel="apple-touch-icon" type="image/png" href="/img/logos/apple-touch-icon-144x144.png" />
+  <!--  <link rel="icon" type="image/png" href="http://www.moxon.com/img/logos/apple-touch-icon.png"/>  -->
+
+  <!-- Ubuntu for logo -->
+  <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700' rel='stylesheet' type='text/css'>
+
+<!--[if lte IE 8]>
+    <link rel="stylesheet" href="/css/app-old-ie.css">
+<![endif]-->
+<!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="/css/app.css">
+<!--<![endif]-->
+  
+<!-- Begin MailChimp Signup Form -->
+ <link href="//cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
+ <style type="text/css">
+	#mc_embed_signup{position:absolute; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,.8); display:block; z-index:10000; }
+	#mc_embed_signup form{position:fixed; top:5%; left:5%; right:5%; bottom:5%; width:60%; font:normal 100% Helvetica,Arial,sans-serif; font-size:14px; border-radius:4px; border:3px; padding:10px; background-color:#eee; color:#000; text-align:left;max-height:800px;overflow-y:auto;overflow-x:hidden;}
+	#mc_embed_signup a.mc_embed_close{background:transparent url(http://downloads.mailchimp.com/img/closebox.png) no-repeat; display:block; height:30px; width:30px; text-indent:-999em; position:absolute; top:10px; right:10px; display:none; }
+ </style>
+
+<!-- Begin Google Analytics -->
+ <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-38592761-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  </script>
+
+</head>
+
+<body class="">
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header>
+  <div class="head-container">
+	  <div class="col">
+	    <a href="/">
+	      <h1>thingSoC <span class="tag-line">Open Source Sockets for the Internet of Things</span></h1>
+	    </a>
+	  </div>
+  </div>
+</header>
+
+
+
+<div class="row"><div class="col">
+<nav class="toggle">
+  <h2><a href="#" title="(click to expand)"><span class="menu-icon">&#9776;</span> Go to:</a></h2>
+  <ul>
+    <li class="nav-projects"><a href="/projects/index.html">Projects</a></li>
+    <li class="nav-support"><a href="/support/index.html">Support</a></li>
+    <li class="nav-about"><a href="/about/index.html">About</a></li>
+    <li class="nav-news"><a href="/news/index.html">News</a></li>
+  </ul>
+</nav>
+</div></div>
+
+
+  
+
+<main class="row">
+  
+  <div class="col major">
+    
+  
+  <article role="article">
+    <header>
+      
+        <h1 class="entry-title">Why thingSoC ?</h1>
+      
+      
+        <p class="meta">
+          
+        </p>
+      
+    </header>
+    <div class="entry-content">
+  
+  
+  
+
+<blockquote>
+	<p>If I have seen further than others, it is by standing on the shoulders of giants.</p>
+	<p>&mdash;Issac Newton</p>
+</blockquote>
+
+<p>Why <b>thingSoC</b>? What problems does it solve? <br>What value does <b>thingSoC</b> provide? 
+</p>
+<!-- more -->
+<p>
+There are already a number of popular and well-supported development platforms,
+like Arduino, Beaglebone, Raspberry Pi, and others, so why is thingSoC needed?
+While we work with and support all those platforms,
+each has a particular set of limitations, which thingSoC is designed to address.
+</p>
+
+<h3>New Needs for the "Internet of Things"</h3>
+<p>
+     thingSoC is very well suited for developing new "Internet Things", because :
+      <p>
+       <ul class="faq">
+	  <li>thingSoC is designed to automatically identify and configure installed options and peripherals</li>
+          <li><p>
+              thingSoC devices are very user friendly. They can detect what options and peripherals are installed
+              in a system and how to communicate with them. Similar to how "USB" works, and how USB knows the difference
+              between a USB Memory Stick and a USB Camera, for example.
+              </p>
+              <p>This capability alone yields a great user experience, as users will no longer have to deal with configuration and setup,
+                 or wondering if two devices are compatible. The thingSoC autodiscovery mechanism allows the system to discover that information.
+                 That will tranform the customer support experience for new devices, break-out-boards, etc.
+              </p>
+              <p>
+              <b>thingSoC Compliant</b> devices implement the thingSoC EEPROM based autodiscovery mechanism,
+              which is compatible with the <A href="http://elinux.org/BeagleBone_and_the_3.8_Kernel#Cape_Manager_requirements">Linux 3.8 Kernal 
+              and Device  Tree  Overlays</a>. The thingSoC EEPROM based autodiscovery mechanism also implements additional features,
+              however it is backward compatible with the Linux Device Tree Overlay Manager.
+              </p>
+          </li>
+
+	  <li>thingSoC is designed to support RF wireless interfaces from the "ground up"</li>
+          <li>
+           <p>
+            There are designated "RF zones" in the thingSoC specification for supporting on-board antenna and RF interfaces.
+            This is very important for creating a modular IoT platform that yields the maximum radio range with minimum RF interference.
+           </p>
+           <p>
+            We run into this all the time with the Arduino, the Beaglebone and most others - 
+            the basic design of those platforms include ground and power planes that limit 
+            the RF performance of expansion cards plugged into them. thingSoC has designated "RF zones"
+            for the placement of on-board antenna and RF interfaces. thingSoC is designed to help you get great RF range, 
+            as well as limiting radiated RF interference, by using proven design techniques right from the beginning.
+           </p>
+           </li>
+
+          <li>thingSoC is designed for low power and battery operation</li>
+          <li>
+            <p>thingSoC includes dedicated pins for battery power, 
+               as well as "shutdown/sleep" and "wakeup" pins 
+               for integrated battery management and control functions.
+               thingSoC takes a "whole system" approach to reducing power and maximizing battery life.
+            </p>
+          </li>
+
+	  <li>thingSoC is designed for solar, wind, thermal, and other alternative charging schemes</li>
+          <li>thingSoC includes dedicated pins for external power inputs, with prescribed input protections.<br>
+              It also includes support for the new USB Type-C charging and wall power specification. 
+          </li>
+
+	  <li>thingSoC is designed to support higher speed interfaces like USB 3.0 and 10/100/1000 Ethernet</li>
+          <li>
+            <p>
+              While it may seem counter-intuitive at first, using higher speed interfaces can actually reduce overall system power use.
+              Older, slower interfaces need to stay "Awake" longer to transfer the same amount of data as a faster interface, like SuperSpeed USB.
+              While USB 3.0 (SuperSpeed) may use more power during the actual transfer, 
+              since the transfer time is so much shorter, the overall power used for the same data transfer is less than USB 2.0 (High-Speed).
+            </p>
+          </li>
+
+	  <li>thingSoC is designed with a secure mounting system for high vibration applications</li>
+          <li>
+            <p>
+             Many current platforms lack a standardized physical mounting standard, which means they are not
+             suitable for high vibration applications like robots, drones, ebikes, and other moving devices.
+            </p>
+            <p>
+             Even our smallest board size, the "half-board" includes two (2) mounting holes for secure attachment,
+             and the most used, "single-board" size includes four (4) mounting holes for secure attachment.
+             This means that thingSoC devices can survive tough treatment, and be securely mounted to moving platforms.
+             It also means that packaging for similar sized thingSoC devices are interchangeable.
+             A library of modular 3D package models is in development for standardized 3D printed cases and enclosures. 
+            </p>
+          </li>
+
+          <li>thingSoC is designed to support internal testing, monitoring, and data logging operations</li>
+          <li>
+            <p>Let's face it, for many systems and products out there - proving correct operation and self-testing is an after-thought,
+               if it has been addressed at all. We've seen many interesting projects fail due to the lack of a well thought out testing strategy.
+            </p>
+            <p>thingSoC TEST level modules eliminate common test lead/test jumper wiring and configuration problems
+		 by instrumenting standardized busses on known pins that can be easily probed and monitored.
+		 The thingSoC "TEST" level yields modular test and measurement platforms that are easily integrated within a design
+		 for remote monitoring and data logging operations.
+            </p>
+            <p>
+                 Building a new IoT widget and launching it on Kickstarter, CrowdSupply, Indiegogo, or elsewhere?<br>
+                 That's great - now, how are you going to do your initial product testing and quality assurance?<br>
+                 Wouldn't it be great to be able to just plug in a modular "TEST" board that can do production
+                 programming, and testing of your first production builds inexpensively? <br>
+                 thingSoC supports Zero-Insertion-Force (ZIF) and Spring type pins(Pogo-Pins)
+                 for making all of those test jigs that you'll be needing for production testing.<br>
+            </p>
+          </li>
+
+	  <li>thingSoC is designed to be interoperable with leading IoT products</li>
+          <li>
+            <p>
+             thingSoC is a completely open source standard, not tied to any proprietary vendor implementation, 
+             CPU architecture, or IDE. thingSoC is designed to be backward compatible with 
+             Arduino, rfDuino, Raspberry Pi, Beaglebone, X-Bee, and others.
+            </p>
+            <p>
+             The size of the thingSoC modules have been chosen specifically to fit within an Arduino Shield,
+             a Beaglebone Cape, a Raspberry PiPlate, as well as several other popular formats. This means that
+             IoT devices designed for thingSoC, will also be able to be used with other platforms, using simple adaptors. 
+            </p>
+          </li>
+       </ul>
+      </p>
+</p>
+
+<p>
+  <img src="/img/projects/thingSoC/tsoc-singles-smd.png"alt="thingSoC single size" title="thingSoC single size">
+</p>     
+
+<h3><b>thingSoC</b> Capabilities</h3>
+<p>
+           thingSoC includes several capabilities that the other small form factors do not support :
+      <p>
+	<ol>
+          <li>Production Ready, embeddable hardware platforms that are easy to use </li>
+	  <li>Standardized auto-discovery firmware system that identifies what boards are installed</li>
+          <li>"RF Zones" specification for supporting on-board antenna and RF interfaces</li>
+	  <li>Built in support for battery, solar, and very low power applications</li>
+	  <li>High Speed Interface support, including SuperSpeed USB 3.0, PCI-E, and 10/100 Ethernet </li>
+	  <li>Standardized Mounting System, designed for high vibration platforms (robots, ebikes, drones)</li>
+          <li>Standardized testing, instrumentation, monitoring, and data recording interfaces</li>
+	  <li>Interchangeable platform for break-out-boards, sensors, radios, and other devices</li>
+      </ol>
+      </p>
+
+
+
+</p>
+
+
+<h3>IoT and Maker Space Fragmentation</h3>
+<p>
+Many companies and independent design houses  have embraced the various <a href="http://developer.mbed.org/media/uploads/franzachatz/screen_shot_2011-01-02_at_15.16.46.png">"GumStick"</a> 
+form factors as low cost delivery vehicles for their microprocessor boards and/or microprocessor based IP.
+</p>
+<p> 
+While that has served well in lowering the cost of entry for many, the incompatible sizes, incompatible pin assignments,
+incompatible signal levels and many other proprietary differences have made most of these products unable
+to connect to one other, or utilize peripherals and radios designed for the other(s).
+In our opinion, this fragmentation has been limiting the market as a whole, 
+while slowing community development efforts on common application and common driver software.
+</p>
+<p>
+<b>thingSoC</b> has been designed to address many of the issues and limitations with current IoT development platforms.
+It is a community sponsored, open source project, with no fees or licensing costs.
+</p>
+
+</div>
+    <footer>
+      <p class="meta">
+        April 13, 2015
+      </p>
+      <p class="meta">
+        
+          <a class="previous" href="/news/2015/04/12/Before-thingSoC.html" title="Previous Post: Before thingSoC...">&laquo; Before thingSoC...</a>
+        
+        
+          <a class="next" href="/news/2015/04/14/Get-thingSoC.html" title="Next Post: Get thingSoC !">Get thingSoC ! &raquo;</a>
+        
+      </p>
+    </footer>
+  </article>
+
+
+  </div>
+  <div class="col minor">
+    
+  <h2>Featured Projects</h2>
+  <ul class="post-list">
+  
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        <li>
+          <a href="/projects/thingSoC.html">thingSoC : Open Source Sockets</a>
+        </li>
+      
+    
+  
+</ul>
+  <h2>Latest News</h2>
+  <ul class="post-list">
+  
+    <li>
+      <a href="/news/2015/04/14/Get-thingSoC.html">Get thingSoC !</a>
+    </li>
+  
+    <li>
+      <a href="/news/2015/04/13/Why-thingSoC.html">Why thingSoC ?</a>
+    </li>
+  
+    <li>
+      <a href="/news/2015/04/12/Before-thingSoC.html">Before thingSoC...</a>
+    </li>
+  
+</ul>
+
+
+  </div>
+
+</main>
+   
+
+<form id="signup"
+      action="http://patternagents.us5.list-manage.com/subscribe/post?u=d606135278a28bf2e4504c9ef&id=34ecdcaa40"
+      method="post"
+      id="mc-embedded-subscribe-form"
+      name="mc-embedded-subscribe-form"
+      class="validate"
+      target="_blank"
+      novalidate>
+  <div class="row"><div class="col">
+    
+  <div class="row collapse">
+      <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+      <button class="postfix" type="submit">Subscribe</button>
+  </div>
+  </div></div>
+</form>
+   <!-- Add the discussion widget -->
+   
+
+<!-- discus panel -->
+<!-- place "comments: true" in the YAML front matter to enable comments in that page -->
+
+<div class="panel" id="disqus_thread"></div>
+
+   
+
+<footer>
+  <div class="row">
+    <div class="col half">
+      <div class="row">
+        <div class="col quarter">
+          <ul class="social-icons">
+            <li><a href="https://twitter.com/PatternAgents" title="twitter"><img src="/img/logos/white/twitter.png"></a></li>
+            <li><a href="https://github.com/thingsoc" title="github"><img src="/img/logos/white/github.png"></a></li>
+            <li><a href="http://www.linkedin.com/company/3092259" title="linkedin"><img src="/img/logos/white/linkedin.png"></a></li>
+            <li><a href="https://www.facebook.com/pages/Patternagents-LLC/363283563788946?hc_location=stream" title="facebook"><img src="/img/logos/white/facebook.png"></a></li>
+          </ul>
+        </div>
+        <div class="col quarter">
+            <h2><a href="/contact/index.html">Contact</a></h2>
+            <ul>
+              <li><a href="/contact/press.html">Press</a></li>
+              <li><a href="/contact/investors.html">Investors</a></li>
+              <li><a href="/licensing/index.html">Licensing</a></li>
+              <li><a href="/contact/credits.html">Credits</a></li>
+            </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col half">
+      <div class="row">
+        <div class="col quarter">
+          <h2><a href="/about/index.html">About Us</a></h2>
+          <ul>
+            <li><a href="/about/manufacturers.html">For Manufacturers</a></li>
+            <li><a href="/about/distributors.html">For Distributors</a></li>
+            <li><a href="/about/representatives.html">For Representatives</a></li>
+          </ul>
+        </div>
+        <div class="col quarter">
+          <h2><a href="/policies/index.html">Policies</a></h2>
+          <ul>
+            <li><a href="/policies/shipping.html">Shipping</a></li>
+            <li><a href="/policies/returns.html">Returns</a></li>
+            <li><a href="/policies/legal/index.html">Legal</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row unimportant">
+    <div class="col quarter"><p>Copyright &copy; 2010-2015 PatternAgents, LLC</p></div>
+  </div>
+</footer>
+
+<script src="/js/lib/jquery.js"></script>
+
+
+<!-- disqus widget script -->
+<script type="text/javascript">
+  var disqus_shortname = 'patternagents';
+  (function() {
+   var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+   dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<!-- pinterest widget script -->
+<script type="text/javascript">
+(function(d){
+  var f = d.getElementsByTagName('SCRIPT')[0], p = d.createElement('SCRIPT');
+  p.type = 'text/javascript';
+  p.async = true;
+  p.setAttribute('data-pin-color', 'red');
+  p.setAttribute('data-pin-hover', 'true');
+  p.src = '//assets.pinterest.com/js/pinit.js';
+  f.parentNode.insertBefore(p, f);
+}(document));
+</script>
+<!-- toggle menu -->
+<script>
+  $(function() {
+    var $navToggle = $('nav.toggle');
+    $navToggle.addClass('collapsed');
+    $navToggle.find('h2').bind('click focus', function() {
+      // if we want to get fancy, we can animate the max-height here
+      $navToggle.toggleClass('collapsed');
+    });
+  });
+</script>
+
+
+
+
+  
+
+
+
+
+
+
+</body>
+</html>

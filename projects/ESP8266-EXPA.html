@@ -128,7 +128,8 @@
   <!-- Add the content from the post/project -->
     <p>
     <b>thingSoC Reference Design</b><br> 
-    ESP8266-EXPA is a an example Wi-Fi Client/Access Point, thingSoC reference design
+    ESP8266-EXPA is a an example Wi-Fi Client/Access Point, thingSoC reference design; 
+    utilizing a thingSoC Interface Bridge, System-on-Chip device.
 
   </p>
 <!-- more -->
@@ -139,11 +140,51 @@ and status LED's.
   <h3>ESP8266-EXPA Features :</h3>
   <ul>
     <li>ESP8266    : High Performance 802.11b/g Wi-Fi module</li>
-    <li>FM24V10    : 1Mbit (128K x 8 Bits) FRAM Storage Device</li>
+    <li>FM24V10    : (optional) 1Mbit (128K x 8 Bits) FRAM Storage Device</li>
     <li>CY8C82XXX  : thingSoC Interface Bridge, System-on-Chip device</li>
+    <li>MIC5504    : Onboard LDO for battery operation</li>
     <li>Status LED : Power, Status, Receive, Transmit</li>
     <li>thingSoC   : BB-20-Single Form Factor</li>
   </ul>
+</p>
+<p>
+ <h3>thingSoC Interface Bridge, System-on-Chip Device :</h3>
+  <ul>
+    <li>Standard thingSoC Autoidentification and configuration.</li>
+    <li>Controls and Monitors all ESP8266 GPIO pins at once.</li>
+    <li>Easily change modes for simple firmware updates, no jumpers!</li>
+    <li>All ESP8266 GPIO & Reset settings available via I2C1 bus registers.</li>
+    <li>Operates from a single Cell Li-Po Battery</li>
+    <li>Adds Power Management (PMIC) and Real-Time Clock.</li>
+    <li>Usable standalone, or in a thingSoC socket.</li>
+    <li>Source code and project files included in the Github Repo.</li>
+ </ul>
+<br>
+The program code for the thingSoC Interface Bridge comes pre-loaded, and is normally not modfied by the user.
+(It is however, open source, and you are free to change it if you like...)
+</p>
+<p>
+ <h3>thingSoC Interface Bridge : Theory of Operation</h3>
+The CY8C28XXX System-on-Chip device used is configured to contain :
+  <ul>
+    <li>UART1 to interface with the thingSoC Socket</li>
+    <li>I2C1  to interface with the thingSoC Socket (EEPROM Emulation)</li>
+    <li>UART2 to interface with the ESP8266 Wi-FI module UART</li>
+    <li>I2C2  to interface with the 128K x 8 Bit FRAM Storage Device</li>
+    <li>GPIO(12) to interface with the ESP8266 Wi-FI module GPIO, RST & ADC</li>
+    <li>GPIO(4) to interface with SHUTDOWN, STATUS, and TX/RX LED's</li>
+ </ul>
+</p>
+<p>
+The thingSoC Interface Bridge provides three(3) main functions, 
+  <ul>
+    <li>Acts as an I2C EEPROM (default address 0x56) for thingSoC Autoidentification.</li>
+    <li>Acts as a UART bridge between the thingSoC socket and the ESP8266 Wi-FI module UART</li>
+    <li>Allows the user to control and monitor all GPIO using I2C commands.</li>
+ </ul>
+Most of the other ESP8266 designs out there have an annoying amount of jumpers to configure or solder
+in order to make changes to the boot modes, reflash the device, or utilize the GPIO functions.
+the thingSoC Interface Bridge make it much simpler to use and control the ESP8266.
 </p>
 <p> 
   <h3>ESP8266 Resources :</h3>

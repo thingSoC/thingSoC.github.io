@@ -3,16 +3,16 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang="en" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
-  <title>thingSoC: USB-CDC-BASE</title>
+  <title>thingSoC: KITPROG-TEST</title>
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width" />
 
   <meta name="robots"                  content="noodp, noydir, noarchive"         />
-  <meta name="description"        content="USB-CDC-BASE"    />
-  <meta name="abstract"              content="USB-CDC-BASE"       />
+  <meta name="description"        content="KITPROG-TEST"    />
+  <meta name="abstract"              content="KITPROG-TEST"       />
   <meta name="classification"  content="electronics, electronics design, design engineering" />
-  <meta name="keywords"              content="USB-CDC-BASE, usb, arduino, uno, mega, due, psoc, psoc1, psoc3, psoc4, psoc5, cypress, cpm, cpld, fpga"       />
+  <meta name="keywords"              content="KITPROG-TEST, usb, arduino, uno, mega, due, psoc, psoc1, psoc3, psoc4, psoc5, cypress, cpm, cpld, fpga"       />
 
   <link rel="apple-touch-icon" type="image/png" href="/img/logos/apple-touch-icon-144x144.png" />
   <!--  <link rel="icon" type="image/png" href="http://www.moxon.com/img/logos/apple-touch-icon.png"/>  -->
@@ -123,36 +123,41 @@
     <div class="col maj_major">
       
   
-  <h1>USB-CDC-BASE</h1>
+  <h1>KITPROG-TEST</h1>
 
   <!-- Add the content from the post/project -->
     <p>
     <b>thingSoC Reference Design</b><br> 
-    USB-CDC-BASE is a an example USB to UART and I2C/HID thingSoC BASE Module.
+    KITPROG-TEST is a an example USB-to-UART,I2C and JTAG SWD Programmer, thingSoC reference design; 
+    utilizing a Cypress CY8C58xx, ARM Cortex-M3, System-on-Chip device.
 
   </p>
 <!-- more -->
 <p>
-USB-CDC-BASE includes a dual channel USB to Serial interface, along with an I2C EEPROM for storing the board configuration information,
-and status LED's. The USB-CDC-BASE also includes VIN, USB, and Battery powered capabilities, with a single cell Li-Po battery charger.
-The battery can be charged from either VIN (i.e. 12 volt wall wart) or the USB input.
+KITPROG-TEST implements the standard PSoC Creator IDE USB based, device programmer and UART/I2C communications interface.
+It allows you to upload programs to blank PSoC ARM Cortex microcontrollers, as well as program blank I2C memories and other devices.
+The UART interface allows for a generic USB-to-Device serial channel for communicating with target devices.
 <p> 
-  <h3>USB-CDC-BASE Features :</h3>
+  <h3>KITPROG-TEST Features :</h3>
   <ul>
-    <li>Dual Channel USB to Serial interface - CY7C65215</li>
-    <li>I2C Configuration EEPROM - 8K Bytes - 24LC64T</li>
-    <li>Single Cell Lithium battery charger (4.2V) - MCP73831</li>
-    <li>Status LED's</li>
-    <li>thingSoC BB-40-Double Form Factor</li>
-  </ul>
-</p>
-<p> 
-  <h3>Reference Design Status :</h3>
-  <ul>
-    <li>Untested PCB Layout, <a href="https://github.com/thingSoC/USB-CDC-BASE/blob/master/USB-CDC-BASE/hardware/USB-CDC-BASE_sch.pdf?raw=true">example schematic</a> reference only.</li>
+    <li>CY8C58xx     : Cypress CY8C58xx, ARM Cortex-M3, System-on-Chip device</li>
+    <li>JTAG Target  : Programming Header for SWD JTAG Interface (5 pin)</li>
+    <li>Reset Switch : Local Reset</li>
+    <li>Debug Switch : Target Debug/Reset</li>
+    <li>Debug LED    : JTAG & Debug Mode</li>
+    <li>thingSoC     : BB-40-Double Form Factor (Standard JTAG Pinout)</li>
   </ul>
 </p>
 
+
+<p> 
+  <h3>Reference Design Status :</h3>
+  <ul>
+    <li>Alpha 0.5 PCB Layout, prototypes ordered on 5/18/2015 (stay tuned, it's coming...)<li>
+    <li><a href="https://github.com/thingSoC/KITPROG-TEST/blob/master/KITPROG-TEST/hardware/KITPROG-TEST_sch.pdf?raw=true">Schematic Diagram</a></li>
+    <li><a href="https://github.com/thingSoC/KITPROG-TEST/blob/master/KITPROG-TEST/hardware/KITPROG-TEST_brd.pdf?raw=true">Layout Diagram</a></li>
+  </ul>
+</p>
 <p>
  <img src="/img/projects/thingSoC/open_source_hardware_logo.png"alt="Open Source Hardware" title="Open Source Hardware">
 </p>     
@@ -169,49 +174,49 @@ The battery can be charged from either VIN (i.e. 12 volt wall wart) or the USB i
     </div>
     <div class="col maj_minor">
       
-  <h2>USB-CDC-BASE</h2>
-  <img src="/img/projects/USB-CDC-BASE/USB-CDC-BASE_model.png" alt="USB-CDC-BASE Model" title="USB-CDC-BASE Model"/>
+  <h2>KITPROG-TEST</h2>
+  <img src="/img/projects/KITPROG-TEST/KITPROG-TEST_model.png" alt="KITPROG-TEST Model" title="KITPROG-TEST Model"/>
   <br>
   
 
 
-  <h2>Tweet about USB-CDC-BASE</h2>
+  <h2>Tweet about KITPROG-TEST</h2>
     <center>
-    <a href="https://twitter.com/intent/tweet?button_hashtag=USB-CDC-BASE" class="twitter-hashtag-button" data-lang="en" data-related="PatternAgents">Tweet #USB-CDC-BASE</a>
+    <a href="https://twitter.com/intent/tweet?button_hashtag=KITPROG-TEST" class="twitter-hashtag-button" data-lang="en" data-related="PatternAgents">Tweet #KITPROG-TEST</a>
 	</center>
-  <h2>USB-CDC-BASE Repository</h2>
+  <h2>KITPROG-TEST Repository</h2>
   <center>
   <table border="0">
   <tr>
-	<td><a href="https://github.com/thingSoC/USB-CDC-BASE"><img class="img" src="/img/logos/github_repo.png" width="168" height="38" alt="USB-CDC-BASE Github" title="USB-CDC-BASE Github"/></a></td>
+	<td><a href="https://github.com/thingSoC/KITPROG-TEST"><img class="img" src="/img/logos/github_repo.png" width="168" height="38" alt="KITPROG-TEST Github" title="KITPROG-TEST Github"/></a></td>
   </tr>
   <tr>
-	<td><a href="https://github.com/thingSoC/USB-CDC-BASE/wiki"><img class="img" src="/img/logos/project_wiki.png"  width="168" height="38" alt="USB-CDC-BASE Wiki" title="USB-CDC-BASE Wiki"/></a></td>
+	<td><a href="https://github.com/thingSoC/KITPROG-TEST/wiki"><img class="img" src="/img/logos/project_wiki.png"  width="168" height="38" alt="KITPROG-TEST Wiki" title="KITPROG-TEST Wiki"/></a></td>
   </tr>
   <tr>
-	<td><a href="https://github.com/thingSoC/USB-CDC-BASE/issues"><img class="img" src="/img/logos/bug_tracker.png"  width="168" height="38" alt="USB-CDC-BASE Issues" title="USB-CDC-BASE Issues"/></a></td>
+	<td><a href="https://github.com/thingSoC/KITPROG-TEST/issues"><img class="img" src="/img/logos/bug_tracker.png"  width="168" height="38" alt="KITPROG-TEST Issues" title="KITPROG-TEST Issues"/></a></td>
   </tr>
   </table>
   </center>
-  <h2>USB-CDC-BASE Downloads</h2>
+  <h2>KITPROG-TEST Downloads</h2>
     <center>
 	<table border="0">
 	<tr>
-		<td><a href="https://github.com/thingSoC/USB-CDC-BASE/zipball/master"><img class="img" src="/img/logos/zip_archive.png" width="168" height="38" alt="USB-CDC-BASE ZIPball" title="USB-CDC-BASE ZIPball"/></a></td>
+		<td><a href="https://github.com/thingSoC/KITPROG-TEST/zipball/master"><img class="img" src="/img/logos/zip_archive.png" width="168" height="38" alt="KITPROG-TEST ZIPball" title="KITPROG-TEST ZIPball"/></a></td>
 	</tr>
 	<tr>
-		<td><a href="https://github.com/thingSoC/USB-CDC-BASE/tarball/master"><img class="img" src="/img/logos/tar_archive.png" width="168" height="38" alt="USB-CDC-BASE TARball" title="USB-CDC-BASE TARball"/></a></td>
+		<td><a href="https://github.com/thingSoC/KITPROG-TEST/tarball/master"><img class="img" src="/img/logos/tar_archive.png" width="168" height="38" alt="KITPROG-TEST TARball" title="KITPROG-TEST TARball"/></a></td>
 	</tr>
 	</table>
 	</center>
-  <h2>USB-CDC-BASE Images</h2>
+  <h2>KITPROG-TEST Images</h2>
     <center>
 	<table border="0">
 	<tr>
-		<td><a href="/img/projects/USB-CDC-BASE/USB-CDC-BASE_top.png"><img class="illo" src="/img/projects/USB-CDC-BASE/USB-CDC-BASE_top.png" alt="USB-CDC-BASE Top View" title="USB-CDC-BASE Top View"/></a></td>
+		<td><a href="/img/projects/KITPROG-TEST/KITPROG-TEST_top.png"><img class="illo" src="/img/projects/KITPROG-TEST/KITPROG-TEST_top.png" alt="KITPROG-TEST Top View" title="KITPROG-TEST Top View"/></a></td>
 	</tr>
 	<tr>
-		<td><a href="/img/projects/USB-CDC-BASE/USB-CDC-BASE_bot.png"><img class="illo" src="/img/projects/USB-CDC-BASE/USB-CDC-BASE_bot.png" alt="USB-CDC-BASE Bottom View" title="USB-CDC-BASE Bottom View"/></a></td>
+		<td><a href="/img/projects/KITPROG-TEST/KITPROG-TEST_bot.png"><img class="illo" src="/img/projects/KITPROG-TEST/KITPROG-TEST_bot.png" alt="KITPROG-TEST Bottom View" title="KITPROG-TEST Bottom View"/></a></td>
 	</tr>
 	</table>
 	</center>
@@ -220,7 +225,7 @@ The battery can be charged from either VIN (i.e. 12 volt wall wart) or the USB i
 
 <!-- place "licensing: true" in the YAML front matter to enable Licensing in that page -->
 
-	<h2>USB-CDC-BASE Licensing</h2>
+	<h2>KITPROG-TEST Licensing</h2>
 
 <!-- place "cc_by_sa: true" in the YAML front matter to enable cc_by_sa licensing for that page -->
 	
@@ -229,7 +234,7 @@ The battery can be charged from either VIN (i.e. 12 volt wall wart) or the USB i
 			<td align="center"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img width="88" height="31" alt="Creative Commons License" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a></td>
         </tr>
 		<tr>
-			<td>The USB-CDC-BASE Project by PatternAgents is available and licensed under a Creative Commons Attribution-ShareAlike 4.0 International License</td>
+			<td>The KITPROG-TEST Project by PatternAgents is available and licensed under a Creative Commons Attribution-ShareAlike 4.0 International License</td>
 		</tr>
 		</table>
 	

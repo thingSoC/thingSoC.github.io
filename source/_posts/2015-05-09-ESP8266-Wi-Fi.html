@@ -58,10 +58,10 @@ The CY8C4245 System-on-Chip device used is configured to contain :
 <br>
   <ul>
     <li>UART1 to interface with the thingSoC Socket</li>
-    <li>I2C1  to interface with the thingSoC Socket (EEPROM Emulation)</li>
+    <li>I2C1  to interface with the thingSoC Socket (EEPROM Emulation)<br>
+         and the 128K x 8 Bit FRAM Storage Device</li>
     <li>UART2 to interface with the ESP8266 Wi-FI module UART</li>
-    <li>I2C2  to interface with the 128K x 8 Bit FRAM Storage Device</li>
-    <li>GPIO(12) to interface with the ESP8266 Wi-FI module GPIO, RST & ADC</li>
+    <li>GPIO(4) to interface with the ESP8266 Wi-FI module GPIO, RST & ADC</li>
     <li>GPIO(4) to interface with SHUTDOWN, STATUS, and TX/RX LED's</li>
  </ul>
 </p>
@@ -74,7 +74,8 @@ The thingSoC Interface Bridge provides three(3) main functions,
  </ul>
 Most of the other ESP8266 designs out there have an annoying amount of jumpers to configure or solder
 in order to make changes to the boot modes, reflash the device, or utilize the GPIO functions.
-the thingSoC Interface Bridge make it much simpler to use and control the ESP8266.
+the thingSoC Interface Bridge make it much simpler to use and control the ESP8266,
+either from your computer via USB, or your embedded project from a microcontroller.
 </p>
 <p> 
   <h3>ESP8266 Resources :</h3>

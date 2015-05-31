@@ -29,7 +29,7 @@ and status LED's.
   <ul>
     <li>ESP8266    : High Performance 802.11b/g Wi-Fi module</li>
     <li>FM24V10    : (optional) 1Mbit (128K x 8 Bits) FRAM Storage Device</li>
-    <li>CY8C82XXX  : thingSoC Interface Bridge, System-on-Chip device</li>
+    <li>CY8C4245   : thingSoC Interface Bridge, System-on-Chip device</li>
     <li>MIC5504    : Onboard LDO for battery operation</li>
     <li>Status LED : Power, Status, Receive, Transmit</li>
     <li>thingSoC   : BB-20-Single Form Factor</li>
@@ -54,7 +54,7 @@ The program code for the thingSoC Interface Bridge comes pre-loaded, and is norm
 <p>
  <h3>thingSoC Interface Bridge : Theory of Operation</h3>
 <br>
-The CY8C28XXX System-on-Chip device used is configured to contain :
+The CY8C4245 System-on-Chip device used is configured to contain :
 <br>
   <ul>
     <li>UART1 to interface with the thingSoC Socket</li>
@@ -87,7 +87,8 @@ the thingSoC Interface Bridge make it much simpler to use and control the ESP826
 <p> 
   <h3>Reference Design Status :</h3>
   <ul>
-    <li>Untested PCB Layout, prototypes on order 5/9/2015 (stay tuned, it's coming...)<li>
+    <li>Version 2,.0 is moving to an PSoC4:ARM Cortex-M0, in order to get 16 bit I2C sub-addressing</li> 
+    <li>Untested PCB Layout, (new prototypes are coming in early June 2015...)<li>
     <li><a href="https://github.com/thingSoC/ESP8266-EXPA/blob/master/ESP8266-EXPA/hardware/ESP8266-EXPA_sch.pdf?raw=true">Schematic Diagram</a></li>
     <li><a href="https://github.com/thingSoC/ESP8266-EXPA/blob/master/ESP8266-EXPA/hardware/ESP8266-EXPA_brd.pdf?raw=true">Layout Diagram</a></li>
   </ul>

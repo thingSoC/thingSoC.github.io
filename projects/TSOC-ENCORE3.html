@@ -3,16 +3,16 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang="en" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
-  <title>thingSoC: thingSoC Support</title>
+  <title>thingSoC: thingSoC : USB->UART Reference Design</title>
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width" />
 
   <meta name="robots"                  content="noodp, noydir, noarchive"         />
-  <meta name="description"        content="thingSoC Support"    />
-  <meta name="abstract"              content="thingSoC Support"       />
+  <meta name="description"        content="thingSoC : USB PSoC1 Reference Design : System on Chip Platform for the Internet of Things"    />
+  <meta name="abstract"              content="thingSoC : USB->UART Reference Design : System on Chip Platform for the Internet of Things"       />
   <meta name="classification"  content="electronics, electronics design, design engineering" />
-  <meta name="keywords"              content="thingSoC, bridger, videre, arduino, led, sensors"       />
+  <meta name="keywords"              content="TSOC-USBUART1, thingSoC, arduino, lcd, lcd controller, uno, mega, due, psoc, psoc1, psoc3, psoc4, psoc5, cypress, cpm, cpld, fpga"       />
 
   <link rel="apple-touch-icon" type="image/png" href="/img/logos/apple-touch-icon-144x144.png" />
   <!--  <link rel="icon" type="image/png" href="http://www.moxon.com/img/logos/apple-touch-icon.png"/>  -->
@@ -50,8 +50,23 @@
 
 </head>
 
-<body class="support">
+<body class="">
  
+
+<!-- Add the standard layout -->
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -97,34 +112,143 @@
 
 
   
+  
+
 
 <main class="row">
   
   <div class="col major">
     
+  <div class="row">
+    <div class="col maj_major">
+      
   
-  <h1>thingSoC support</h1>
-  <p>
-  Start with the FAQ for more information.
-  </p>
-  <ul>
-    <li><a href="/support/faq.html"                   >FAQ  - Frequently Asked Questions</a></li>
-    <li><a href="/support/hardware_architecture.html"                    >Arch - Hardware Overview</a></li>
-    <li><a href="/support/firmware_architecture.html"                    >Arch - Firmware Overview</a></li>
-    <li><a href="/support/software_architecture.html"                    >Arch - Software Overview</a></li>
-    <li><a href="https://github.com/thingSoC/thingSoC/wiki"  >Wiki - Project Wiki</a></li>
-    <li><a href="https://github.com/thingSoC/thingSoC/issues">Bugs - Project Issue/Bug Tracking</a></li>  
-  </ul>
+  <h1>thingSoC : USB->UART Reference Design</h1>
 
-  <p>
-    You can also find online help and discussion on the <a href="http://groups.google.com/group/thingSoC">thingSoC discussion group</a>.
-    Before asking a question or reporting a bug, please read the FAQ.
-  </p>
+  <!-- Add the content from the post/project -->
+  The <b>TSOC-ENCORE3</b> board is a single channel, USB to UART Base Board Reference Design.
+It provides a complete eight (8) pin full UART connection as well as the popular six (6) pin "FTDI" connector
+that is compatible with Arduino and many other development boards. The <b>TSOC-USBUART1</b> board is based on the Cypress Semiconductor <a href="http://www.cypress.com/file/139881/download">CY7C65213</a>, a USB to UART Bridge Controller.
+<!-- more -->
+<br><br>
+The Cypress Semiconductor <a href="http://www.cypress.com/file/139881/download">CY7C65213</a> is a fully integrated USB-to-UART bridge that
+provides a simple method to upgrade UART-based devices to
+USB with a minimal number of components. The <a href="http://www.cypress.com/file/139881/download">CY7C65213</a>
+includes a USB 2.0 Full-Speed controller, a UART transceiver,
+an internal regulator, an internal oscillator, and a 512-byte flash
+in a 32-pin QFN and 28-pin SSOP package.
+The internal flash is used to store custom-specific USB
+descriptors and GPIO configuration. This is done in-system
+using a configuration utility that communicates over the USB
+interface.
+Cypress Semiconductor provides royalty-free Virtual COM Port (VCP) device
+drivers. The drivers allow the device to appear as a COM port in
+PC applications. All UART signals, including handshaking and
+control signals, are implemented.
+
+<h3>TSOC-ENCORE3 Features:</h3>
+<ul>
+  <li>Complete Eight Pin Serial Connection (RXD, TXD, CTS, RTS, DTR, DSR, DCD, RI)</li>
+  <li>Sleep and Transmit Direction (TXDEN) for RS-485 applications</li>
+  <li>Solid State, Fast power limiting and protection</li>
+  <li>Under/Over Voltage, Over Current, and ESD protection</li>
+  <li>USB2.0 Certified Bridge Controller</li>
+  <li>Data Rate up to 3Mbps</li>
+ <li>An Open-Source Hardware (OSHW) Reference Design</li>
+</ul>
+
+<p>
+ <img src="/img/projects/thingSoC/open_source_hardware_logo.png"alt="Open Source Hardware" title="Open Source Hardware">
+</p>     
+
+<p>
+If you are interested in participating in the <b>thingSoC</b> community development,
+please join our mailing list (it is low frequency - about once per month).
+</p>
 
 
+
+
+    </div>
+    <div class="col maj_minor">
+      
+  <h2>TSOC-ENCORE3</h2>
+  <img src="/img/projects/TSOC-ENCORE3/TSOC-ENCORE3_model.png" alt="TSOC-ENCORE3 Model" title="TSOC-ENCORE3 Model"/>
+  <br>
+  
+
+
+  <h2>Tweet about TSOC-ENCORE3</h2>
+    <center>
+    <a href="https://twitter.com/intent/tweet?button_hashtag=TSOC-ENCORE3" class="twitter-hashtag-button" data-lang="en" data-related="PatternAgents">Tweet #TSOC-ENCORE3</a>
+	</center>
+  <h2>TSOC-ENCORE3 Repository</h2>
+  <center>
+  <table border="0">
+  <tr>
+	<td><a href="https://github.com/thingSoC/TSOC-ENCORE3"><img class="img" src="/img/logos/github_repo.png" width="168" height="38" alt="TSOC-ENCORE3 Github" title="TSOC-ENCORE3 Github"/></a></td>
+  </tr>
+  <tr>
+	<td><a href="https://github.com/thingSoC/TSOC-ENCORE3/wiki"><img class="img" src="/img/logos/project_wiki.png"  width="168" height="38" alt="TSOC-ENCORE3 Wiki" title="TSOC-ENCORE3 Wiki"/></a></td>
+  </tr>
+  <tr>
+	<td><a href="https://github.com/thingSoC/TSOC-ENCORE3/issues"><img class="img" src="/img/logos/bug_tracker.png"  width="168" height="38" alt="TSOC-ENCORE3 Issues" title="TSOC-ENCORE3 Issues"/></a></td>
+  </tr>
+  </table>
+  </center>
+  <h2>TSOC-ENCORE3 Downloads</h2>
+    <center>
+	<table border="0">
+	<tr>
+		<td><a href="https://github.com/thingSoC/TSOC-ENCORE3/zipball/master"><img class="img" src="/img/logos/zip_archive.png" width="168" height="38" alt="TSOC-ENCORE3 ZIPball" title="TSOC-ENCORE3 ZIPball"/></a></td>
+	</tr>
+	<tr>
+		<td><a href="https://github.com/thingSoC/TSOC-ENCORE3/tarball/master"><img class="img" src="/img/logos/tar_archive.png" width="168" height="38" alt="TSOC-ENCORE3 TARball" title="TSOC-ENCORE3 TARball"/></a></td>
+	</tr>
+	</table>
+	</center>
+  <h2>TSOC-ENCORE3 Images</h2>
+    <center>
+	<table border="0">
+	<tr>
+		<td><a href="/img/projects/TSOC-ENCORE3/TSOC-ENCORE3_top.png"><img class="illo" src="/img/projects/TSOC-ENCORE3/TSOC-ENCORE3_top.png" alt="TSOC-ENCORE3 Top View" title="TSOC-ENCORE3 Top View"/></a></td>
+	</tr>
+	<tr>
+		<td><a href="/img/projects/TSOC-ENCORE3/TSOC-ENCORE3_bot.png"><img class="illo" src="/img/projects/TSOC-ENCORE3/TSOC-ENCORE3_bot.png" alt="TSOC-ENCORE3 Bottom View" title="TSOC-ENCORE3 Bottom View"/></a></td>
+	</tr>
+	</table>
+	</center>
+   <!-- License terms -->
+  
+
+<!-- place "licensing: true" in the YAML front matter to enable Licensing in that page -->
+
+	<h2>TSOC-ENCORE3 Licensing</h2>
+
+<!-- place "cc_by_sa: true" in the YAML front matter to enable cc_by_sa licensing for that page -->
+	
+		<table border="0">
+		<tr>
+			<td align="center"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img width="88" height="31" alt="Creative Commons License" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a></td>
+        </tr>
+		<tr>
+			<td>The TSOC-ENCORE3 Project by PatternAgents is available and licensed under a Creative Commons Attribution-ShareAlike 4.0 International License</td>
+		</tr>
+		</table>
+	
+
+<!-- place "cc_by_nc_sa: true" in the YAML front matter to enable cc_by_nc_sa licensing for that page -->
+	
+
+
+
+
+    </div>
+  </div>
 
   </div>
   <div class="col minor">
+    
     
   <h2>Featured Projects</h2>
   <ul class="post-list">
@@ -164,6 +288,7 @@
 </ul>
 
 
+
   </div>
 
 </main>
@@ -190,6 +315,8 @@
 
 <!-- discus panel -->
 <!-- place "comments: true" in the YAML front matter to enable comments in that page -->
+
+<div class="panel" id="disqus_thread"></div>
 
    
 
@@ -284,6 +411,40 @@
 
 
   
+  
+  
+
+<!-- twitter widget script -->
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+  
+
+<!-- pinterest widget script -->
+<script type="text/javascript">
+(function(d){
+  var f = d.getElementsByTagName('SCRIPT')[0], p = d.createElement('SCRIPT');
+  p.type = 'text/javascript';
+  p.async = true;
+  p.setAttribute('data-pin-color', 'red');
+  p.setAttribute('data-pin-hover', 'true');
+  p.src = '//assets.pinterest.com/js/pinit.js';
+  f.parentNode.insertBefore(p, f);
+}(document));
+</script>
+  
+
+<!-- disqus widget script -->
+<script type="text/javascript">
+  var disqus_shortname = 'patternagents';
+  (function() {
+   var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+   dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+
 
 
 

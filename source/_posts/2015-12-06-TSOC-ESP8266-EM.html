@@ -1,55 +1,50 @@
 ---
 layout: project
 category: project
-title: "thingSoC : USB ENCORE3 Reference Design"
+title: "thingSoC : ESP8266 Embedded Module Reference Design"
 date: 2015-12-05 12:12
-permalink: /projects/TSOC-ENCORE3.html
-product_slug: TSOC-ENCORE3
-product_img: TSOC-ENCORE3_model.png
+permalink: /projects/TSOC-ESP8266-EM.html
+product_slug: TSOC-ESP8266-EM
+product_img: TSOC-ESP8266-EM_model.png
 product_id: 62149701
 product_display: false
 product_price: "$00.00"
-product_name: TSOC-ENCORE3
+product_name: TSOC-ESP8266-EM
 licensing: true
 cc_by_sa: true
 meta:
   robots: "noodp, noydir, noarchive"
   description: "thingSoC : USB PSoC1 Reference Design : System on Chip Platform for the Internet of Things"
-  abstract: "thingSoC : USB->UART Reference Design : System on Chip Platform for the Internet of Things"
-  keywords: "TSOC-USBUART1, thingSoC, arduino, lcd, lcd controller, uno, mega, due, psoc, psoc1, psoc3, psoc4, psoc5, cypress, cpm, cpld, fpga"
+  abstract: "thingSoC : TSOC-ESP8266-EM Reference Design : System on Chip Platform for the Internet of Things"
+  keywords: "TSOC-ESP8266-EM, thingSoC, arduino, lcd, lcd controller, uno, mega, due, psoc, psoc1, psoc3, psoc4, psoc5, cypress, cpm, cpld, fpga"
 comments: true
 ---
-The <b>TSOC-ENCORE3</b> board is a USB to PSOC1 (Progammable System on Chip) Base Board Reference Design.
-It provides a complete eight (8) pin full UART connection as well as the popular six (6) pin "FTDI" connector
-that is compatible with Arduino and many other development boards. The <b>TSOC-ENCORE3</b> board is based on the Cypress Semiconductor <a href="http://www.cypress.com/file/134346/download">CY7C64215</a>, a USB to UART Bridge Controller.
+The <b>TSOC-ESP8266-EM</b> board is a complete Wi-Fi Device and Access point, supported by the Arduino IDE.
 <!-- more -->
 <br><br>
-The Cypress Semiconductor <a href="http://www.cypress.com/file/134346/download">CY7C64215</a> is a fully integrated USB-to-UART bridge that
-provides a simple method to upgrade UART-based devices to
-USB with a minimal number of components. The <a href="http://www.cypress.com/file/134346/download">CY7C65213</a>
-includes a USB 2.0 Full-Speed controller, a UART transceiver,
-an internal regulator, an internal oscillator, and a 512-byte flash
-in a 32-pin QFN and 28-pin SSOP package.
-The internal flash is used to store custom-specific USB
-descriptors and GPIO configuration. This is done in-system
-using a configuration utility that communicates over the USB
-interface.
-Cypress Semiconductor provides royalty-free Virtual COM Port (VCP) device
-drivers. The drivers allow the device to appear as a COM port in
-PC applications. All UART signals, including handshaking and
-control signals, are implemented.
+
 
 <h3>{{page.product_slug}} Features:</h3>
 <ul>
-  <li>Complete Eight Pin Serial Connection (RXD, TXD, CTS, RTS, DTR, DSR, DCD, RI)</li>
-  <li>Sleep and Transmit Direction (TXDEN) for RS-485 applications</li>
-  <li>Solid State, Fast power limiting and protection</li>
-  <li>Under/Over Voltage, Over Current, and ESD protection</li>
-  <li>USB2.0 Certified Bridge Controller</li>
-  <li>Data Rate up to 3Mbps</li>
+  <li>ESP8266 WiFi System-on-Chip</li>
+  <li>Program using the Arduino IDE</li>
+  <li>Program using the Node.js</li>
+  <li>Program using the eLua</li>
+  <li>XBEE Socket Form Factor</li>
+  <li>Flash programming using RTS/DTR, compatible with nodeMCU</li>
+  <li>Inter-Integrated Circuit(I2C) Bus supported</li>
+  <li>Serial-Parallel Interface(SPI) Bus supported</li>
  <li>An Open-Source Hardware (OSHW) Reference Design</li>
 </ul>
+<p>
 
+<h3>{{page.product_slug}} Application Examples:</h3>
+<ul>
+  <li>WiFi Sensor</li>
+  <li>WiFi Bridge</li>
+</ul>
+</p>
+<
 <p>
  <img src="{{site.url.images}}/projects/thingSoC/open_source_hardware_logo.png"alt="Open Source Hardware" title="Open Source Hardware">
 </p>     

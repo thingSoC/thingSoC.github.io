@@ -3,16 +3,16 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang="en" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
-  <title>thingSoC: Learn thingSoC :</title>
+  <title>thingSoC: thingSoC : USB->UART Reference Design</title>
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width" />
 
-  <meta name="robots"          content="index, follow, noodp, noydir" />
-  <meta name="description"     content="thingSoC : System on Chip Platform for the Internet of Things" />
-  <meta name="abstract"        content="System on Chip Platform for the Internet of Things" />
+  <meta name="robots"                  content="noodp, noydir, noarchive"         />
+  <meta name="description"        content="thingSoC : USB->UART Reference Design : System on Chip Platform for the Internet of Things"    />
+  <meta name="abstract"              content="thingSoC : USB->UART Reference Design : System on Chip Platform for the Internet of Things"       />
   <meta name="classification"  content="electronics, electronics design, design engineering" />
-  <meta name="keywords"        content="electronics, electronics design, design engineering, open source software, open source hardware, OSHW" />
+  <meta name="keywords"              content="TSOC-USBUART1, thingSoC, arduino, lcd, lcd controller, uno, mega, due, psoc, psoc1, psoc3, psoc4, psoc5, cypress, cpm, cpld, fpga"       />
 
   <link rel="apple-touch-icon" type="image/png" href="/img/logos/apple-touch-icon-144x144.png" />
   <!--  <link rel="icon" type="image/png" href="http://www.moxon.com/img/logos/apple-touch-icon.png"/>  -->
@@ -52,6 +52,20 @@
 
 <body class="">
  
+
+<!-- Add the standard layout -->
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -98,99 +112,143 @@
 
 
   
+  
+
 
 <main class="row">
   
   <div class="col major">
     
-  
-  <article role="article">
-    <header>
+  <div class="row">
+    <div class="col maj_major">
       
-        <h1 class="entry-title">Learn thingSoC :</h1>
-      
-      
-        <p class="meta">
-          
-        </p>
-      
-    </header>
-    <div class="entry-content">
   
-  
-  
+  <h1>thingSoC : USB->UART Reference Design</h1>
 
-<blockquote>
-	<p>Live as if you will die tomorrow. Learn as if you will live forever.</p>
-	<p>&mdash;Mahatma Ganghi</p>
-</blockquote>
-
-<p>How can I learn more about <b>thingSoC</b>? 
-</p>
+  <!-- Add the content from the post/project -->
+  The <b>TSOC-USBUART1</b> board is a single channel, USB to UART Base Board Reference Design.
+It provides a complete eight (8) pin full UART connection as well as the popular six (6) pin "FTDI" connector
+that is compatible with Arduino and many other development boards. The <b>TSOC-USBUART1</b> board is based on the Cypress Semiconductor <a href="http://www.cypress.com/file/139881/download">CY7C65213</a>, a USB to UART Bridge Controller.
 <!-- more -->
-<p>
-<b>thingSoC</b> defines a physical, hardware socket system for inter-operable printed circuit boards,
-with a data centric firmware model for automatic device discovery, and a software API for interacting with the system.
-</p>
+<br><br>
+The Cypress Semiconductor <a href="http://www.cypress.com/file/139881/download">CY7C65213</a> is a fully integrated USB-to-UART bridge that
+provides a simple method to upgrade UART-based devices to
+USB with a minimal number of components. The <a href="http://www.cypress.com/file/139881/download">CY7C65213</a>
+includes a USB 2.0 Full-Speed controller, a UART transceiver,
+an internal regulator, an internal oscillator, and a 512-byte flash
+in a 32-pin QFN and 28-pin SSOP package.
+The internal flash is used to store custom-specific USB
+descriptors and GPIO configuration. This is done in-system
+using a configuration utility that communicates over the USB
+interface.
+Cypress Semiconductor provides royalty-free Virtual COM Port (VCP) device
+drivers. The drivers allow the device to appear as a COM port in
+PC applications. All UART signals, including handshaking and
+control signals, are implemented.
 
-<h3>thingSoC Resources</h3>
-<p>
-<ol>
-    <li><a href="http://thingsoc.github.io/projects/thingSoC.html">thingSoC Project Page</a></li>
-    <li><a href="https://github.com/thingSoC/thingSoC/blob/master/specification/thingSoC_spec_V0_1.pdf?raw=true">thingSoC Specification (Draft)</a></li>
-    <li><a href="https://github.com/thingSoC">thingSoC on Github</a></li>
-    <li><a href="/support/faq.html"                   >FAQ  - Frequently Asked Questions</a></li>
-    <li><a href="/support/hardware_architecture.html"                    >Arch - Hardware Overview</a></li>
-    <li><a href="/support/firmware_architecture.html"                    >Arch - Firmware Overview</a></li>
-    <li><a href="/support/software_architecture.html"                    >Arch - Software Overview</a></li>
-    <li><a href="https://github.com/thingSoC/thingSoC/wiki"  >Wiki - Project Wiki</a></li>
-    <li><a href="https://github.com/thingSoC/thingSoC/issues">Bugs - Project Issue/Bug Tracking</a></li>  
-</ol>
-</p>
-
-<h3>thingSoC Reference Designs</h3>
-<p>
+<h3>TSOC-USBUART1 Features:</h3>
 <ul>
-   <li><a href="https://github.com/thingSoC">thingSoC Reference Designs</a></li>
+  <li>Complete Eight Pin Serial Connection (RXD, TXD, CTS, RTS, DTR, DSR, DCD, RI)</li>
+  <li>Sleep and Transmit Direction (TXDEN) for RS-485 applications</li>
+  <li>Solid State, Fast power limiting and protection</li>
+  <li>Under/Over Voltage, Over Current, and ESD protection</li>
+  <li>USB2.0 Certified Bridge Controller</li>
+  <li>Data Rate up to 3Mbps</li>
+ <li>An Open-Source Hardware (OSHW) Reference Design</li>
 </ul>
-</p>
-
-<h3>Donate</h3>
-<p>
-<b>thingSoC</b> is community supported, you can help by contributing.
-<BR><BR>
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="5NPC24C7VQ89L">
-<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-</form>
-</p>
 
 <p>
-<b>thingSoC</b> has been designed to address many of the issues and limitations with current IoT development platforms.
-It is a community sponsored, open source project, with no fees or licensing costs.
+ <img src="/img/projects/thingSoC/open_source_hardware_logo.png"alt="Open Source Hardware" title="Open Source Hardware">
+</p>     
+
+<p>
+If you are interested in participating in the <b>thingSoC</b> community development,
+please join our mailing list (it is low frequency - about once per month).
 </p>
 
-</div>
-    <footer>
-      <p class="meta">
-        April 14, 2015
-      </p>
-      <p class="meta">
-        
-          <a class="previous" href="/news/2015/04/14/Get-thingSoC.html" title="Previous Post: Get thingSoC !">&laquo; Get thingSoC !</a>
-        
-        
-          <a class="next" href="/projects/TSOC-USBUART1.html" title="Next Post: thingSoC : USB->UART Reference Design">thingSoC : USB->UART Reference Design &raquo;</a>
-        
-      </p>
-    </footer>
-  </article>
 
+
+
+    </div>
+    <div class="col maj_minor">
+      
+  <h2>TSOC-USBUART1</h2>
+  <img src="/img/projects/TSOC-USBUART1/TSOC-USBUART1_model.png" alt="TSOC-USBUART1 Model" title="TSOC-USBUART1 Model"/>
+  <br>
+  
+
+
+  <h2>Tweet about TSOC-USBUART1</h2>
+    <center>
+    <a href="https://twitter.com/intent/tweet?button_hashtag=TSOC-USBUART1" class="twitter-hashtag-button" data-lang="en" data-related="PatternAgents">Tweet #TSOC-USBUART1</a>
+	</center>
+  <h2>TSOC-USBUART1 Repository</h2>
+  <center>
+  <table border="0">
+  <tr>
+	<td><a href="https://github.com/thingSoC/TSOC-USBUART1"><img class="img" src="/img/logos/github_repo.png" width="168" height="38" alt="TSOC-USBUART1 Github" title="TSOC-USBUART1 Github"/></a></td>
+  </tr>
+  <tr>
+	<td><a href="https://github.com/thingSoC/TSOC-USBUART1/wiki"><img class="img" src="/img/logos/project_wiki.png"  width="168" height="38" alt="TSOC-USBUART1 Wiki" title="TSOC-USBUART1 Wiki"/></a></td>
+  </tr>
+  <tr>
+	<td><a href="https://github.com/thingSoC/TSOC-USBUART1/issues"><img class="img" src="/img/logos/bug_tracker.png"  width="168" height="38" alt="TSOC-USBUART1 Issues" title="TSOC-USBUART1 Issues"/></a></td>
+  </tr>
+  </table>
+  </center>
+  <h2>TSOC-USBUART1 Downloads</h2>
+    <center>
+	<table border="0">
+	<tr>
+		<td><a href="https://github.com/thingSoC/TSOC-USBUART1/zipball/master"><img class="img" src="/img/logos/zip_archive.png" width="168" height="38" alt="TSOC-USBUART1 ZIPball" title="TSOC-USBUART1 ZIPball"/></a></td>
+	</tr>
+	<tr>
+		<td><a href="https://github.com/thingSoC/TSOC-USBUART1/tarball/master"><img class="img" src="/img/logos/tar_archive.png" width="168" height="38" alt="TSOC-USBUART1 TARball" title="TSOC-USBUART1 TARball"/></a></td>
+	</tr>
+	</table>
+	</center>
+  <h2>TSOC-USBUART1 Images</h2>
+    <center>
+	<table border="0">
+	<tr>
+		<td><a href="/img/projects/TSOC-USBUART1/TSOC-USBUART1_top.png"><img class="illo" src="/img/projects/TSOC-USBUART1/TSOC-USBUART1_top.png" alt="TSOC-USBUART1 Top View" title="TSOC-USBUART1 Top View"/></a></td>
+	</tr>
+	<tr>
+		<td><a href="/img/projects/TSOC-USBUART1/TSOC-USBUART1_bot.png"><img class="illo" src="/img/projects/TSOC-USBUART1/TSOC-USBUART1_bot.png" alt="TSOC-USBUART1 Bottom View" title="TSOC-USBUART1 Bottom View"/></a></td>
+	</tr>
+	</table>
+	</center>
+   <!-- License terms -->
+  
+
+<!-- place "licensing: true" in the YAML front matter to enable Licensing in that page -->
+
+	<h2>TSOC-USBUART1 Licensing</h2>
+
+<!-- place "cc_by_sa: true" in the YAML front matter to enable cc_by_sa licensing for that page -->
+	
+		<table border="0">
+		<tr>
+			<td align="center"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img width="88" height="31" alt="Creative Commons License" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a></td>
+        </tr>
+		<tr>
+			<td>The TSOC-USBUART1 Project by PatternAgents is available and licensed under a Creative Commons Attribution-ShareAlike 4.0 International License</td>
+		</tr>
+		</table>
+	
+
+<!-- place "cc_by_nc_sa: true" in the YAML front matter to enable cc_by_nc_sa licensing for that page -->
+	
+
+
+
+
+    </div>
+  </div>
 
   </div>
   <div class="col minor">
+    
     
   <h2>Featured Projects</h2>
   <ul class="post-list">
@@ -226,6 +284,7 @@ It is a community sponsored, open source project, with no fees or licensing cost
     </li>
   
 </ul>
+
 
 
   </div>
@@ -350,6 +409,40 @@ It is a community sponsored, open source project, with no fees or licensing cost
 
 
   
+  
+  
+
+<!-- twitter widget script -->
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+  
+
+<!-- pinterest widget script -->
+<script type="text/javascript">
+(function(d){
+  var f = d.getElementsByTagName('SCRIPT')[0], p = d.createElement('SCRIPT');
+  p.type = 'text/javascript';
+  p.async = true;
+  p.setAttribute('data-pin-color', 'red');
+  p.setAttribute('data-pin-hover', 'true');
+  p.src = '//assets.pinterest.com/js/pinit.js';
+  f.parentNode.insertBefore(p, f);
+}(document));
+</script>
+  
+
+<!-- disqus widget script -->
+<script type="text/javascript">
+  var disqus_shortname = 'patternagents';
+  (function() {
+   var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+   dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+
 
 
 

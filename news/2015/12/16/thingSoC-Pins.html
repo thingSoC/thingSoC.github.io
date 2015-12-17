@@ -3,16 +3,16 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang="en" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
-  <title>thingSoC: thingSoC : ESP8266 Embedded Module</title>
+  <title>thingSoC: thingSoC Pin Mux Design :</title>
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width" />
 
-  <meta name="robots"                  content="noodp, noydir, noarchive"         />
-  <meta name="description"        content="thingSoC : USB PSoC1 Reference Design : System on Chip Platform for the Internet of Things"    />
-  <meta name="abstract"              content="thingSoC : TSOC-ESP8266-EM Reference Design : System on Chip Platform for the Internet of Things"       />
+  <meta name="robots"          content="index, follow, noodp, noydir" />
+  <meta name="description"     content="thingSoC : System on Chip Platform for the Internet of Things" />
+  <meta name="abstract"        content="System on Chip Platform for the Internet of Things" />
   <meta name="classification"  content="electronics, electronics design, design engineering" />
-  <meta name="keywords"              content="TSOC-ESP8266-EM, thingSoC, arduino, lcd, lcd controller, uno, mega, due, psoc, psoc1, psoc3, psoc4, psoc5, cypress, cpm, cpld, fpga"       />
+  <meta name="keywords"        content="electronics, electronics design, design engineering, open source software, open source hardware, OSHW" />
 
   <link rel="apple-touch-icon" type="image/png" href="/img/logos/apple-touch-icon-144x144.png" />
   <!--  <link rel="icon" type="image/png" href="http://www.moxon.com/img/logos/apple-touch-icon.png"/>  -->
@@ -52,20 +52,6 @@
 
 <body class="">
  
-
-<!-- Add the standard layout -->
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -112,143 +98,148 @@
 
 
   
-  
-
 
 <main class="row">
   
   <div class="col major">
     
-  <div class="row">
-    <div class="col maj_major">
-      
   
-  <h1>thingSoC : ESP8266 Embedded Module</h1>
+  <article role="article">
+    <header>
+      
+        <h1 class="entry-title">thingSoC Pin Mux Design :</h1>
+      
+      
+        <p class="meta">
+          
+        </p>
+      
+    </header>
+    <div class="entry-content">
+  
+  
+  
 
-  <!-- Add the content from the post/project -->
-  The <b>TSOC-ESP8266-EM</b> board is a complete Wi-Fi Device and Access point, supported by the Arduino IDE.
-It places the popular ESP8266 Wi-Fi System-on-Chip Device in a thingSoC Embedded Module Socket,
-and enables the ESP8266 to be used with any other thingSoC reference design, allowing it to
-be paired with a number of different host processors and peripherals.
+<blockquote>
+	<p>There is nothing permanent except change.</p>
+	<p>&mdash;Heraclitus</p>
+</blockquote>
+
+<p><b>thingSoC</b> has a new, but simple method for determining the multiplexing of Input/Output Pins
+for add-on boards and peripherals. Remember that the Linux Device Tree pin multiplexing information is
+provided to control the pin multiplexing on the CPU or microcontroller itself; and doesn't necessarily specify
+all the information about a specific peripheral pin multiplexing or it's capabilities. <br><b>thingSoC</b> has a few simple bus
+configurations that make interfacing peripherals a snap.
+</p>
 <!-- more -->
-<br><br>
-
-
-<h3>TSOC-ESP8266-EM Features:</h3>
-<ul>
-  <li>ESP8266 WiFi System-on-Chip</li>
-  <li>Program using the Arduino IDE</li>
-  <li>Program using Node.js</li>
-  <li>Program using eLua</li>
-  <li>Flash programming using RTS/DTR, compatible with nodeMCU</li>
-  <li>Inter-Integrated Circuit(I2C) Bus supported</li>
-  <li>Serial-Parallel Interface(SPI) Bus supported</li>
-  <li>Optional Socket for I2C NVSRAM (FM24V10) (128K x 8 bits)</li>
-  <li>Optional Socket for I2C Temperature Sensor (TMP102)</li>
-  <li>Optional Socket for I2C Encryption Processor (ATECC108)</li>
-  <li>Compatible with <a href="http://www.mikroe.com/click/">Mikrobus periperals</a></li>
- <li>An Open-Source Hardware (OSHW) Reference Design</li>
-</ul>
+<h3>thingSoC Pin Configurations</h3>
 <p>
-
-<h3>TSOC-ESP8266-EM Application Examples:</h3>
-<ul>
-  <li>WiFi Sensor</li>
-  <li>WiFi Bridge</li>
-</ul>
-
+<b>thingSoC</b> is different from the other 'lil microprocessor boards out there, such as the Arduino Mini, NXP mBed, Teensy, and others;
+it has defined pin configurations that are cross-platform compatible. In other words, all thingSoC compatible boards use an interchangeable
+interconnection scheme, even if the embedded microprocessor is a different make or model. The example below shows how this is possible :
 <p>
- <img src="/img/projects/thingSoC/open_source_hardware_logo.png"alt="Open Source Hardware" title="Open Source Hardware">
-</p>     
-
+ <img src="/img/projects/thingSoC/thingSoC_pinmux.png" alt="thingSoC Interface Pin Multiplexing" title="thingSoC Interface Pin Multiplexing">
+</p> 
 <p>
-If you are interested in participating in the <b>thingSoC</b> community development,
-please join our mailing list (it is low frequency - about once per month).
+Most Microprocessor busses, such as SPI, or I2S audio, have a grouping of particular signals that are needed to implement that particular bus type.
+The <b>thingSoC</b> specification requires those signal groupings on specific pins, so the particular signals you need, are always located where you need them to be.
+This insures interoperability across a wide range of peripherals and add-on boards.
+</p>
+<h3>thingSoC Minimum Pin Configuration</h3>
+<p>
+The minimum <b>thingSoC</b> socket configuration is only four (4) pins, namely, Power(5V), Ground, I2C_SDA, and I2C_SCL.
+This allows the <b>thingSoC</b> socket controller to read the socket configuration information 
+(at I2C Address 0x54 - 0x57), in order to determine how a programmable <b>thingSoC</b> socket 
+is configured.
+</p>
+<p>
+ <img src="/img/projects/thingSoC/thingSoC_minimum.png" alt="thingSoC Interface Minimum Pins" title="thingSoC Interface Minimum Pins">
+</p> 
+<p>
+Once the <b>thingSoC</b> socket controller reads the socket configuration table via the I2C interface, it can configure the remainder of the
+socket connections corrrectly for the specific attached peripheral. For example, in an configuration that requires a large number of analog
+sensor inputs to be sampled, all the remaining pins might be configured to be Analog inputs, as the following example shows :
+<p>
+ <img src="/img/projects/thingSoC/thingSoC_analog.png" alt="thingSoC Interfaces" title="thingSoC Interfaces">
 </p>
 
+<h3>thingSoC Default Pin Configuration</h3>
+<p>The <b>thingSoC</b> socket default configuration
+is shown below, and includes, one I2C interace (minimum), one full UART interface (eight pins), one full SPI interface (ten pins),
+and JTAG/Programming interface (eight pins).
+<p>
+ <img src="/img/projects/thingSoC/thingSoC_default.png" alt="thingSoC default Interfaces" title="thingSoC default Interfaces">
+</p>
+<p>
+The <b>thingSoC</b> socket pin configurations are one of the features of the <b>thingSoC</b> architecture that allow for simple operation
+and great interoperability between different microprocessor makes and models. In the next article, we'll cover the <b>thingSoC</b> socket 
+JTAG and Programming Interface, a dual mode interface that saves a number of pins during normal operating modes.
+</p>
+<p>
+<p>
+<h3>thingSoC Resources</h3>
+<p>
+<b>thingSoC</b> defines a physical, hardware socket system for inter-operable printed circuit boards,
+with a data centric firmware model for automatic device discovery, and a software API for interacting with the system.
+<p>
+<ol>
+    <li><a href="http://thingsoc.github.io/projects/thingSoC.html">thingSoC Project Page</a></li>
+    <li><a href="https://github.com/thingSoC/thingSoC/blob/master/specification/thingSoC_spec_V0_1.pdf?raw=true">thingSoC Specification (Draft)</a></li>
+    <li><a href="https://github.com/thingSoC">thingSoC on Github</a></li>
+    <li><a href="/support/faq.html"                   >FAQ  - Frequently Asked Questions</a></li>
+    <li><a href="/support/hardware_architecture.html"                    >Arch - Hardware Overview</a></li>
+    <li><a href="/support/firmware_architecture.html"                    >Arch - Firmware Overview</a></li>
+    <li><a href="/support/software_architecture.html"                    >Arch - Software Overview</a></li>
+    <li><a href="https://github.com/thingSoC/thingSoC/wiki"  >Wiki - Project Wiki</a></li>
+    <li><a href="https://github.com/thingSoC/thingSoC/issues">Bugs - Project Issue/Bug Tracking</a></li>  
+</ol>
+</p>
 
-
-
-    </div>
-    <div class="col maj_minor">
-      
-  <h2>TSOC-ESP8266-EM</h2>
-  <img src="/img/projects/TSOC-ESP8266-EM/TSOC-ESP8266-EM_model.png" alt="TSOC-ESP8266-EM Model" title="TSOC-ESP8266-EM Model"/>
-  <br>
+<h3>thingSoC Reference Designs</h3>
+<p>
+<ul>
+   <li><a href="">thingSoC ESP8266 Wi-Fi Reference Design</a></li>
+   <li><a href="">thingSoC USBUART Reference Design</a></li>
+  <li><a href="">thingSoC Cortex-M0 Reference Design</a></li>
   
+</ul>
+</p>
 
+<h3>Donate</h3>
+<p>
+<b>thingSoC</b> is community supported, you can help by contributing.
+<BR><BR>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="5NPC24C7VQ89L">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+</p>
 
-  <h2>Tweet about TSOC-ESP8266-EM</h2>
-    <center>
-    <a href="https://twitter.com/intent/tweet?button_hashtag=TSOC-ESP8266-EM" class="twitter-hashtag-button" data-lang="en" data-related="PatternAgents">Tweet #TSOC-ESP8266-EM</a>
-	</center>
-  <h2>TSOC-ESP8266-EM Repository</h2>
-  <center>
-  <table border="0">
-  <tr>
-	<td><a href="https://github.com/thingSoC/TSOC-ESP8266-EM"><img class="img" src="/img/logos/github_repo.png" width="168" height="38" alt="TSOC-ESP8266-EM Github" title="TSOC-ESP8266-EM Github"/></a></td>
-  </tr>
-  <tr>
-	<td><a href="https://github.com/thingSoC/TSOC-ESP8266-EM/wiki"><img class="img" src="/img/logos/project_wiki.png"  width="168" height="38" alt="TSOC-ESP8266-EM Wiki" title="TSOC-ESP8266-EM Wiki"/></a></td>
-  </tr>
-  <tr>
-	<td><a href="https://github.com/thingSoC/TSOC-ESP8266-EM/issues"><img class="img" src="/img/logos/bug_tracker.png"  width="168" height="38" alt="TSOC-ESP8266-EM Issues" title="TSOC-ESP8266-EM Issues"/></a></td>
-  </tr>
-  </table>
-  </center>
-  <h2>TSOC-ESP8266-EM Downloads</h2>
-    <center>
-	<table border="0">
-	<tr>
-		<td><a href="https://github.com/thingSoC/TSOC-ESP8266-EM/zipball/master"><img class="img" src="/img/logos/zip_archive.png" width="168" height="38" alt="TSOC-ESP8266-EM ZIPball" title="TSOC-ESP8266-EM ZIPball"/></a></td>
-	</tr>
-	<tr>
-		<td><a href="https://github.com/thingSoC/TSOC-ESP8266-EM/tarball/master"><img class="img" src="/img/logos/tar_archive.png" width="168" height="38" alt="TSOC-ESP8266-EM TARball" title="TSOC-ESP8266-EM TARball"/></a></td>
-	</tr>
-	</table>
-	</center>
-  <h2>TSOC-ESP8266-EM Images</h2>
-    <center>
-	<table border="0">
-	<tr>
-		<td><a href="/img/projects/TSOC-ESP8266-EM/TSOC-ESP8266-EM_top.png"><img class="illo" src="/img/projects/TSOC-ESP8266-EM/TSOC-ESP8266-EM_top.png" alt="TSOC-ESP8266-EM Top View" title="TSOC-ESP8266-EM Top View"/></a></td>
-	</tr>
-	<tr>
-		<td><a href="/img/projects/TSOC-ESP8266-EM/TSOC-ESP8266-EM_bot.png"><img class="illo" src="/img/projects/TSOC-ESP8266-EM/TSOC-ESP8266-EM_bot.png" alt="TSOC-ESP8266-EM Bottom View" title="TSOC-ESP8266-EM Bottom View"/></a></td>
-	</tr>
-	</table>
-	</center>
-   <!-- License terms -->
-  
+<p>
+<b>thingSoC</b> has been designed to address many of the issues and limitations with current IoT development platforms.
+It is a community sponsored, open source project, with no fees or licensing costs.
+</p>
 
-<!-- place "licensing: true" in the YAML front matter to enable Licensing in that page -->
+ 
+</div>
+    <footer>
+      <p class="meta">
+        December 16, 2015
+      </p>
+      <p class="meta">
+        
+          <a class="previous" href="/projects/TSOC-XMC1200.html" title="Previous Post: thingSoC : Infineon XMC1200 CPU Base Board">&laquo; thingSoC : Infineon XMC1200 CPU Base Board</a>
+        
+        
+      </p>
+    </footer>
+  </article>
 
-	<h2>TSOC-ESP8266-EM Licensing</h2>
-
-<!-- place "cc_by_sa: true" in the YAML front matter to enable cc_by_sa licensing for that page -->
-	
-		<table border="0">
-		<tr>
-			<td align="center"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img width="88" height="31" alt="Creative Commons License" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a></td>
-        </tr>
-		<tr>
-			<td>The TSOC-ESP8266-EM Project by PatternAgents is available and licensed under a Creative Commons Attribution-ShareAlike 4.0 International License</td>
-		</tr>
-		</table>
-	
-
-<!-- place "cc_by_nc_sa: true" in the YAML front matter to enable cc_by_nc_sa licensing for that page -->
-	
-
-
-
-
-    </div>
-  </div>
 
   </div>
   <div class="col minor">
-    
     
   <h2>Featured Projects</h2>
   <ul class="post-list">
@@ -294,7 +285,6 @@ please join our mailing list (it is low frequency - about once per month).
     </li>
   
 </ul>
-
 
 
   </div>
@@ -419,40 +409,6 @@ please join our mailing list (it is low frequency - about once per month).
 
 
   
-  
-  
-
-<!-- twitter widget script -->
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
-  
-
-<!-- pinterest widget script -->
-<script type="text/javascript">
-(function(d){
-  var f = d.getElementsByTagName('SCRIPT')[0], p = d.createElement('SCRIPT');
-  p.type = 'text/javascript';
-  p.async = true;
-  p.setAttribute('data-pin-color', 'red');
-  p.setAttribute('data-pin-hover', 'true');
-  p.src = '//assets.pinterest.com/js/pinit.js';
-  f.parentNode.insertBefore(p, f);
-}(document));
-</script>
-  
-
-<!-- disqus widget script -->
-<script type="text/javascript">
-  var disqus_shortname = 'patternagents';
-  (function() {
-   var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-   dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-  })();
-</script>
-
-
-
 
 
 

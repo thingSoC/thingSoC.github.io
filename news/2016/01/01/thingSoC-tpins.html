@@ -3,16 +3,16 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang="en" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
-  <title>thingSoC: thingSoC Support</title>
+  <title>thingSoC: thingSoC : Pin Multiplex Design</title>
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width" />
 
-  <meta name="robots"                  content="noodp, noydir, noarchive"         />
-  <meta name="description"        content="thingSoC Support"    />
-  <meta name="abstract"              content="thingSoC Support"       />
+  <meta name="robots"          content="index, follow, noodp, noydir" />
+  <meta name="description"     content="thingSoC : System on Chip Platform for the Internet of Things" />
+  <meta name="abstract"        content="System on Chip Platform for the Internet of Things" />
   <meta name="classification"  content="electronics, electronics design, design engineering" />
-  <meta name="keywords"              content="thingSoC, bridger, videre, arduino, led, sensors"       />
+  <meta name="keywords"        content="electronics, electronics design, design engineering, open source software, open source hardware, OSHW" />
 
   <link rel="apple-touch-icon" type="image/png" href="/img/logos/apple-touch-icon-144x144.png" />
   <!--  <link rel="icon" type="image/png" href="http://www.moxon.com/img/logos/apple-touch-icon.png"/>  -->
@@ -50,8 +50,9 @@
 
 </head>
 
-<body class="support">
+<body class="">
  
+
 
 
 
@@ -103,24 +104,141 @@
   <div class="col major">
     
   
-  <h1>thingSoC support</h1>
-  <p>
-  Start with the FAQ for more information.
-  </p>
-  <ul>
+  <article role="article">
+    <header>
+      
+        <h1 class="entry-title">thingSoC : Pin Multiplex Design</h1>
+      
+      
+        <p class="meta">
+          
+        </p>
+      
+    </header>
+    <div class="entry-content">
+  
+  
+  
+
+<blockquote>
+	<p>There is nothing permanent except change.</p>
+	<p>&mdash;Heraclitus</p>
+</blockquote>
+
+<p><b>thingSoC</b> has a new, but simple method for determining the multiplexing of Input/Output Pins
+for add-on boards and peripherals. Remember that the Linux Device Tree pin multiplexing information is
+provided to control the pin multiplexing on the CPU or microcontroller itself; and doesn't necessarily specify
+all the information about a specific peripheral pin multiplexing or it's capabilities. <br><b>thingSoC</b> has a few simple bus
+configurations that make interfacing peripherals a snap.
+</p>
+<!-- more -->
+<h3>thingSoC Pin Configurations</h3>
+<p>
+<b>thingSoC</b> is different from the other 'lil microprocessor boards out there, such as the Arduino Mini, NXP mBed, Teensy, and others;
+it has defined pin configurations that are cross-platform compatible. In other words, all thingSoC compatible boards use an interchangeable
+interconnection scheme, even if the embedded microprocessor is a different make or model. The example below shows how this is possible :
+<p>
+ <img src="/img/projects/thingSoC/thingSoC_pinmux.png" alt="thingSoC Interface Pin Multiplexing" title="thingSoC Interface Pin Multiplexing">
+</p> 
+<p>
+Most Microprocessor busses, such as SPI, or I2S audio, have a grouping of particular signals that are needed to implement that particular bus type.
+The <b>thingSoC</b> specification requires those signal groupings on specific pins, so the particular signals you need, are always located where you need them to be.
+This insures interoperability across a wide range of peripherals and add-on boards.
+</p>
+<h3>thingSoC Minimum Pin Configuration</h3>
+<p>
+The minimum <b>thingSoC</b> socket configuration is only four (4) pins, namely, Power(5V), Ground, I2C_SDA, and I2C_SCL.
+This allows the <b>thingSoC</b> socket controller to read the socket configuration information 
+(at I2C Address 0x54 - 0x57), in order to determine how a programmable <b>thingSoC</b> socket 
+is configured.
+</p>
+<p>
+ <img src="/img/projects/thingSoC/thingSoC_minimum.png" alt="thingSoC Interface Minimum Pins" title="thingSoC Interface Minimum Pins">
+</p> 
+<p>
+Once the <b>thingSoC</b> socket controller reads the socket configuration table via the I2C interface, it can configure the remainder of the
+socket connections corrrectly for the specific attached peripheral. For example, in an configuration that requires a large number of analog
+sensor inputs to be sampled, all the remaining pins might be configured to be Analog inputs, as the following example shows :
+<p>
+ <img src="/img/projects/thingSoC/thingSoC_analog.png" alt="thingSoC Interfaces" title="thingSoC Interfaces">
+</p>
+
+<h3>thingSoC Default Pin Configuration</h3>
+<p>The <b>thingSoC</b> socket default configuration
+is shown below, and includes, one I2C interace (minimum), one full UART interface (eight pins), one full SPI interface (ten pins),
+and JTAG/Programming interface (eight pins).
+<p>
+ <img src="/img/projects/thingSoC/thingSoC_default.png" alt="thingSoC default Interfaces" title="thingSoC default Interfaces">
+</p>
+<p>
+The <b>thingSoC</b> socket pin configurations are one of the features of the <b>thingSoC</b> architecture that allow for simple operation
+and great interoperability between different microprocessor makes and models. In the next article, we'll cover the <b>thingSoC</b> socket 
+JTAG and Programming Interface, a dual mode interface that saves a number of pins during normal operating modes.
+</p>
+<p>
+<p>
+<h3>thingSoC Resources</h3>
+<p>
+<b>thingSoC</b> defines a physical, hardware socket system for inter-operable printed circuit boards,
+with a data centric firmware model for automatic device discovery, and a software API for interacting with the system.
+<p>
+
+<ol>
+    <li><a href="http://thingsoc.github.io/projects/thingSoC.html">thingSoC Project Page</a></li>
+    <li><a href="https://github.com/thingSoC/thingSoC/blob/master/specification/thingSoC_spec.pdf?raw=true">thingSoC Specification (Draft)</a></li>
+    <li><a href="https://github.com/thingSoC">thingSoC on Github</a></li>
     <li><a href="/support/faq.html"                   >FAQ  - Frequently Asked Questions</a></li>
     <li><a href="/support/hardware_architecture.html"                    >Arch - Hardware Overview</a></li>
     <li><a href="/support/firmware_architecture.html"                    >Arch - Firmware Overview</a></li>
     <li><a href="/support/software_architecture.html"                    >Arch - Software Overview</a></li>
     <li><a href="https://github.com/thingSoC/thingSoC/wiki"  >Wiki - Project Wiki</a></li>
     <li><a href="https://github.com/thingSoC/thingSoC/issues">Bugs - Project Issue/Bug Tracking</a></li>  
-  </ul>
+</ol>
+</p>
 
-  <p>
-    You can also find online help and discussion on the <a href="http://groups.google.com/group/thingSoC">thingSoC discussion group</a>.
-    Before asking a question or reporting a bug, please read the FAQ.
-  </p>
+<h3>thingSoC Reference Designs</h3>
+<p>
+<ul>
+   <li><a href="">thingSoC ESP8266 Wi-Fi Reference Design</a></li>
+   <li><a href="">thingSoC USBUART Reference Design</a></li>
+  <li><a href="">thingSoC Cortex-M0 Reference Design</a></li>
+  
+</ul>
+</p>
 
+<h3>Donate</h3>
+<p>
+<b>thingSoC</b> is community supported, you can help by contributing.
+<BR><BR>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="5NPC24C7VQ89L">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+</p>
+
+<p>
+<b>thingSoC</b> has been designed to address many of the issues and limitations with current IoT development platforms.
+It is a community sponsored, open source project, with no fees or licensing costs.
+</p>
+
+ 
+</div>
+    <footer>
+      <p class="meta">
+        January 01, 2016
+      </p>
+      <p class="meta">
+        
+          <a class="previous" href="/projects/TSOC-USBUART1.html" title="Previous Post: thingSoC : USBUART (CDC) Reference Design">&laquo; thingSoC : USBUART (CDC) Reference Design</a>
+        
+        
+          <a class="next" href="/news/2016/01/10/thingSoC-tspi.html" title="Next Post: thingSoC : Extended SPI Design">thingSoC : Extended SPI Design &raquo;</a>
+        
+      </p>
+    </footer>
+  </article>
 
 
   </div>
@@ -192,6 +310,8 @@
 
 <!-- discus panel -->
 <!-- place "comments: true" in the YAML front matter to enable comments in that page -->
+
+<div class="panel" id="disqus_thread"></div>
 
    
 

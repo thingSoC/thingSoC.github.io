@@ -3,16 +3,16 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang="en" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
-  <title>thingSoC: thingSoC Support</title>
+  <title>thingSoC: thingSoC : Extended SPI Design</title>
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width" />
 
-  <meta name="robots"                  content="noodp, noydir, noarchive"         />
-  <meta name="description"        content="thingSoC Support"    />
-  <meta name="abstract"              content="thingSoC Support"       />
+  <meta name="robots"          content="index, follow, noodp, noydir" />
+  <meta name="description"     content="thingSoC : System on Chip Platform for the Internet of Things" />
+  <meta name="abstract"        content="System on Chip Platform for the Internet of Things" />
   <meta name="classification"  content="electronics, electronics design, design engineering" />
-  <meta name="keywords"              content="thingSoC, bridger, videre, arduino, led, sensors"       />
+  <meta name="keywords"        content="electronics, electronics design, design engineering, open source software, open source hardware, OSHW" />
 
   <link rel="apple-touch-icon" type="image/png" href="/img/logos/apple-touch-icon-144x144.png" />
   <!--  <link rel="icon" type="image/png" href="http://www.moxon.com/img/logos/apple-touch-icon.png"/>  -->
@@ -50,8 +50,9 @@
 
 </head>
 
-<body class="support">
+<body class="">
  
+
 
 
 
@@ -103,24 +104,115 @@
   <div class="col major">
     
   
-  <h1>thingSoC support</h1>
-  <p>
-  Start with the FAQ for more information.
-  </p>
-  <ul>
+  <article role="article">
+    <header>
+      
+        <h1 class="entry-title">thingSoC : Extended SPI Design</h1>
+      
+      
+        <p class="meta">
+          
+        </p>
+      
+    </header>
+    <div class="entry-content">
+  
+  
+  
+
+<blockquote>
+	<p>I don't know where I'm going from here, but I promise it won't be boring.</p>
+	<p>&mdash;David Bowie</p>
+</blockquote>
+
+<p>The <b>thingSoC</b> specification defines a set of extended SPI (Serial Parallel Interface) signals
+that provides a simple, but extensible, high-speed interface. Two (2) additional select signals
+allow a standard method to access up to four (4) SPI peripherals using only a single, external 2:4 decoder chip.   
+</p>
+<!-- more -->
+<h3>thingSoC Pin Configurations</h3>
+<p>
+<b>thingSoC</b> is different from the other 'lil microprocessor boards out there, such as the Arduino Mini, NXP mBed, Teensy, and others;
+it has defined pin configurations that are cross-platform compatible. In other words, all thingSoC compatible boards use an interchangeable
+interconnection scheme, even if the embedded microprocessor is a different make or model. The example below shows how this is possible :
+<p>
+ <img src="/img/projects/thingSoC/thingSoC_pinmux.png" alt="thingSoC Interface Pin Multiplexing" title="thingSoC Interface Pin Multiplexing">
+</p> 
+
+<h3>thingSoC : Extended SPI Interface Design</h3>
+<p>
+The <b>thingSoC</b> extended SPI (Serial Parallel Interface) signals are as follows :
+<ol>
+<li><b>SPI-IO2</b> : Used to provide additonal control/status signals for SPI peripherals, such as "HOLD", "STATUS", etc.</li>
+<li><b>SPI-IO2</b> : Used to provide additonal control/status signals for SPI peripherals, such as "HOLD", "STATUS", etc.</li>
+<li><b>SPI-SS2</b> : Used to access up to four (4) SPI peripherals with only a single, external 2:4 decoder chip.</li>
+<li><b>SPI-SS1</b> : Used to access up to four (4) SPI peripherals with only a single, external 2:4 decoder chip.</li>
+<li><b>SPI-IRQ</b>/<b>SPI-A0 </b> : Used to provide either an analog input (A0) or a SPI peripheral Interrupt, active low. </li>
+<li><b>SPI-ATN</b>/<b>SPI-RST</b> : Used to provide either an control input (ATN) or a SPI peripheral Reset (RST), active low. </li>
+<li><b>SPI-CS</b> : SPI Chip Select, active low. </li>
+<li><b>SPI-SCK</b> : SPI Clock, active high. </li>
+<li><b>SPI-MISO</b> : SPI Data Master In, Slave Out.</li>
+<li><b>SPI-MOSI</b> : SPI Data Master Out, Slave In. </li>
+<li><b>3.3V</b> : Power Input with minimum 250mA available.</li>
+<li><b>GND</b> : System Ground (Digital)</li>
+</ol>
+<p>
+The <b>thingSoC</b> (draft) specification provides a more complete description of the extended SPI (Serial Parallel Interface) signals,
+as well as the EEPROM data structure that defines the SPI peripherals use and pin multiplexing.
+<p>
+
+<h3>thingSoC Resources</h3>
+<p>
+<ol>
+    <li><a href="http://thingsoc.github.io/projects/thingSoC.html">thingSoC Project Page</a></li>
+    <li><a href="https://github.com/thingSoC/thingSoC/blob/master/specification/thingSoC_spec.pdf?raw=true">thingSoC Specification (Draft)</a></li>
+    <li><a href="https://github.com/thingSoC">thingSoC on Github</a></li>
     <li><a href="/support/faq.html"                   >FAQ  - Frequently Asked Questions</a></li>
     <li><a href="/support/hardware_architecture.html"                    >Arch - Hardware Overview</a></li>
     <li><a href="/support/firmware_architecture.html"                    >Arch - Firmware Overview</a></li>
     <li><a href="/support/software_architecture.html"                    >Arch - Software Overview</a></li>
     <li><a href="https://github.com/thingSoC/thingSoC/wiki"  >Wiki - Project Wiki</a></li>
     <li><a href="https://github.com/thingSoC/thingSoC/issues">Bugs - Project Issue/Bug Tracking</a></li>  
-  </ul>
+</ol>
+</p>
 
-  <p>
-    You can also find online help and discussion on the <a href="http://groups.google.com/group/thingSoC">thingSoC discussion group</a>.
-    Before asking a question or reporting a bug, please read the FAQ.
-  </p>
+<h3>thingSoC Reference Designs</h3>
+<p>
+<ul>
+   <li><a href="https://github.com/thingSoC">thingSoC Reference Designs</a></li>
+</ul>
+</p>
 
+<h3>Donate</h3>
+<p>
+<b>thingSoC</b> is community supported, you can help by contributing.
+<BR><BR>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="5NPC24C7VQ89L">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+</p>
+
+<p>
+<b>thingSoC</b> has been designed to address many of the issues and limitations with current IoT development platforms.
+It is a community sponsored, open source project, with no fees or licensing costs.
+</p>
+
+</div>
+    <footer>
+      <p class="meta">
+        January 10, 2016
+      </p>
+      <p class="meta">
+        
+          <a class="previous" href="/news/2016/01/01/thingSoC-tpins.html" title="Previous Post: thingSoC : Pin Multiplex Design">&laquo; thingSoC : Pin Multiplex Design</a>
+        
+        
+      </p>
+    </footer>
+  </article>
 
 
   </div>
@@ -192,6 +284,8 @@
 
 <!-- discus panel -->
 <!-- place "comments: true" in the YAML front matter to enable comments in that page -->
+
+<div class="panel" id="disqus_thread"></div>
 
    
 

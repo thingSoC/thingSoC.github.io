@@ -9,9 +9,9 @@ excerpt_link: "More &raquo;"  # "Continue reading" link text at the bottom of ex
 excerpt_separator: "<!-- more -->"
 
 # the product_slug of the project you want to feature on home page
-featured_project: thingSoC TSOC-USBUART1
+featured_project: thingSoC
 # the projects listed in list of projects in sidebar_projects
-listed_projects: [thingSoC]
+listed_projects: [thingSoC TSOC-USBUART1]
 
 # site specific strings -
 #

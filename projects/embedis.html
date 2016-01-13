@@ -3,16 +3,16 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang="en" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
-  <title>thingSoC: thingSoC</title>
+  <title>thingSoC: thingSoC : embedis</title>
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width" />
 
   <meta name="robots"                  content="noodp, noydir, noarchive"         />
-  <meta name="description"        content="thingSoC - Open Source Sockets for the Internet of Things"    />
-  <meta name="abstract"              content="thingSoC - Open Source Sockets for the Internet of Things"       />
-  <meta name="classification"  content="open source software, open source hardware, foss, oshw" />
-  <meta name="keywords"              content="thingSoC, rsvp, rsvpsis, rsvp-sis, microprocessor, fpga, asic, arduino, oshw"       />
+  <meta name="description"        content="embedis : an open source library for creating simple embedded dictionary servers"    />
+  <meta name="abstract"              content="embedis : an open source library for creating simple embedded dictionary servers"       />
+  <meta name="classification"  content="electronics, electronics design, design engineering" />
+  <meta name="keywords"              content="embedis, thingSoC, arduino, lcd, lcd controller, uno, mega, due, psoc, psoc1, psoc3, psoc4, psoc5, cypress, cpm, cpld, fpga"       />
 
   <link rel="apple-touch-icon" type="image/png" href="/img/logos/apple-touch-icon-144x144.png" />
   <!--  <link rel="icon" type="image/png" href="http://www.moxon.com/img/logos/apple-touch-icon.png"/>  -->
@@ -50,11 +50,10 @@
 
 </head>
 
-<body class="home">
+<body class="">
  
 
-
-
+<!-- Add the standard layout -->
 
 
 
@@ -90,9 +89,9 @@
 <header>
   <div class="head-container">
 	  <div class="col">
-	    
+	    <a href="/">
 	      <h1>thingSoC <span class="tag-line">Open Source Sockets for the Internet of Things</span></h1>
-	    
+	    </a>
 	  </div>
   </div>
 </header>
@@ -114,44 +113,6 @@
 
   
   
-      
-      
-      
-      
-
-<article class="feature row">
-  <div class="col major">
-    <div class="col">
-	      <h1 class="entry-title"><a href="/projects/thingSoC.html">thingSoC : Open Source Sockets</a></h1>
-        <div class="feature-body">
-          <br>
-<b>thingSoC</b> is an open source standard that defines a
-vendor independent socket system for the creation of new Internet Things;
-it addresses many of the limitations of current product offerings
-and standards, by adding capabilities such as automatic device discovery, 
-device configuration, monitoring, instrumentation, and testing.
-<br><br>
-<b>thingSoC</b> works with many existing standards and Integrated Development Environments (IDEs),
-such as Arduino, rfDuino, Raspberry Pi, Beaglebone, X-Bee, and others;
-but adds features and capabilites that make building new IoT devices much easier.
-<br><br>
-The <b>thingSoC</b> virtual platform definition supports a number of different System-on-Chip platforms and peripherals,
-such as cell modems, packet radios, Wi-Fi, Bluetooth, and more. 
-
-
-
-
-
-          <a class="button" href="/projects/thingSoC.html">More Info &raquo;</a>
-        </div>    
-      </div>
-  </div>
-  <div class="col minor">
-        <a href="/projects/thingSoC.html"><img src="/img/projects/thingSoC/thingSoC_model.png" alt="thingSoC" title="thingSoC"/></a>
-      </div>
-</article>
-
-    
 
 
 <main class="row">
@@ -162,28 +123,54 @@ such as cell modems, packet radios, Wi-Fi, Bluetooth, and more.
     <div class="col maj_major">
       
   
-<br>
-<b>thingSoC</b> defines a physical, hardware socket system for inter-operable printed circuit boards,
-with a data centric firmware model for automatic device discovery, and a software API for interacting with the system.
+  <h1>thingSoC : embedis</h1>
+
+  <!-- Add the content from the post/project -->
+  <p>
+<b>embedis</b> is an open source library for creating simple embedded dictionary servers. 
+Embedis is used for embedding key-value dictionaries into the 
+SRAM, FLASH, FRAM, NVSRAM, EEPROM, or SDcard memory systems 
+of small, limited resource, embedded computing platforms, 
+such as the Arduino(AVR), Teensy(Cortex-M4), PSoC(Cortex-M0/3), 
+and others. 
+<!-- more -->
+<p>
+I needed to support several different persistant memory store types, 
+for a number of "Internet of Things", and small embedded system projects. 
+These types include the internal processor/SoC based SRAM, FLASH, EEPROM, 
+and Scratchpad SRAM memories, as well as externally attached FLASH, EEPROM, 
+FRAM, NVSRAM and SDCard memories. 
 </p>
-<p>
-<b>thingSoC</b> sockets support both the basic low speed interface standards like I2C, SPI, and UART, 
-but also supports higher speed interfaces like USB 3.0, 10/100/1000, and PCI-E for higher performance IoT devices.
-<b>thingSoC</b> sockets have been designed to support low power battery based IoT applications, as well as USB and wall-powered ones.
-</p>
-<p>
- <img src="/img/projects/thingSoC/thingSoC_cat_sm.png" alt="thingSoC Interfaces" title="thingSoC Interfaces">
-</p> 
-<p>
-<h1>What can you do with thingSoC?</h1>
-<p>
-Imagine what you could build with an IoT platform that is both simple to use, and ultra reliable!
+<h3>embedis Features:</h3>
 <ul>
-<li>Data Logging and Remote Monitoring</li>
-<li>Asset Monitoring Solutions</li>
-<li>Smart Home Applications</li>
-<li>Measurement and Verification Applications</li>
-<li>Your Application?</li></ul>
+  <li>SRAM, FLASH, FRAM, NVSRAM, EEPROM, or SDcard memory systems </li>
+ <li>An Open-Source Reference Design</li>
+</ul>
+
+<p>
+ <img src="/img/projects/thingSoC/open_source_hardware_logo.png"alt="Open Source Hardware" title="Open Source Hardware">
+</p>     
+
+<h3>thingSoC Resources</h3>
+<p>
+<ol>
+    <li><a href="http://thingsoc.github.io/projects/thingSoC.html">thingSoC Project Page</a></li>
+    <li><a href="https://github.com/thingSoC/thingSoC/blob/master/specification/thingSoC_spec.pdf?raw=true">thingSoC Specification (Draft)</a></li>
+    <li><a href="https://github.com/thingSoC">thingSoC on Github</a></li>
+    <li><a href="/support/faq.html"                   >FAQ  - Frequently Asked Questions</a></li>
+    <li><a href="/support/hardware_architecture.html"                    >Arch - Hardware Overview</a></li>
+    <li><a href="/support/firmware_architecture.html"                    >Arch - Firmware Overview</a></li>
+    <li><a href="/support/software_architecture.html"                    >Arch - Software Overview</a></li>
+    <li><a href="https://github.com/thingSoC/thingSoC/wiki"  >Wiki - Project Wiki</a></li>
+    <li><a href="https://github.com/thingSoC/thingSoC/issues">Bugs - Project Issue/Bug Tracking</a></li>  
+</ol>
+</p>
+
+<h3>thingSoC Reference Designs</h3>
+<p>
+<ul>
+   <li><a href="https://github.com/thingSoC">thingSoC Reference Designs</a></li>
+</ul>
 </p>
 
 <h3>Donate</h3>
@@ -199,12 +186,10 @@ Imagine what you could build with an IoT platform that is both simple to use, an
 </p>
 
 <p>
-Sign-up for our mailing list to hear more about 
-the <b>thingSoC</b> development and it's upcoming release.
+<b>thingSoC</b> has been designed to address many of the issues and limitations with current IoT development platforms.
+It is a community sponsored, open source project, with no fees or licensing costs.
 </p>
-<p>
-<b>thingSoC</b> - Open Source Sockets for the Internet of Things
-</p>
+
 
 
 
@@ -212,18 +197,75 @@ the <b>thingSoC</b> development and it's upcoming release.
     </div>
     <div class="col maj_minor">
       
-  <h2>Recent Tweets</h2>
+  <h2>embedis</h2>
+  <img src="/img/projects/embedis/embedis_model.png" alt="embedis Model" title="embedis Model"/>
+  <br>
   
 
-<!-- twitter -->
-<div class="panel">
-  <a  class="twitter-timeline"
-      href="https://twitter.com/PatternAgents" 
-      data-widget-id="408008079146373120"
-      data-tweet-limit="1">
-    Tweets by @PatternAgents
-  </a>
-</div>
+
+  <h2>Tweet about embedis</h2>
+    <center>
+    <a href="https://twitter.com/intent/tweet?button_hashtag=embedis" class="twitter-hashtag-button" data-lang="en" data-related="PatternAgents">Tweet #embedis</a>
+	</center>
+  <h2>embedis Repository</h2>
+  <center>
+  <table border="0">
+  <tr>
+	<td><a href="https://github.com/thingSoC/embedis"><img class="img" src="/img/logos/github_repo.png" width="168" height="38" alt="embedis Github" title="embedis Github"/></a></td>
+  </tr>
+  <tr>
+	<td><a href="https://github.com/thingSoC/embedis/wiki"><img class="img" src="/img/logos/project_wiki.png"  width="168" height="38" alt="embedis Wiki" title="embedis Wiki"/></a></td>
+  </tr>
+  <tr>
+	<td><a href="https://github.com/thingSoC/embedis/issues"><img class="img" src="/img/logos/bug_tracker.png"  width="168" height="38" alt="embedis Issues" title="embedis Issues"/></a></td>
+  </tr>
+  </table>
+  </center>
+  <h2>embedis Downloads</h2>
+    <center>
+	<table border="0">
+	<tr>
+		<td><a href="https://github.com/thingSoC/embedis/zipball/master"><img class="img" src="/img/logos/zip_archive.png" width="168" height="38" alt="embedis ZIPball" title="embedis ZIPball"/></a></td>
+	</tr>
+	<tr>
+		<td><a href="https://github.com/thingSoC/embedis/tarball/master"><img class="img" src="/img/logos/tar_archive.png" width="168" height="38" alt="embedis TARball" title="embedis TARball"/></a></td>
+	</tr>
+	</table>
+	</center>
+  <h2>embedis Images</h2>
+    <center>
+	<table border="0">
+	<tr>
+		<td><a href="/img/projects/embedis/embedis_top.png"><img class="illo" src="/img/projects/embedis/embedis_top.png" alt="embedis Top View" title="embedis Top View"/></a></td>
+	</tr>
+	<tr>
+		<td><a href="/img/projects/embedis/embedis_bot.png"><img class="illo" src="/img/projects/embedis/embedis_bot.png" alt="embedis Bottom View" title="embedis Bottom View"/></a></td>
+	</tr>
+	</table>
+	</center>
+   <!-- License terms -->
+  
+
+<!-- place "licensing: true" in the YAML front matter to enable Licensing in that page -->
+
+	<h2>embedis Licensing</h2>
+
+<!-- place "cc_by_sa: true" in the YAML front matter to enable cc_by_sa licensing for that page -->
+	
+		<table border="0">
+		<tr>
+			<td align="center"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img width="88" height="31" alt="Creative Commons License" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a></td>
+        </tr>
+		<tr>
+			<td>The embedis Project by PatternAgents is available and licensed under a Creative Commons Attribution-ShareAlike 4.0 International License</td>
+		</tr>
+		</table>
+	
+
+<!-- place "cc_by_nc_sa: true" in the YAML front matter to enable cc_by_nc_sa licensing for that page -->
+	
+
+
 
 
     </div>
@@ -327,6 +369,8 @@ the <b>thingSoC</b> development and it's upcoming release.
 <!-- discus panel -->
 <!-- place "comments: true" in the YAML front matter to enable comments in that page -->
 
+<div class="panel" id="disqus_thread"></div>
+
    
 
 <footer>
@@ -422,11 +466,35 @@ the <b>thingSoC</b> development and it's upcoming release.
   
   
   
-  
 
 <!-- twitter widget script -->
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
+  
+
+<!-- pinterest widget script -->
+<script type="text/javascript">
+(function(d){
+  var f = d.getElementsByTagName('SCRIPT')[0], p = d.createElement('SCRIPT');
+  p.type = 'text/javascript';
+  p.async = true;
+  p.setAttribute('data-pin-color', 'red');
+  p.setAttribute('data-pin-hover', 'true');
+  p.src = '//assets.pinterest.com/js/pinit.js';
+  f.parentNode.insertBefore(p, f);
+}(document));
+</script>
+  
+
+<!-- disqus widget script -->
+<script type="text/javascript">
+  var disqus_shortname = 'patternagents';
+  (function() {
+   var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+   dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
 
 
 

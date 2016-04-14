@@ -126,7 +126,7 @@
   <li>Q: Is the thingSoC Firmware Meta Data Store (FDMS) compatible with the Beaglebone Cape Manager?
   </li>
   <li> Yes. <b>thingSoC Compliant</b> devices implement the thingSoC thingSoC Firmware Meta Data Store (FDMS) mechanism,
-       which is compatible with the <A href="http://elinux.org/BeagleBone_and_the_3.8_Kernel#Cape_Manager_requirements">Linux 3.8 Kernal 
+       which is compatible with the <A href="https://github.com/raspberrypi/hats/blob/master/eeprom-format.md">Linux 3.8 Kernal 
        and Device  Tree  Overlays</a>. The thingSoC Firmware Meta Data Store (FDMS) mechanism implements additional features,
        however it is backward compatible with the Linux/Beaglebone Cape Manager.
   </li>
@@ -135,10 +135,10 @@
   </li>
   <li> The thingSoC Firmware Meta Data Store (FDMS) mechanism can implement additional features by allowing additional 
        <A href="http://www.patternagents.com/news/2015/01/25/the-blob.html">"BLOBs" (Binary Level Objects)</a> to be included in
-       the memory/storage device after the Beaglebone Cape Manager "BLOB". For example, an 
+       the memory/storage device after the Raspberry Pie Hat "BLOB". For example, an 
        <a href="http://www.intel.com/content/www/us/en/servers/ipmi/information-storage-definition-rev-1-2.html">IPMI FRU</a> 
        (Intelligent Peripheral Management Interface - Field Replaceable Unit) "BLOB" could be located immediately after the
-       Beaglebone Cape Manager "BLOB", giving access IPMI format data as well.
+       Raspberry Pie Hat "BLOB", giving access IPMI format data as well.
        <p>
         Each <A href="http://www.patternagents.com/news/2015/01/25/the-blob.html">"BLOB"</a> type can be identified by a
         unique "Magic Word" sequence at the beginning of the <A href="http://www.patternagents.com/news/2015/01/25/the-blob.html">"BLOB"</a>

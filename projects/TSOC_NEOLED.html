@@ -3,16 +3,16 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang="en" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
-  <title>thingSoC: thingSoC : embedis</title>
+  <title>thingSoC: TSOC_NEOLED : NeoPixel LED Driver Embedded Module</title>
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width" />
 
   <meta name="robots"                  content="noodp, noydir, noarchive"         />
-  <meta name="description"        content="embedis : an open source library for creating simple embedded dictionary servers"    />
-  <meta name="abstract"              content="embedis : an open source library for creating simple embedded dictionary servers"       />
+  <meta name="description"        content="TSOC_NEOLED - NeoPixel LED Driver Embedded Module"    />
+  <meta name="abstract"              content="TSOC_NEOLED - NeoPixel LED Driver Embedded Module"       />
   <meta name="classification"  content="electronics, electronics design, design engineering" />
-  <meta name="keywords"              content="embedis, thingSoC, arduino, lcd, lcd controller, uno, mega, due, psoc, psoc1, psoc3, psoc4, psoc5, cypress, cpm, cpld, fpga"       />
+  <meta name="keywords"              content="TSOC_NEOLED, WS2812, modbus, dmx, dmx-512, dmx512, rdm, usb, arduino, uno, pro, atmel, cpld, fpga"       />
 
   <link rel="apple-touch-icon" type="image/png" href="/img/logos/apple-touch-icon-144x144.png" />
   <!--  <link rel="icon" type="image/png" href="http://www.moxon.com/img/logos/apple-touch-icon.png"/>  -->
@@ -123,123 +123,82 @@
     <div class="col maj_major">
       
   
-  <h1>thingSoC : embedis</h1>
+  <h1>TSOC_NEOLED : NeoPixel LED Driver Embedded Module</h1>
 
   <!-- Add the content from the post/project -->
   <p>
-<b>embedis</b> is an open source library for creating simple embedded dictionary servers. 
-Embedis is used for embedding key-value dictionaries into the 
-SRAM, FLASH, FRAM, NVSRAM, EEPROM, or SDcard memory systems 
-of small, limited resource, embedded computing platforms, 
-such as the Arduino(AVR), Teensy(Cortex-M4), PSoC(Cortex-M0/3), 
-and others. 
+The TSOC_NEOLED is a PSoC4 (Programmable System on Chip) based board with integrated NeoPixel (WS2812) driver, in an Embedded Module format for the new thingSoC,
+Internet of Things open standard.
+</p>
 <!-- more -->
+
+<h3>TSOC_NEOLED - NeoPixel LED Driver Embedded Module :</h3>
+The TSOC_NEOLED connects any thingSoC (or Mikrobus) module to strings of programmable color LEDs.
 <p>
-I needed to support several different persistant memory store types, 
-for a number of "Internet of Things", and small embedded system projects. 
-These types include the internal processor/SoC based SRAM, FLASH, EEPROM, 
-and Scratchpad SRAM memories, as well as externally attached FLASH, EEPROM, 
-FRAM, NVSRAM and SDCard memories. 
-</p>
-<h3>embedis Features:</h3>
-<ul>
-  <li>SRAM, FLASH, FRAM, NVSRAM, EEPROM, or SDcard memory systems </li>
- <li>An Open-Source Reference Design</li>
-</ul>
+  <ul>
+    <li><a href="https://www.arduino.cc/">Supported by the Arduino IDE</a></li>
+    <li><a href="http://www.thingsoc.com">thingSoC Compliant Module</a></li>
+    <li><a href="http://www.mikroe.com/mikrobus/">Mikrobus Compatible Module</a></li> 
+    <li>Support Inidividually addressable RGB, or RGBY Color LEDs
+  </ul>
 
+   <img class="illo" src="/img/projects/TSOC_NEOLED/TSOC_NEOLED_iso.png" alt="TSOC_NEOLED Model" title="TSOC_NEOLED Model"/></a>
+   <p>
+<h2>Example Applications :</h2>
+An example of a portable color LED application, attached to our tandem bicycle for a Portland parade ride. 
 <p>
- <img src="/img/projects/thingSoC/open_source_hardware_logo.png"alt="Open Source Hardware" title="Open Source Hardware">
-</p>     
-
-<h3>thingSoC Resources</h3>
+<img class="illo" src="/img/projects/TSOC_NEOLED/light_the_ride2.png" alt="Light the Ride" title="Light the Ride"/></a>
 <p>
-<ol>
-    <li><a href="http://thingsoc.github.io/projects/thingSoC.html">thingSoC Project Page</a></li>
-    <li><a href="https://github.com/thingSoC/thingSoC/blob/master/specification/thingSoC_spec.pdf?raw=true">thingSoC Specification (Draft)</a></li>
-    <li><a href="https://github.com/thingSoC">thingSoC on Github</a></li>
-    <li><a href="/support/faq.html"                   >FAQ  - Frequently Asked Questions</a></li>
-    <li><a href="/support/hardware_architecture.html"                    >Arch - Hardware Overview</a></li>
-    <li><a href="/support/firmware_architecture.html"                    >Arch - Firmware Overview</a></li>
-    <li><a href="/support/software_architecture.html"                    >Arch - Software Overview</a></li>
-    <li><a href="https://github.com/thingSoC/thingSoC/wiki"  >Wiki - Project Wiki</a></li>
-    <li><a href="https://github.com/thingSoC/thingSoC/issues">Bugs - Project Issue/Bug Tracking</a></li>  
-</ol>
-</p>
-
-<h3>thingSoC Reference Designs</h3>
 <p>
-<ul>
-   <li><a href="https://github.com/thingSoC">thingSoC Reference Designs</a></li>
-</ul>
-</p>
-
-<h3>Donate</h3>
-<p>
-<b>thingSoC</b> is community supported, you can help by contributing.
-<BR><BR>
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="5NPC24C7VQ89L">
-<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-</form>
-</p>
-
-<p>
-<b>thingSoC</b> has been designed to address many of the issues and limitations with current IoT development platforms.
-It is a community sponsored, open source project, with no fees or licensing costs.
-</p>
-
-
 
 
 
     </div>
     <div class="col maj_minor">
       
-  <h2>embedis</h2>
-  <img src="/img/projects/embedis/embedis_model.png" alt="embedis Model" title="embedis Model"/>
+  <h2>TSOC_NEOLED</h2>
+  <img src="/img/projects/TSOC_NEOLED/TSOC_NEOLED_model.png" alt="TSOC_NEOLED Model" title="TSOC_NEOLED Model"/>
   <br>
   
 
 
-  <h2>Tweet about embedis</h2>
+  <h2>Tweet about TSOC_NEOLED</h2>
     <center>
-    <a href="https://twitter.com/intent/tweet?button_hashtag=embedis" class="twitter-hashtag-button" data-lang="en" data-related="PatternAgents">Tweet #embedis</a>
+    <a href="https://twitter.com/intent/tweet?button_hashtag=TSOC_NEOLED" class="twitter-hashtag-button" data-lang="en" data-related="PatternAgents">Tweet #TSOC_NEOLED</a>
 	</center>
-  <h2>embedis Repository</h2>
+  <h2>TSOC_NEOLED Repository</h2>
   <center>
   <table border="0">
   <tr>
-	<td><a href="https://github.com/thingSoC/embedis"><img class="img" src="/img/logos/github_repo.png" width="168" height="38" alt="embedis Github" title="embedis Github"/></a></td>
+	<td><a href="https://github.com/thingSoC/TSOC_NEOLED"><img class="img" src="/img/logos/github_repo.png" width="168" height="38" alt="TSOC_NEOLED Github" title="TSOC_NEOLED Github"/></a></td>
   </tr>
   <tr>
-	<td><a href="https://github.com/thingSoC/embedis/wiki"><img class="img" src="/img/logos/project_wiki.png"  width="168" height="38" alt="embedis Wiki" title="embedis Wiki"/></a></td>
+	<td><a href="https://github.com/thingSoC/TSOC_NEOLED/wiki"><img class="img" src="/img/logos/project_wiki.png"  width="168" height="38" alt="TSOC_NEOLED Wiki" title="TSOC_NEOLED Wiki"/></a></td>
   </tr>
   <tr>
-	<td><a href="https://github.com/thingSoC/embedis/issues"><img class="img" src="/img/logos/bug_tracker.png"  width="168" height="38" alt="embedis Issues" title="embedis Issues"/></a></td>
+	<td><a href="https://github.com/thingSoC/TSOC_NEOLED/issues"><img class="img" src="/img/logos/bug_tracker.png"  width="168" height="38" alt="TSOC_NEOLED Issues" title="TSOC_NEOLED Issues"/></a></td>
   </tr>
   </table>
   </center>
-  <h2>embedis Downloads</h2>
+  <h2>TSOC_NEOLED Downloads</h2>
     <center>
 	<table border="0">
 	<tr>
-		<td><a href="https://github.com/thingSoC/embedis/zipball/master"><img class="img" src="/img/logos/zip_archive.png" width="168" height="38" alt="embedis ZIPball" title="embedis ZIPball"/></a></td>
+		<td><a href="https://github.com/thingSoC/TSOC_NEOLED/zipball/master"><img class="img" src="/img/logos/zip_archive.png" width="168" height="38" alt="TSOC_NEOLED ZIPball" title="TSOC_NEOLED ZIPball"/></a></td>
 	</tr>
 	<tr>
-		<td><a href="https://github.com/thingSoC/embedis/tarball/master"><img class="img" src="/img/logos/tar_archive.png" width="168" height="38" alt="embedis TARball" title="embedis TARball"/></a></td>
+		<td><a href="https://github.com/thingSoC/TSOC_NEOLED/tarball/master"><img class="img" src="/img/logos/tar_archive.png" width="168" height="38" alt="TSOC_NEOLED TARball" title="TSOC_NEOLED TARball"/></a></td>
 	</tr>
 	</table>
 	</center>
-  <h2>embedis Images</h2>
+  <h2>TSOC_NEOLED Images</h2>
     <center>
 	<table border="0">
 	<tr>
-		<td><a href="/img/projects/embedis/embedis_top.png"><img class="illo" src="/img/projects/embedis/embedis_top.png" alt="embedis Top View" title="embedis Top View"/></a></td>
+		<td><a href="/img/projects/TSOC_NEOLED/TSOC_NEOLED_top.png"><img class="illo" src="/img/projects/TSOC_NEOLED/TSOC_NEOLED_top.png" alt="TSOC_NEOLED Top View" title="TSOC_NEOLED Top View"/></a></td>
 	</tr>
 	<tr>
-		<td><a href="/img/projects/embedis/embedis_bot.png"><img class="illo" src="/img/projects/embedis/embedis_bot.png" alt="embedis Bottom View" title="embedis Bottom View"/></a></td>
+		<td><a href="/img/projects/TSOC_NEOLED/TSOC_NEOLED_bot.png"><img class="illo" src="/img/projects/TSOC_NEOLED/TSOC_NEOLED_bot.png" alt="TSOC_NEOLED Bottom View" title="TSOC_NEOLED Bottom View"/></a></td>
 	</tr>
 	</table>
 	</center>
@@ -248,7 +207,7 @@ It is a community sponsored, open source project, with no fees or licensing cost
 
 <!-- place "licensing: true" in the YAML front matter to enable Licensing in that page -->
 
-	<h2>embedis Licensing</h2>
+	<h2>TSOC_NEOLED Licensing</h2>
 
 <!-- place "cc_by_sa: true" in the YAML front matter to enable cc_by_sa licensing for that page -->
 	
@@ -257,7 +216,7 @@ It is a community sponsored, open source project, with no fees or licensing cost
 			<td align="center"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img width="88" height="31" alt="Creative Commons License" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a></td>
         </tr>
 		<tr>
-			<td>The embedis Project by PatternAgents is available and licensed under a Creative Commons Attribution-ShareAlike 4.0 International License</td>
+			<td>The TSOC_NEOLED Project by PatternAgents is available and licensed under a Creative Commons Attribution-ShareAlike 4.0 International License</td>
 		</tr>
 		</table>
 	

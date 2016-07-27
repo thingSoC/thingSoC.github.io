@@ -3,16 +3,16 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang="en" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
-  <title>thingSoC: TSOC_NEOLED : NeoPixel LED Driver Embedded Module</title>
+  <title>thingSoC: TSOC_NEOLED : LED Driver Embedded Module</title>
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width" />
 
   <meta name="robots"                  content="noodp, noydir, noarchive"         />
-  <meta name="description"        content="TSOC_NEOLED - NeoPixel LED Driver Embedded Module"    />
-  <meta name="abstract"              content="TSOC_NEOLED - NeoPixel LED Driver Embedded Module"       />
+  <meta name="description"        content="TSOC_NEOLED - LED Driver Embedded Module"    />
+  <meta name="abstract"              content="TSOC_NEOLED - LED Driver Embedded Module"       />
   <meta name="classification"  content="electronics, electronics design, design engineering" />
-  <meta name="keywords"              content="TSOC_NEOLED, WS2812, modbus, dmx, dmx-512, dmx512, rdm, usb, arduino, uno, pro, atmel, cpld, fpga"       />
+  <meta name="keywords"              content="TSOC_NEOLED, adafruit, adafruit neopixel, WS2812, WS2812B, modbus, dmx, dmx-512, dmx512, rdm, usb, arduino, uno, pro, atmel, cpld, fpga"       />
 
   <link rel="apple-touch-icon" type="image/png" href="/img/logos/apple-touch-icon-144x144.png" />
   <!--  <link rel="icon" type="image/png" href="http://www.moxon.com/img/logos/apple-touch-icon.png"/>  -->
@@ -123,17 +123,22 @@
     <div class="col maj_major">
       
   
-  <h1>TSOC_NEOLED : NeoPixel LED Driver Embedded Module</h1>
+  <h1>TSOC_NEOLED : LED Driver Embedded Module</h1>
 
   <!-- Add the content from the post/project -->
   <p>
-The TSOC_NEOLED is a PSoC4 (Programmable System on Chip) based board with integrated NeoPixel (WS2812) driver, in an Embedded Module format for the new thingSoC,
-Internet of Things open standard.
+The TSOC_NEOLED is a PSoC4 (Programmable System on Chip) based board with integrated  WS2812 (a.k.a Adafruit NeoPixel) programmable LED driver, 
+in an Embedded Module format for the new thingSoC, Internet of Things open standard.
 </p>
 <!-- more -->
 
-<h3>TSOC_NEOLED - NeoPixel LED Driver Embedded Module :</h3>
+<h3>TSOC_NEOLED - LED Driver Embedded Module :</h3>
 The TSOC_NEOLED connects any thingSoC (or Mikrobus) module to strings of programmable color LEDs.
+To the "Host" the TSOC_NEOLED appears to be a static memory of 2048 bytes, either I2C bus access (default),
+or SPI bus access for higher reads/write performance. Each color LED uses four (4) bytes of the memory as
+a 32 bit (eight bits each Green, Red, Blue, White/Yellow) word. The memory is organized as eight(8) strings of
+sixty-four(64) LEDs per string, by default. Other geometries can be programmed as well.
+
 <p>
   <ul>
     <li><a href="https://www.arduino.cc/">Supported by the Arduino IDE</a></li>
